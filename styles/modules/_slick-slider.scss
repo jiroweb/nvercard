@@ -1,0 +1,84 @@
+.slick{
+    &-carousel{
+        position: relative;
+    }
+
+    &-list{
+        overflow: hidden;
+
+    }
+
+    &-track{
+        display: flex;
+        flex-wrap: nowrap;
+        cursor: default;
+    }
+}
+
+
+
+
+//ARROWS
+.slick {
+    &-arrow {
+      
+        position: absolute;
+        background-color: #AFB6BD;
+        border: 0;
+        transition: $transition;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // icon font
+        font-family: 'icomoon';
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        z-index: 999;
+
+        &:hover {
+            background-color: #3C444B;
+        }
+
+        &:before {
+            font-size: 11px;
+            color: #232C31;
+        }
+
+        &:hover:before {
+            color: #AFB6BD;
+        }
+    }
+
+    &-prev {
+        left: 0;
+
+        &:before {
+            content: "\e903";
+        }
+    }
+
+    &-next {
+        right: 0;
+
+        &:before {
+            content: "\e902";
+        }
+    }
+
+    &-disabled {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0;
+    }
+}
+
+
+
+
+

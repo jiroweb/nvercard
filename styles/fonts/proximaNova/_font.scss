@@ -1,0 +1,38 @@
+// FONT FAMILY NAME AS VARS
+$Black: 'ProximaNova-Black',
+sans-serif; // black
+
+$Extrabold: 'ProximaNova-Extrabold',
+sans-serif; // extrabold
+
+$Bold: 'ProximaNova-Bold',
+sans-serif; // bold
+
+$Semibold: 'ProximaNova-Semibold',
+sans-serif; // 600
+
+$Light: 'ProximaNova-Light',
+sans-serif; // 300
+
+$Regular: 'ProximaNova-Regular',
+sans-serif; // normal
+
+
+
+$font-path:'/assets/fonts/proxima/';
+$list: 'ProximaNova-Black''ProximaNova-Extrabold''ProximaNova-Bold''ProximaNova-Semibold''ProximaNova-Light''ProximaNova-Regular';
+
+@each $name in $list {
+    $src: $font-path + $name;
+
+    @font-face {
+        src: url($src + '.eot');
+        src: url($src + '.eot?#iefix') format('embedded-opentype'),
+            url($src + '.woff2') format('woff2'),
+            url($src + '.woff') format('woff'),
+            url($src + '.ttf') format('truetype'),
+            url($src + '.otf') format('opentype'),
+            url($src + '.svg') format('svg');
+        font-family: $name;
+    }
+}

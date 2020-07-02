@@ -1,0 +1,52 @@
+pagination {
+    display: block;
+
+    .pagination {
+        display: flex;
+        align-items: center;
+
+        .page {
+            &-item {
+                @include wh(30px);
+                flex: 1 auto;
+                margin: 0 2px;
+                border-radius: 4px;
+                transition: $transition;
+
+                &.disabled {
+                    display: none;
+                }
+            }
+
+            &-link {
+                @include wh(100%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font: 14px $Regular;
+                color: #33444e;
+            }
+        }
+
+        &-page {
+
+            &.active,
+            &:hover {
+                background-color: var(--global_color);
+
+                .page-link {
+                    color: white;
+                }
+            }
+        }
+
+        &-prev,
+        &-next {
+            &:hover {
+                .page-link {
+                    color: var(--global_color);
+                }
+            }
+        }
+    }
+}

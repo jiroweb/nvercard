@@ -1,0 +1,55 @@
+.app-loader {
+    position: fixed;
+    left: 50%;
+    top: 50%
+}
+
+.app-loader:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-top: 2px solid #07d;
+    border-right: 2px solid transparent;
+    border-radius: 50%;
+    animation: app-loader-rotate .6s linear infinite;
+    width: 2rem;
+    height: 2rem;
+    margin-top: -1rem;
+    margin-left: -1rem;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-top-color: #d40943
+}
+
+@media screen and (-ms-high-contrast:active),
+(-ms-high-contrast:none) {
+    .app-loader:before {
+        animation: none !important
+    }
+}
+
+@-webkit-keyframes app-loader-rotate {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes app-loader-rotate {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@-o-keyframes app-loader-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes app-loader-rotate {
+    to {
+        transform: rotate(360deg)
+    }
+}

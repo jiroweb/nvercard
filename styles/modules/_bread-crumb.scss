@@ -1,0 +1,39 @@
+.crumb {
+    &-list {
+        margin: 0 -8px;
+
+        &__item {
+            padding: 5px 8px;
+
+            &--home {
+                font-size: 13px;
+                color: rgba($third_color, .5);
+                transition: $transition;
+
+                &:hover {
+                    color: var(--global_color);
+                }
+            }
+
+            &--link {
+                font: 13px $Regular;
+                color: $third_color;
+                transition: $transition;
+
+                &:hover {
+                    color: var(--global_color);
+                }
+            }
+
+            &--arrow {
+                font-size: 8px;
+                color: rgba($third_color, .5);
+            }
+
+            &--current {
+                font: 13px $Regular;
+                color: rgba($third_color, .5);
+            }
+        }
+    }
+}

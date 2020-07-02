@@ -1,0 +1,287 @@
+.employee {
+    &-create {
+        margin-top: 27px;
+        margin-bottom: 30px;
+        padding: 30px 17.5px;
+
+        &__title {
+            font: 15px $Bold;
+            letter-spacing: .75px;
+            color: $third_color;
+            margin-bottom: 22px;
+            text-transform: uppercase;
+        }
+
+        &__box {
+            margin: 0 -17.5px;
+
+            &--list {
+                width: 50%;
+                padding: 0 17.5px;
+
+                &-item {
+
+                    &+& {
+                        margin-top: 20px;
+                    }
+
+                    &__name {
+                        font: 14px $Regular;
+                        color: #9FA3A7;
+                        margin-bottom: 5px;
+
+                        &__text {
+                            display: inline-block;
+                        }
+                    }
+
+                    &__input {
+                        width: 100%;
+                        position: relative;
+
+                        input {
+                            @include wh(100%, 40px);
+                            display: block;
+                            font: 14px $Regular;
+                            color: $second_color;
+                            border-radius: 5px;
+                            border: 1px solid rgba(#c7d0d3, .5);
+                            background-color: #ffffff;
+                            padding: 0 17px;
+
+                            &:disabled {
+                                border: solid 1px transparent;
+                                background-color: #f8f8f8;
+                            }
+                        }
+
+                        &--icon {
+                            @include wh(38px);
+                            position: absolute;
+                            top: 1px;
+                            right: 1px;
+                            background: #E3E7E9;
+                            border-radius: 0px 4px 4px 0px;
+                            font-size: 24px;
+                            color: #323B40;
+                            pointer-events: none;
+
+                            &+input {
+                                padding-right: 55px;
+                            }
+                        }
+
+                        .icon-exclamatory {
+                            position: absolute;
+                            top: 13px;
+                            right: 20px;
+                            color: #b6bdbf;
+                            cursor: pointer;
+
+                            &:hover::after {
+                                content: attr(data-title);
+                                width: 245px;
+                                position: absolute;
+                                top: -55px;
+                                right: -100%;
+                                padding: 10px 15px;
+                                border-radius: 7px;
+                                box-shadow: 0px 5px 13px 0 rgba(0, 0, 0, 0.12);
+                                border: solid 1px #ebebeb;
+                                background-color: #ffffff;
+                                color: $second_color;
+                                font: 13px $Regular;
+                                text-align: center;
+                                z-index: 999;
+                            }
+                        }
+                    }
+
+                    &__select {
+                        max-width: 100%;
+                    }
+                }
+
+                &-access {
+                    margin-top: 35px;
+
+                    &__title {
+                        margin-bottom: 25px;
+
+                        p {
+                            font: 15px/1.7 $Semibold;
+                            color: #000000;
+                            letter-spacing: 0.04em;
+                            text-transform: uppercase;
+                        }
+
+                        span {
+                            font: 15px/18px $Regular;
+                            color: #828282;
+                            margin-top: 10px;
+                            display: block;
+                        }
+
+                    }
+
+                    &__tab {
+                        &+& {
+                            margin-top: 17px;
+                        }
+
+                        h3 {
+                            margin-left: 20px;
+
+                            span {
+                                font: 18px/.8 $Regular;
+                                color: #000000;
+                                letter-spacing: .04em;
+                                margin-bottom: 5px;
+                                text-transform: capitalize;
+                                display: block;
+                            }
+
+                            p {
+                                font: 13px/1.6 $Regular;
+                                color: #989EA1;
+                                letter-spacing: .04em;
+                            }
+                        }
+                    }
+                }
+
+                @include sm {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+
+            @include sm {
+                display: block;
+            }
+        }
+
+        &__btn {
+            margin-top: 36px;
+            padding: 0 10px;
+
+            &--item {
+                @include wh(193px, 45px);
+                margin: 0 7.5px;
+            }
+        }
+    }
+
+    &-opportunity {
+        margin-top: 55px;
+        margin-bottom: 67px;
+
+        @include xl {
+            display: block;
+        }
+
+        &__categories {
+            width: calc(100% - 765px);
+
+            @include xl {
+                width: 100%;
+                margin-bottom: 45px;
+            }
+
+            &--checkbox {
+                padding-right: 15px;
+
+                ul {
+                    li {
+                        &+li {
+                            margin-top: 25px;
+                        }
+
+                        .checkbox {
+                            &-name {
+                                font: 18px $Semibold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__building {
+            max-width: 765px;
+            width: 100%;
+
+            &--select {
+                margin-bottom: 27px;
+
+                @include sm {
+                    display: block;
+                }
+
+                &-dropdown {
+                    width: calc(100% - 88px);
+                    padding-right: 30px;
+
+                    @include sm {
+                        width: 100%;
+                        padding-right: 0;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &-btn {
+                    font: 15px $Regular;
+                    color: var(--global_color);
+                    cursor: pointer;
+                }
+            }
+
+            &--selected {
+                background: #F7F8F9;
+                border-radius: 10px;
+
+                ul {
+                    li {
+                        padding: 11px 24px;
+
+                        &+li {
+                            border-top: 1px solid #E7E7E7;
+                        }
+
+                        p {
+                            span {
+                                font: 16px/22px $Regular;
+                                color: #232C31;
+                                padding-right: 15px;
+                            }
+
+                            .icon {
+                                font-size: 16px;
+                                color: #8FA2A7;
+                                cursor: pointer;
+                                transition: $transition;
+
+                                &:hover {
+                                    color: var(--global_color);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-changepassword {
+        margin-top: 50px;
+
+        &__new {
+            margin-top: 10px;
+
+            &--text {
+                font: 16px/18px $Regular;
+                color: #AFB6BD;
+            }
+        }
+    }
+}

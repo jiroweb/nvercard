@@ -1,0 +1,397 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+iframe,
+ol,
+ul,
+li,
+form,
+label,
+i,
+footer,
+header,
+menu,
+nav,
+a,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td,
+video,
+canvas,
+section,
+main object,
+address,
+code,
+em,
+small,
+strong,
+var,
+article,
+aside,
+details,
+figure,
+summary,
+time,
+mark,
+audio,
+center {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+iframe,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main,
+picture {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: left;
+}
+
+input {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+input[type="password"] {
+  font: 17px Verdana, sans-serif !important;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  display: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+input:-webkit-autofill {
+  -webkit-transition: background-color 100000s ease-in-out 0s;
+  transition: background-color 100000s ease-in-out 0s;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+input,
+button,
+select,
+textarea {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.d_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d_i_flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.f_wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.f_no_wrap {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.f_row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.f_direct_col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.j_content_start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.j_content_end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.j_content_center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.j_content_between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.a_items_start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.a_items_end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.a_i_c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+:root {
+  --color-global: #10c459;
+  --color-red: #d02128;
+  --color-dark: #4F4F4F;
+  --color-gradient: linear-gradient(180deg, #10c459 0%, #0C8F71 100%);
+  --border-radius: 6px;
+  --transition-all: .3s;
+}
+
+.container {
+  max-width: 1580px;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1279.98px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/*=======================-HEADER-STYLE-START-=======================*/
+header {
+  background-color: white;
+}
+
+.header-info__block {
+  padding: 14px 0 10px;
+}
+
+.header-logo .logo-img {
+  width: 55px;
+  height: 75px;
+}
+
+.contact-style {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.contact-style a {
+  font-size: 17px;
+  color: var(--color-global);
+  -webkit-transition: var(--transition-all);
+  transition: var(--transition-all);
+}
+
+.contact-style a:hover {
+  color: var(--color-red);
+}
+
+.contact-style a i {
+  margin-right: 5px;
+}
+
+.contact-style span {
+  font-size: 12px;
+  color: var(--color-dark);
+  margin-bottom: 5px;
+}
+
+.header-sign__in a {
+  border: 1px solid var(--color-red);
+  padding: 8px 15px;
+  background-color: transparent;
+  border-radius: var(--border-radius);
+  color: var(--color-red);
+  -webkit-transition: var(--transition-all);
+  transition: var(--transition-all);
+  font-size: 16px;
+}
+
+.header-sign__in a:hover {
+  background-color: var(--color-red);
+  -webkit-box-shadow: 0px 0px 26px -4px #d02128;
+  box-shadow: 0px 0px 26px -4px #d02128;
+  color: white;
+}
+
+.button-form button {
+  background-color: var(--color-global);
+  padding: 13px 0;
+  color: white;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  width: 200px;
+}
+
+.menu-list {
+  background-color: var(--color-global);
+  -webkit-box-shadow: 0px 0px 26px -4px #10c459;
+  box-shadow: 0px 0px 26px -4px #10c459;
+  padding: 10px 0;
+}
+
+.sidenav ul li a {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sidenav > ul > li:hover > a {
+  color: #0c8d3f;
+  -webkit-transition: var(--transition-all);
+  transition: var(--transition-all);
+}
+
+.sidenav > ul {
+  position: relative;
+}
+
+.menu-dropdown {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  z-index: 9999999;
+  padding: 35px 149px 43px 40px;
+  -webkit-box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 7px 7px;
+  top: 29px;
+  left: 0;
+  -webkit-transition: var(--transition-all);
+  transition: var(--transition-all);
+}
+
+.dropdown-content h6 {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-global);
+  margin-bottom: 14px;
+}
+
+.dropdown-content ul li a {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.dropdown-content ul li:hover a {
+  color: var(--color-global);
+}
+
+.menu-dropdown:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*========================-HEADER-STYLE-END-========================*/
+/*# sourceMappingURL=style.css.map */

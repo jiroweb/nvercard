@@ -1,0 +1,109 @@
+ngb-datepicker {
+    &.dropdown-menu {
+        background-color: white;
+        z-index: 99999999999;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        .ngb-dp-month {
+            width: 100%;
+
+            .ngb-dp-week{
+                justify-content: center;
+            }
+        }
+
+        .ngb-dp-weekday {
+            margin: .5px;
+        }
+
+        .ngb-dp-day {
+            border-radius: 4px;
+            margin: .5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover,
+            &[tabindex="0"] {
+                background-color: var(--global_color);
+                color: white;
+            }
+
+            &.ngb-dp-today[tabindex="-1"] {
+                opacity: .5;
+                background-color: var(--global_color);
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            &.disabled {
+                color: #bfbfbf;
+
+                &:hover {
+                    background-color: #bfbfbf;
+                    color: white;
+                }
+
+                &.hidden {
+                    opacity: 0;
+                    visibility: hidden;
+                    pointer-events: none;
+                }
+            }
+
+            &.hidden {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+        }
+    }
+
+    [ngbDatepickerDayView].outside{
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+.ngb-datepicker-range {
+    ngb-datepicker {
+
+        &.dropdown-menu {
+
+            .ngb-dp-day {
+                &.ngb-dp-today[tabindex="-1"] {
+                    opacity: 1;
+                    color: white;
+                }
+
+                .custom-day {
+                    @include wh(100%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 4px;
+
+
+                    &.range {
+                        color: white;
+                        background-color: var(--global_color);
+
+                        &.faded {
+                            opacity: .8;
+                        }
+                    }
+                }
+
+                &.disabled {
+                    .range {
+                        background-color: #bfbfbf;
+                    }
+                }
+            }
+        }
+    }
+}
