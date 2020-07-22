@@ -1,0 +1,110 @@
+.main-slider {
+    position: relative;
+    &__js--block-list{
+        height: 493px;
+    
+    &__slider{
+        margin: 0 auto 0 auto;
+        width: 1200px;
+        padding: 80px 15px;
+        height: 100%;
+        &--title{
+            h1{font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 20px;}
+            p{
+                font-size: 25px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    &__btn{
+        button{
+            width: 200px;
+        }
+    }
+    }
+}
+
+
+// .main-slider__js .slick-prev,
+// .main-slider__js .slick-next {
+//     width: 61px;
+//     height: 61px;
+//     border-radius: 50%;
+//     background: var(--color-red);
+//     z-index: 999;
+//     transition: var(--transition-all);
+// }
+
+// .main-slider__js .slick-prev:hover,
+// .main-slider__js .slick-next:hover {
+//     -webkit-box-shadow: 0px 0px 26px -4px rgba(208, 33, 40, 1);
+//     -moz-box-shadow: 0px 0px 26px -4px rgb(122, 57, 59);
+//     box-shadow: 0px 0px 26px -4px rgba(208, 33, 40, 1);
+// }
+
+// .main-slider__js .slick-prev {
+//     left: 10%;
+// }
+
+// .main-slider__js .slick-next {
+//     right: 10%;
+// }
+
+// .main-slider__js .slick-next:before {
+//     content: "";
+//     position: absolute;
+//     border: solid white;
+//     border-width: 3px 0 0 3px;
+//     height: 16px;
+//     width: 16px;
+//     opacity: 1;
+//     top: 21px;
+//     right: 24px;
+//     transform: rotate(135deg);
+// }
+
+// .main-slider__js .slick-prev:before {
+//     content: "";
+//     position: absolute;
+//     border: solid white;
+//     border-width: 0 3px 3px 0;
+//     height: 16px;
+//     width: 16px;
+//     opacity: 1;
+//     top: 21px;
+//     left: 24px;
+//     transform: rotate(135deg);
+// }
+
+// .main-slider__js .slick-dots {
+//     position: absolute;
+//     bottom: 30px;
+// }
+
+
+// .slick-dots li {
+//     position: relative;
+//     display: inline-block;
+//     width: 20px;
+//     height: 20px;
+//     margin: 0 5px;
+//     padding: 0;
+//     cursor: pointer;
+// }
+
+// .slick-dots li.slick-active button {
+//     background: linear-gradient(180deg, #10c459 5.83%, #098339 109.17%);
+//     -webkit-box-shadow: 0 0 4px 1px rgba(16, 198, 89, 1);
+//     -moz-box-shadow: 0 0 4px 1px rgba(16, 198, 89, 1);
+//     box-shadow: 0 0 4px 1px rgba(16, 198, 89, 1);
+//     width: 16px;
+//     height: 16px;
+// }
+
+// .slick-dots li button {
+//     background-color: #DCDCDC;
+//     width: 10px;
+//     height: 10px;
+// }
