@@ -92,7 +92,7 @@
                 a {
                     font: 13px $Regular;
                     color: var(--global_color);
-                    transition: $transition;
+                    
 
                     &:hover {
                         color: $green_color;
@@ -142,7 +142,7 @@
                             font: 15px $Regular;
                             color: #232C31;
                             padding-right: 30px;
-                            transition: $transition;
+                            
 
                             b {
                                 font: 15px $Semibold;
@@ -215,7 +215,7 @@
                         overflow: hidden;
                         font: 15px $Regular;
                         color: #232C31;
-                        transition: $transition;
+                        
                     }
                 }
 

@@ -70,19 +70,19 @@
             &-name {
                 min-height: 45px;
                 padding: 5px 22px 5px 15px;
-                transition: $transition;
+                
                 position: relative;
 
                 p {
                     width: calc(100% - 6px);
                     padding-right: 10px;
 
-                    .new-icon {
+                    .icon {
                         font-size: 17px;
                         flex: 0 0 22px;
                         color: #3C444B;
                         margin-right: 11px;
-                        transition: $transition;
+                        
                     }
 
                     span {
@@ -91,10 +91,10 @@
                     }
                 }
 
-                .new-icon {
+                .icon {
                     font-size: 10px;
                     color: #AFB6BD;
-                    transition: $transition;
+                    
                 }
 
 
@@ -103,13 +103,13 @@
                     background-color: white;
 
                     p {
-                        .new-icon {
-                            color: var(--global_color_header);
+                        .icon {
+                            color: var(--color_global_hover);
                         }
                     }
 
-                    .new-icon {
-                        color: var(--global_color_header);
+                    .icon {
+                        color: var(--color_global_hover);
                     }
                 }
             }
@@ -124,7 +124,7 @@
                 padding: 39px 0 22px 32px;
                 opacity: 0;
                 visibility: hidden;
-                transition: $transition;
+                
 
                 @include xl {
                     width: calc(1200px - 340px);
@@ -183,7 +183,7 @@
 
 
                         &-title {
-                            font: 18px/22px $Extrabold;
+                            font: 18px/22px $Semibold;
                             color: var(--catalog_color_text);
                             letter-spacing: 0.03em;
                             text-transform: uppercase;
@@ -213,10 +213,10 @@
                                 a {
                                     font: 15px/18px $Regular;
                                     color: var(--catalog_color_text);
-                                    transition: $transition;
+                                    
 
                                     &:hover {
-                                        color: var(--global_color_header);
+                                        color: var(--color_global_hover);
                                     }
 
                                     @include sm {
@@ -252,7 +252,7 @@
 
                             img {
                                 filter: grayscale(1);
-                                transition: $transition;
+                                
                             }
 
                             &:hover img {

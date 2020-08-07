@@ -45,13 +45,13 @@
 
 .order-info__repeat a {
     color: #b6bdbf;
-    transition: $transition;
+    
 
     span {
         font: 13px/13px $Regular;
         color: $second_color;
         border-bottom: 1px solid #b6bdbf;
-        transition: $transition;
+        
     }
 
     &:hover {
@@ -164,7 +164,7 @@
         font: 19.5px/19.5px $Regular;
         color: #4f565a;
         border-bottom: .5px solid #4f565a;
-        transition: $transition;
+        
         display: block;
 
         &:hover {
@@ -223,7 +223,7 @@
                 border-bottom: 2px solid transparent;
                 font: 15.5px $Semibold;
                 color: $second_color;
-                transition: $transition;
+                
 
                 @include sm{
                     padding: 7px 10px 7px 10px;

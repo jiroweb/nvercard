@@ -14,21 +14,3 @@
         background-color: white;
     }
 }
-
-
-.new-scrollbar {
-    overflow: auto;
-
-    &::-webkit-scrollbar {
-        @include wh(8px);
-
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: var(--new_global_color);
-    }
-
-    &::-webkit-scrollbar-track {
-        background-color: var(--black_color);
-    }
-}

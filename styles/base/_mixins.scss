@@ -1,4 +1,7 @@
-
+@mixin wh($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
 
 
 @mixin xs {

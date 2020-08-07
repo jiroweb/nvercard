@@ -5,7 +5,7 @@
         padding: 30px 17.5px;
 
         &__title {
-            font: 15px $Bold;
+            font: 15px $Extrabold;
             letter-spacing: .75px;
             color: $third_color;
             margin-bottom: 22px;
@@ -259,7 +259,7 @@
                                 font-size: 16px;
                                 color: #8FA2A7;
                                 cursor: pointer;
-                                transition: $transition;
+                                
 
                                 &:hover {
                                     color: var(--global_color);

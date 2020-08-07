@@ -1,6 +1,7 @@
 @import './shared',
 './normalize',
 './flex-box',
+'../modules/scrollbar',
 './root';
 
 
@@ -196,10 +197,10 @@
 // // colors  -- END
 
 
-// // display-none-block -- START
-// .d_none {
-//     display: none;
-// }
+// display-none-block -- START
+.d_none {
+    display: none;
+}
 
 // .d_block {
 //     display: block;

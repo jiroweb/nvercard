@@ -1,0 +1,23 @@
+// FONT FAMILY NAME AS VARS
+$Extrabold: 'NotoSansArmenian-ExtraBold',
+sans-serif; // extrabold
+
+$Semibold: 'NotoSansArmenian-SemiBold',
+sans-serif; // 600
+
+$Regular: 'NotoSansArmenian-Regular',
+sans-serif; // normal
+
+
+
+$font-path:'/assets/fonts/NotoSansArmenian/';
+$list: 'NotoSansArmenian-Regular' 'NotoSansArmenian-SemiBold' 'NotoSansArmenian-ExtraBold';
+
+@each $name in $list {
+    $src: $font-path + $name;
+
+    @font-face {
+        src: url($src + '.ttf') format('truetype');
+        font-family: $name;
+    }
+}

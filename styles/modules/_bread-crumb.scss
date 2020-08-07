@@ -8,7 +8,7 @@
             &--home {
                 font-size: 13px;
                 color: rgba($third_color, .5);
-                transition: $transition;
+                
 
                 &:hover {
                     color: var(--global_color);
@@ -18,7 +18,7 @@
             &--link {
                 font: 13px $Regular;
                 color: $third_color;
-                transition: $transition;
+                
 
                 &:hover {
                     color: var(--global_color);

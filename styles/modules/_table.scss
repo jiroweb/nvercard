@@ -57,7 +57,7 @@
 
             table {
                 thead tr th {
-                    font: 10px $Bold;
+                    font: 10px $Extrabold;
                     color: $third_color;
                     padding: 10px 15px;
                     background: #F6F6F6;
@@ -69,14 +69,14 @@
                         width: 100%;
                         display: block;
                         border: 1px solid rgba($second_color, 0.1);
-                        font: 13px $Bold;
+                        font: 13px $Extrabold;
                         letter-spacing: .65px;
                         color: $second_color;
                         padding: 2px;
 
 
                         &::placeholder {
-                            font: 13px $Bold;
+                            font: 13px $Extrabold;
                             color: rgba($second_color, 0.5);
                         }
                     }
@@ -90,7 +90,7 @@
 
                     a {
                         color: var(--global_color);
-                        transition: $transition;
+                        
 
                         &:hover{
                             color: $green_color;
@@ -100,7 +100,7 @@
                     .count {
                         color: $second_color;
                         text-decoration: underline;
-                        transition: $transition;
+                        
 
                         &:hover {
                             color: var(--global_color);
@@ -125,7 +125,7 @@
                     color: #8FA2A7;
                     font-size: 17px;
                     cursor: pointer;
-                    transition: $transition;
+                    
                     position: relative;
 
                     &:hover {

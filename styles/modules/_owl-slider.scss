@@ -6,7 +6,7 @@
         overflow: hidden;
         position: absolute;
         background-color: #e0e0e0;
-        transition: $transition;
+        
         display: flex;
         align-items: center;
         justify-content: center;
@@ -97,7 +97,7 @@
             border-radius: 50%;
             background-color: rgba($third_color, .5);
             display: block;
-            transition: $transition;
+            
 
             &:hover {
                 background-color: var(--global_color);

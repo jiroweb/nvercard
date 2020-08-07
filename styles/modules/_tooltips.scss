@@ -4,7 +4,7 @@
     .tooltip-content {
         position: absolute;
         z-index: 999;
-        transition: $transition;
+        
         opacity: 0;
         visibility: hidden;
     }
@@ -59,7 +59,7 @@
 
                 span {
                     display: block;
-                    font: 13.5px $Bold;
+                    font: 13.5px $Extrabold;
                     color: #3b474e;
                     letter-spacing: 2.03px;
                     text-transform: uppercase;
@@ -71,7 +71,7 @@
                 bottom: 35px;
                 opacity: 1;
                 visibility: visible;
-                transition: $transition;
+                
             }
         }
     }
