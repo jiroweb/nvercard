@@ -581,8 +581,7 @@ body {
 
 .header-catalog__list {
   width: 340px;
-  height: 368px;
-  padding: 45px 22px 45px 15px;
+  padding: 25px 15px;
   position: relative;
   background-color: #F5F5F5;
 }

@@ -199,8 +199,8 @@
     }
 
     &__list {
-        @include wh(340px, 368px);
-        padding: 45px 22px 45px 15px;
+        width: 340px;
+        padding: 25px 15px;
         position: relative;
         background-color: #F5F5F5;
 
