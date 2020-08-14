@@ -14,7 +14,7 @@
    <header class="header">
       <nav class="header-nav d_f a_i_c" id="nav">
          <div class="container">
-            <div class="header-nav__box d_f j_c_b">
+            <div class="header-nav__box d_f">
                <a href="#" [routerLink]="['/home']" class="header-nav__box--logo d_f j_content_center a_i_c">
                   <img src="./assets/img/logo/nvercard final logo - transparent.png" alt="logo">
                </a>
@@ -29,21 +29,10 @@
                         </a>
                      </li>
                      <li class="header-nav__box--menu-list__item">
-                        <a href="#" class="header-nav__box--menu-list__item--link header-nav__box--menu-link">Նորույթներ
-                        </a>
-                     </li>
-                     <li class="header-nav__box--menu-list__item">
-                        <a href="#" class="header-nav__box--menu-list__item--link header-nav__box--menu-link">Զեղչեր
-                        </a>
-                     </li>
-                     <li class="header-nav__box--menu-list__item">
                         <a href="#" class="header-nav__box--menu-list__item--link header-nav__box--menu-link">Կոնտակտներ
                         </a>
                      </li>
                   </ul>
-                  <div class="header-nav__box--menu-geolocation">
-                     <p>Հայաստան</p>
-                  </div>
                </div>
 
                <div class="header-nav__box--info d_f a_i_c">
@@ -52,7 +41,9 @@
                   </div>
                   <div class="header-nav__box--info-support d_f a_i_c">
                      <p>Գործում է 24/7 սկզբունքով</p>
-                     <a href="tel:37496060424">+374 (96) 06 04 24</a>
+                     <a href="tel:37496060424">
+                        <span>+374 (96) 06 04 24</span>
+                     </a>
                   </div>
                </div>
             </div>
@@ -62,8 +53,9 @@
       <div class="header-content">
          <div class="container">
             <div class="header-content__box d_f j_c_b">
-               <div class="header-content__box--catalog d_f a_i_c">
-                  <button class="header-content__box--catalog__btn clickCatalogOpenClose window-click">
+               <div class="header-content__box--catalog boxCatalogBtn d_f a_i_c">
+                  <i class="icon icon-arrow-left arrowBackToCategories d_none"><</i>
+                  <button class="header-content__box--catalog__btn clickCatalogOpenClose d_f a_i_c j_c_c window-click">
                      <span class="select-zone__nameCatalog">Բաժիններ</span>
                      <i class="icon icon-catalog">=</i>
                   </button>
@@ -73,11 +65,11 @@
 
          <div class="headerCatalog d_none">
             <div class="header-catalog">
-               <div class="container">
+               <div class="container header-catalog__container">
                   <ul class="header-catalog__list">
                      <li class="header-catalog__list--item catalogItem">
                         <a href="#"
-                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b select-itemCatalog">
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
                            <p class="d_f a_i_c">
                               <i class="icon icon-catalog d_f a_i_c j_content_center">+</i>
                               <span>Խնամք</span>
@@ -98,6 +90,7 @@
                                     <li><a href="#">SPA</a></li>
                                     <li><a href="#">Դաջվածք</a></li>
                                     <li><a href="#">Ֆիթնես</a></li>
+                                    
                                  </ul>
                               </div>
                               <div class="header-catalog__list--item-sub__categories--img d_f f_w">
@@ -123,7 +116,7 @@
                      </li>
                      <li class="header-catalog__list--item catalogItem">
                         <a href="#"
-                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b select-itemCatalog">
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
                            <p class="d_f a_i_c">
                               <i class="icon icon-catalog d_f a_i_c j_content_center">+</i>
                               <span>Հագուստ</span>
@@ -167,72 +160,7 @@
                      </li>
                      <li class="header-catalog__list--item catalogItem">
                         <a href="#"
-                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b select-itemCatalog">
-                           <p class="d_f a_i_c">
-                              <i class="icon icon-catalog d_f a_i_c j_content_center">+</i>
-                              <span>Կոշիկներ</span>
-                           </p>
-                           <i class="icon icon-arrow__right">></i>
-                        </a>
-                        <ul class="header-catalog__list--item-sub catalogSubMenu">
-                           <li
-                              class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
-                              <div class="header-catalog__list--item-sub__categories--box">
-                                 <p class="header-catalog__list--item-sub__categories--box-title">Կանացի
-                                 </p>
-                                 <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
-                                    <li><a href="#">Բարձրակրունկ</a></li>
-                                    <li><a href="#">Ցածրակրունկ</a></li>
-                                    <li><a href="#">Ամառային</a></li>
-                                    <li><a href="#">Սանդալ</a></li>
-                                    <li><a href="#">Սպորտային</a></li>
-                                    <li><a href="#">Երկարաճիտք</a></li>
-                                    <li><a href="#">Կիսաճտկավոր կոշիկներ</a></li>
-                                    <li><a href="#">Ուգգիներ</a></li>
-                                    <li><a href="#">Հողաթափեր</a></li>
-                                    <li><a href="#">Մանկական</a></li>
-
-                                 </ul>
-                              </div>
-                              <div class="header-catalog__list--item-sub__categories--box">
-                                 <p class="header-catalog__list--item-sub__categories--box-title">Տղամարդու
-                                 </p>
-                                 <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
-                                    <li><a href="#">Ամառային</a></li>
-                                    <li><a href="#">Սանդալ</a></li>
-                                    <li><a href="#">Սպորտային</a></li>
-                                    <li><a href="#">Երկարաճիտք</a></li>
-                                    <li><a href="#">Կիսաճտկավոր կոշիկներ</a></li>
-                                    <li><a href="#">Ուգգիներ</a></li>
-                                    <li><a href="#">Չարոխ</a></li>
-                                    <li><a href="#">Հողաթափեր</a></li>
-                                    <li><a href="#">Մանկական</a></li>
-                                 </ul>
-                              </div>
-                              <div class="header-catalog__list--item-sub__categories--img d_f f_w">
-                                 <a href="#">
-                                    <img
-                                       src="https://mamul.am/images/photos/171219/petq-che-dzmrany-demqy-lvanal--n117029-1.jpg">
-                                 </a>
-                                 <a href="#">
-                                    <img
-                                       src="https://mamul.am/images/photos/171219/petq-che-dzmrany-demqy-lvanal--n117029-1.jpg">
-                                 </a>
-                                 <a href="#">
-                                    <img
-                                       src="https://mamul.am/images/photos/171219/petq-che-dzmrany-demqy-lvanal--n117029-1.jpg">
-                                 </a>
-                                 <a href="#">
-                                    <img
-                                       src="https://mamul.am/images/photos/171219/petq-che-dzmrany-demqy-lvanal--n117029-1.jpg">
-                                 </a>
-                              </div>
-                           </li>
-                        </ul>
-                     </li>
-                     <li class="header-catalog__list--item catalogItem">
-                        <a href="#"
-                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b select-itemCatalog">
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
                            <p class="d_f a_i_c">
                               <i class="icon icon-catalog d_f a_i_c j_content_center">+</i>
                               <span>Աքսեսուարներ</span>
@@ -278,7 +206,7 @@
                      </li>
                      <li class="header-catalog__list--item catalogItem">
                         <a href="#"
-                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b select-itemCatalog">
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
                            <p class="d_f a_i_c">
                               <i class="icon icon-catalog d_f a_i_c j_content_center">+</i>
                               <span>Սպորտ</span>
@@ -325,7 +253,7 @@
                      </li>
                      <li class="header-catalog__list--item catalogItem">
                         <a href="#"
-                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b select-itemCatalog">
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
                            <p class="d_f a_i_c">
                               <i class="icon icon-catalog d_f a_i_c j_content_center">+</i>
                               <span>էլեկտրոտեխնիկա</span>
@@ -372,7 +300,7 @@
                      </li>
                      <li class="header-catalog__list--item catalogItem">
                         <a href="#"
-                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b select-itemCatalog">
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
                            <p class="d_f a_i_c">
                               <i class="icon icon-catalog d_f a_i_c j_content_center">+</i>
                               <span>Ավտոմասեր և սպասարկում</span>
@@ -416,7 +344,7 @@
                      </li>
                      <li class="header-catalog__list--item catalogItem">
                         <a href="#"
-                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b select-itemCatalog">
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
                            <p class="d_f a_i_c">
                               <i class="icon icon-catalog d_f a_i_c j_content_center">+</i>
                               <span>Տան պարագաներ</span>
@@ -460,58 +388,6 @@
                            </li>
                         </ul>
                      </li>
-                     <li class="header-catalog__list--item catalogItem">
-                        <a href="#"
-                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b select-itemCatalog">
-                           <p class="d_f a_i_c">
-                              <i class="icon icon-catalog d_f a_i_c j_content_center">+</i>
-                              <span>Նվերներ</span>
-                           </p>
-                           <i class="icon icon-arrow__right">></i>
-                        </a>
-                        <ul class="header-catalog__list--item-sub catalogSubMenu">
-                           <li
-                              class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
-                              <div class="header-catalog__list--item-sub__categories--box">
-                                 <p class="header-catalog__list--item-sub__categories--box-title">Նվերներ
-                                 </p>
-                                 <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
-                                    <li><a href="#">Կանանց</a></li>
-                                    <li><a href="#">Տղամարդկանց</a></li>
-                                    <li><a href="#">Երեխաներին</a></li>
-                                    <li><a href="#">Մեծահասակներին</a></li>
-                                    <li><a href="#">Կանանց տոների</a></li>
-                                    <li><a href="#">Ամանորյա</a></li>
-                                    <li><a href="#">Ծննդյան</a></li>
-                                    <li><a href="#">Կրեատիվ</a></li>
-                                    <li><a href="#">Ինտելեկտուալ/Կրթական</a></li>
-                                    <li><a href="#">Տնամուտի</a></li>
-                                    <li><a href="#">Մկրտության</a></li>
-                                    <li><a href="#">Հարսանեկան</a></li>
-                                 </ul>
-                              </div>
-                              <div class="header-catalog__list--item-sub__categories--img d_f f_w">
-                                 <a href="#">
-                                    <img
-                                       src="https://mamul.am/images/photos/171219/petq-che-dzmrany-demqy-lvanal--n117029-1.jpg">
-                                 </a>
-                                 <a href="#">
-                                    <img
-                                       src="https://mamul.am/images/photos/171219/petq-che-dzmrany-demqy-lvanal--n117029-1.jpg">
-                                 </a>
-                                 <a href="#">
-                                    <img
-                                       src="https://mamul.am/images/photos/171219/petq-che-dzmrany-demqy-lvanal--n117029-1.jpg">
-                                 </a>
-                                 <a href="#">
-                                    <img
-                                       src="https://mamul.am/images/photos/171219/petq-che-dzmrany-demqy-lvanal--n117029-1.jpg">
-                                 </a>
-                              </div>
-                           </li>
-                        </ul>
-                     </li>
-                     
                   </ul>
                </div>
             </div>

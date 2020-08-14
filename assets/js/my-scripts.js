@@ -1,21 +1,10 @@
 $(document).ready(function () {
     // catalog function
-    if (window.screen.width < 768) {
-        $("body").on('click', '.select-itemCatalog', function () {
-            let child_select_name = $('body').find('.select-zone__nameCatalog');
-            let select_text = $(this).text();
-            $(child_select_name).text(select_text);
-            $('.arrowBackToCategories').css('display', 'flex');
-        });
-        $('body').on('click', '.arrowBackToCategories', function () {
-            $(this).hide();
-            $('.catalogSubMenu').removeClass('open');
-            $('.clickCatalogName').removeClass('active');
-            $('.select-zone__nameCatalog').text('Весь каталог');
-        });
-    }
+    
+
     if (window.screen.width >= 768) {
         $('body').on('click', '.clickCatalogOpenClose', function () {
+            $(this).parent().toggleClass('active');
             $('.clickCatalogName').removeClass('active');
             $('.catalogSubMenu').removeClass('open');
 
@@ -27,11 +16,33 @@ $(document).ready(function () {
                 let catalogSubMenuFirst = $(first_box_show).find('.catalogSubMenu');
                 catalogSubMenuFirst.addClass('open');
             });
-           
+
             $('.headerCatalog').toggle();
+        });
+        // function for window click
+        $(window).on('click', function (e) {
+            if (!$(e.target).closest('.window-click').length) {
+                $('.headerCatalog').hide();
+                $('.clickCatalogName, .boxCatalogBtn').removeClass('active');
+                $('.catalogSubMenu').removeClass('open');
+            }
         });
     }
 
+    if (window.screen.width < 768) {
+        $('body').on('click', '.clickCatalogOpenClose', function () {
+            $(this).parent().toggleClass('active');
+            $('.clickCatalogName').removeClass('active');
+            $('.catalogSubMenu').removeClass('open');
+            $('.headerCatalog').toggle();
+        });
+        $('body').on('click', '.arrowBackToCategories', function () {
+            $(this).hide();
+            $('.catalogSubMenu').removeClass('open');
+            $('.clickCatalogName').removeClass('active');
+            $('.select-zone__nameCatalog').text('Բաժիններ');
+        });
+    }
 
     $("body").on('mouseover', '.clickCatalogName', function () {
         let catalogList = $(this).parent();
@@ -43,22 +54,18 @@ $(document).ready(function () {
             $(catalogItemOpen).removeClass('open');
         }
         $(subMenu).addClass('open');
+
+        if (window.screen.width < 768) {
+            let child_select_name = $('body').find('.select-zone__nameCatalog');
+            let select_text = $(this).find('span').text();
+            console.log(select_text)
+            $(child_select_name).text(select_text);
+            $('.arrowBackToCategories').show();
+        }
     });
     $("body").on('mouseover', '.change_activeCatalog', function () {
         let this_active = $('.change_activeCatalog');
         $(this_active).removeClass('active');
         $(this).addClass('active');
-    });
-
-
-
-
-    // function for window click
-    $(window).on('click', function (e) {
-        if (!$(e.target).closest('.window-click').length) {
-            $('.headerCatalog').hide();
-            $('.clickCatalogName').removeClass('active');
-            $('.catalogSubMenu').removeClass('open');
-        }
     });
 });

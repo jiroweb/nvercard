@@ -16,36 +16,33 @@
     // nav
     &-nav {
         position: relative;
+        padding: 8px 0;
 
         &.onscroll {
             transform: translateY(-100%);
         }
 
-        @include xs {
-            display: none;
-        }
-
         &__box {
 
             &--logo {
-                max-width: 75px;
+                max-width: 300px;
                 width: 100%;
-                height: 110px;
-                margin-left: 30px;
-                transform: rotateZ(45deg);
+                height: 61px;
+
+                @include sm {
+                    max-width: 220px;
+                    height: 46px;
+                }
             }
 
-
             &--menu {
-                margin-left: 15px;
+                margin-left: 45px;
+
+                @include xs {
+                    display: none;
+                }
 
                 &-list {
-                    margin-right: 60px;
-
-                    @include lg {
-                        display: none;
-                    }
-
                     &__item {
 
                         &+& {
@@ -64,22 +61,10 @@
                         color: var(--color_global);
                     }
                 }
-
-                &-geolocation {
-                    font: 15px/18px $Regular;
-                    color: #AFB6BD;
-
-                    @include lg {
-                        display: none;
-                    }
-                }
             }
 
             &--info {
-
-                @include lg {
-                    width: calc(100% - 111px);
-                }
+                margin-left: auto;
 
                 &-delivery {
                     font: 15px/18px $Semibold;
@@ -88,36 +73,34 @@
                     margin-right: 32px;
 
                     @include lg {
-                        margin-left: 160px;
-                    }
-
-                    @include sm {
-                        margin-left: auto;
-                        margin-right: 0;
+                        display: none;
                     }
                 }
 
                 &-support {
-                    @include lg {
-                        margin-left: auto;
-                    }
-
-                    @include sm {
-                        display: none;
-                    }
 
                     p {
                         font: 15px/18px $Regular;
                         color: #828282;
                         margin-right: 11px;
+
+                        @include sm {
+                            display: none;
+                        }
                     }
 
                     a {
-                        font: 15px/18px $Semibold;
-                        color: var(--color_text);
+                        span {
+                            font: 15px/18px $Semibold;
+                            color: var(--color_text);
 
-                        &:hover {
-                            color: var(--color_global);
+                            &:hover {
+                                color: var(--color_global);
+                            }
+
+                            @include xs {
+                                display: none;
+                            }
                         }
                     }
                 }
@@ -139,11 +122,29 @@
                 max-width: 170px;
                 @include wh(100%);
 
+                @include xs {
+                    &.active {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 40px;
+                        min-width: 100%;
+                        max-width: 100%;
+                        background-color: var(--color_red);
+                    }
+                }
+                .icon-arrow-left{
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    @include wh(20px);
+                    z-index: 999999;
+                }
                 &__btn {
                     @include wh(100%, 40px);
                     padding: 0 20px;
                     color: white;
-                    text-align: left;
                     background-color: var(--color_red);
 
 
@@ -173,7 +174,7 @@
     @include xs {
         position: fixed;
         height: 100%;
-        top: 53px;
+        top: 40px;
     }
 
 
@@ -184,16 +185,20 @@
 
 .header-catalog {
     background-color: white;
-    position: relative;
     z-index: 9999999;
     overflow: hidden;
+
+    &__container {
+        position: relative;
+
+    }
 
     @media (min-width: 768px) and (max-height: 470px) {
         height: 100%;
         overflow-x: hidden;
         overflow-y: auto;
 
-        .container {
+        &__container {
             height: 100%;
         }
     }
@@ -201,19 +206,14 @@
     &__list {
         width: 340px;
         padding: 25px 15px;
-        position: relative;
         background-color: #F5F5F5;
-
-        @include xl {
-            margin-left: -15px;
-        }
 
         @include xs {
             width: auto;
-            height: calc(100vh - 53px);
-            margin-right: -15px;
+            height: calc(100vh - 40px);
             background-color: white;
-            padding: 0 15px 0 20px;
+            padding: 0 15px;
+            margin: 0 -15px;
             overflow-y: auto;
             overflow-x: hidden;
         }
@@ -223,12 +223,9 @@
         }
 
         &--item {
-            margin-right: -22px;
-            margin-left: -15px;
+            margin: 0 -15px;
 
             @include xs {
-                margin-right: -15px;
-                margin-left: -20px;
                 border-bottom: 1px solid #E0E0E0;
             }
 
@@ -280,39 +277,22 @@
             }
 
             &-sub {
-                width: calc(1500px - 340px);
+                width: calc(100% - 380px);
                 height: 100%;
                 position: absolute;
                 top: 0;
-                left: 100%;
+                right: 0;
                 background-color: white;
-                padding: 39px 0 22px 32px;
+                padding: 39px 25px 22px 32px;
                 opacity: 0;
                 visibility: hidden;
 
-
-                @include xl {
-                    width: calc(1200px - 340px);
-                }
-
                 @include lg {
-                    width: calc(964px - 340px);
-
-                }
-
-                @include sm {
-                    width: calc(768px - 340px);
+                    width: calc(100% - 355px);
                 }
 
                 @include xs {
                     width: 100%;
-                    padding: 0;
-                    background-color: white;
-                    z-index: 99;
-                }
-
-                @media (min-width: 768px) and (max-height: 470px) {
-                    padding: 39px 15px 22px 32px;
                 }
 
                 &.open {
@@ -333,19 +313,7 @@
                     }
 
                     &--box {
-                        width: calc(100% - 630px);
-                        margin-right: 22px;
-
-                        @include xl {
-                            width: calc(100% - 116px);
-                            margin-right: 0;
-                        }
-
-                        @include lg {
-                            width: 100%;
-                        }
-
-
+                        width: 55%;
 
                         &-title {
                             font: 18px/22px $Semibold;
@@ -354,10 +322,6 @@
                             text-transform: uppercase;
                             margin-bottom: 5px;
                             padding-left: 10px;
-
-                            @include xs {
-                                display: none;
-                            }
                         }
 
                         &-links {
@@ -394,14 +358,9 @@
                     }
 
                     &--img {
-                        max-width: 630px;
-                        width: 100%;
+                        width: 45%;
 
-                        @include xl {
-                            max-width: 116px;
-                        }
-
-                        @include sm {
+                        @include xs {
                             display: none;
                         }
 
@@ -409,8 +368,8 @@
                             @include wh(50%, 153px);
                             padding: 5px;
 
-                            @include xl {
-                                @include wh(116px, 50px);
+                            @include lg {
+                                @include wh(100%, 75px);
                             }
 
                             img {
