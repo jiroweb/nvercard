@@ -7,6 +7,7 @@ $(document).ready(function () {
             $(this).parent().toggleClass('active');
             $('.clickCatalogName').removeClass('active');
             $('.catalogSubMenu').removeClass('open');
+            $('.arrowBackToCategories').hide();
 
             $('.catalogItem').each(function () {
                 let this_parent = $(this).parent();
@@ -35,6 +36,8 @@ $(document).ready(function () {
             $('.clickCatalogName').removeClass('active');
             $('.catalogSubMenu').removeClass('open');
             $('.headerCatalog').toggle();
+            $('.arrowBackToCategories').hide();
+            $('.select-zone__nameCatalog').text('Բաժիններ');
         });
         $('body').on('click', '.arrowBackToCategories', function () {
             $(this).hide();

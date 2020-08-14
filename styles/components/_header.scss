@@ -322,6 +322,10 @@
                             text-transform: uppercase;
                             margin-bottom: 5px;
                             padding-left: 10px;
+
+                            @include xs{
+                                display: none;
+                            }
                         }
 
                         &-links {

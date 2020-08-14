@@ -711,6 +711,12 @@ body {
   padding-left: 10px;
 }
 
+@media (max-width: 767.98px) {
+  .header-catalog__list--item-sub__categories--box-title {
+    display: none;
+  }
+}
+
 .header-catalog__list--item-sub__categories--box-links li {
   width: 50%;
   padding: 10px;
