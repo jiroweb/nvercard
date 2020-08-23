@@ -266,8 +266,8 @@ body {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("/assets/fonts/icons/icomoon.eot?mbk7ji");
-  src: url("/assets/fonts/icons/icomoon.eot?mbk7ji#iefix") format("embedded-opentype"), url("/assets/fonts/icons/icomoon.ttf?mbk7ji") format("truetype"), url("/assets/fonts/icons/icomoon.woff?mbk7ji") format("woff"), url("/assets/fonts/icons/icomoon.svg?mbk7ji#icomoon") format("svg");
+  src: url("../assets/fonts/icons/icomoon.eot?mbk7ji");
+  src: url("../assets/fonts/icons/icomoon.eot?mbk7ji#iefix") format("embedded-opentype"), url("../assets/fonts/icons/icomoon.ttf?mbk7ji") format("truetype"), url("../assets/fonts/icons/icomoon.woff?mbk7ji") format("woff"), url("../assets/fonts/icons/icomoon.svg?mbk7ji#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
