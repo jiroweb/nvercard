@@ -1,6 +1,15 @@
 $(document).ready(function () {
     // catalog function
-    
+
+    function clickCatalogBtnIcon(){
+        if ($('.clickCatalogBtnIcon').hasClass('icon-catalog')) {
+            $('.icon-catalog').removeClass('icon-catalog');
+            $('.clickCatalogBtnIcon').addClass('icon-cancel');
+        }else if($('.clickCatalogBtnIcon').hasClass('icon-cancel')){
+            $('.icon-cancel').removeClass('icon-cancel');
+            $('.clickCatalogBtnIcon').addClass('icon-catalog');
+        }
+    }
 
     if (window.screen.width >= 768) {
         $('body').on('click', '.clickCatalogOpenClose', function () {
@@ -8,7 +17,7 @@ $(document).ready(function () {
             $('.clickCatalogName').removeClass('active');
             $('.catalogSubMenu').removeClass('open');
             $('.arrowBackToCategories').hide();
-
+            clickCatalogBtnIcon();
             $('.catalogItem').each(function () {
                 let this_parent = $(this).parent();
                 let this_childrn = $(this_parent).children();
@@ -21,13 +30,14 @@ $(document).ready(function () {
             $('.headerCatalog').toggle();
         });
         // function for window click
-        $(window).on('click', function (e) {
-            if (!$(e.target).closest('.window-click').length) {
-                $('.headerCatalog').hide();
-                $('.clickCatalogName, .boxCatalogBtn').removeClass('active');
-                $('.catalogSubMenu').removeClass('open');
-            }
-        });
+        // $(window).on('click', function (e) {
+        //     if (!$(e.target).closest('.window-click').length) {
+        //         $('.headerCatalog').hide();
+        //         $('.clickCatalogName, .boxCatalogBtn').removeClass('active');
+        //         $('.catalogSubMenu').removeClass('open');
+        //         clickCatalogBtnIcon();
+        //     }
+        // });
     }
 
     if (window.screen.width < 768) {
@@ -38,6 +48,7 @@ $(document).ready(function () {
             $('.headerCatalog').toggle();
             $('.arrowBackToCategories').hide();
             $('.select-zone__nameCatalog').text('Բաժիններ');
+            clickCatalogBtnIcon();
         });
         $('body').on('click', '.arrowBackToCategories', function () {
             $(this).hide();

@@ -82,7 +82,7 @@
                     p {
                         font: 15px/18px $Regular;
                         color: #828282;
-                        margin-right: 11px;
+                        margin-right: 25px;
 
                         @include sm {
                             display: none;
@@ -90,9 +90,27 @@
                     }
 
                     a {
+
+                        @include xs {
+                            border: 1px solid var(--color_global);
+                            background-color: var(--color_global);
+                            padding: 12px;
+                            border-radius: 50%;
+                        }
+
+                        .icon {
+                            font-size: 16px;
+                            color: var(--color_global);
+
+                            @include xs {
+                                color: white;
+                            }
+                        }
+
                         span {
                             font: 15px/18px $Semibold;
                             color: var(--color_text);
+                            margin-left: 10px;
 
                             &:hover {
                                 color: var(--color_global);
@@ -134,13 +152,17 @@
                         background-color: var(--color_red);
                     }
                 }
-                .icon-arrow-left{
+
+                .icon-arrow-left {
                     position: absolute;
-                    top: 10px;
-                    left: 10px;
-                    @include wh(20px);
+                    top: 0;
+                    left: 0;
+                    @include wh(40px);
+                    line-height: 40px;
+                    text-align: center;
                     z-index: 999999;
                 }
+
                 &__btn {
                     @include wh(100%, 40px);
                     padding: 0 20px;
@@ -249,7 +271,7 @@
 
                     span {
                         font: 16px $Regular;
-                        color: var(--catalog_color_text);
+                        color: var(--color_text);
                     }
                 }
 
@@ -267,6 +289,10 @@
                     p {
                         .icon {
                             color: var(--color_global_hover);
+                        }
+
+                        span {
+                            color: var(--color_global);
                         }
                     }
 
@@ -293,6 +319,12 @@
 
                 @include xs {
                     width: 100%;
+                    padding: 0;
+                    z-index: 999999;
+                    transform: translateX(100%);
+                    transition: all .3s ease-in-out;
+                    opacity: 1;
+                    visibility: visible;
                 }
 
                 &.open {
@@ -300,43 +332,49 @@
                     visibility: visible;
 
                     @include xs {
-                        left: 0;
+                        transform: translateX(0);
                     }
-
                 }
 
                 &__categories {
                     @include wh(100%);
-
-                    &::-webkit-scrollbar-track {
-                        background-color: #f0f1f2;
-                    }
+                    overflow-x: hidden;
+                    overflow-y: auto;
 
                     &--box {
                         width: 55%;
 
+                        @include xs {
+                            width: 100%;
+                        }
+
                         &-title {
                             font: 18px/22px $Semibold;
-                            color: var(--catalog_color_text);
+                            color: var(--color_global);
                             letter-spacing: 0.03em;
                             text-transform: uppercase;
                             margin-bottom: 5px;
                             padding-left: 10px;
 
-                            @include xs{
+                            @include xs {
                                 display: none;
                             }
                         }
 
                         &-links {
 
+                            @include xs {
+                                height: 100%;
+                                display: block;
+                                overflow-x: hidden;
+                                overflow-y: auto;
+                            }
+
                             li {
                                 width: 50%;
-                                padding: 10px;
 
                                 @include sm {
                                     width: 100%;
-                                    padding: 0;
                                 }
 
                                 @include xs {
@@ -345,7 +383,8 @@
 
                                 a {
                                     font: 15px/18px $Regular;
-                                    color: var(--catalog_color_text);
+                                    color: var(--color_text);
+                                    padding: 10px;
 
 
                                     &:hover {
@@ -354,7 +393,10 @@
 
                                     @include sm {
                                         display: block;
-                                        padding: 10px;
+                                    }
+
+                                    @include xs{
+                                        padding: 15px;
                                     }
                                 }
                             }
@@ -369,11 +411,15 @@
                         }
 
                         a {
-                            @include wh(50%, 153px);
+                            @include wh(50%, 150px);
                             padding: 5px;
 
                             @include lg {
-                                @include wh(100%, 75px);
+                                width: 100%;
+
+                                &:not(:nth-child(1)):not(:nth-child(2)){
+                                    display: none;
+                                }
                             }
 
                             img {
