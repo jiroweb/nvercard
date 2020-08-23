@@ -505,16 +505,6 @@ body {
   font-family: "NotoSansArmenian-ExtraBold";
 }
 
-@media (min-width: 768px) {
-  app-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 99999999;
-  }
-}
-
 .header-nav {
   position: relative;
   padding: 8px 0;
