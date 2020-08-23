@@ -1,15 +1,15 @@
 @font-face {
-  src: url("/assets/fonts/NotoSansArmenian/NotoSansArmenian-Regular.ttf") format("truetype");
+  src: url("../../../assets/fonts/NotoSansArmenian/NotoSansArmenian-Regular.ttf") format("truetype");
   font-family: "NotoSansArmenian-Regular";
 }
 
 @font-face {
-  src: url("/assets/fonts/NotoSansArmenian/NotoSansArmenian-SemiBold.ttf") format("truetype");
+  src: url("../../../assets/fonts/NotoSansArmenian/NotoSansArmenian-SemiBold.ttf") format("truetype");
   font-family: "NotoSansArmenian-SemiBold";
 }
 
 @font-face {
-  src: url("/assets/fonts/NotoSansArmenian/NotoSansArmenian-ExtraBold.ttf") format("truetype");
+  src: url("../../../assets/fonts/NotoSansArmenian/NotoSansArmenian-ExtraBold.ttf") format("truetype");
   font-family: "NotoSansArmenian-ExtraBold";
 }
 
@@ -366,17 +366,17 @@ body {
 }
 
 @font-face {
-  src: url("/assets/fonts/NotoSansArmenian/NotoSansArmenian-Regular.ttf") format("truetype");
+  src: url("../../../assets/fonts/NotoSansArmenian/NotoSansArmenian-Regular.ttf") format("truetype");
   font-family: "NotoSansArmenian-Regular";
 }
 
 @font-face {
-  src: url("/assets/fonts/NotoSansArmenian/NotoSansArmenian-SemiBold.ttf") format("truetype");
+  src: url("../../../assets/fonts/NotoSansArmenian/NotoSansArmenian-SemiBold.ttf") format("truetype");
   font-family: "NotoSansArmenian-SemiBold";
 }
 
 @font-face {
-  src: url("/assets/fonts/NotoSansArmenian/NotoSansArmenian-ExtraBold.ttf") format("truetype");
+  src: url("../../../assets/fonts/NotoSansArmenian/NotoSansArmenian-ExtraBold.ttf") format("truetype");
   font-family: "NotoSansArmenian-ExtraBold";
 }
 
