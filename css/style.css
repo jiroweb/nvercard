@@ -289,12 +289,16 @@ body {
   display: block;
 }
 
-.icon-eye-hidden:before {
-  content: "\e907";
+.icon-home:before {
+  content: "\e900";
 }
 
-.icon-eye:before {
-  content: "\e912";
+.icon-health:before {
+  content: "\e901";
+}
+
+.icon-share:before {
+  content: "\e902";
 }
 
 .icon-heart:before {
@@ -321,12 +325,52 @@ body {
   content: "\e90b";
 }
 
+.icon-clock1:before {
+  content: "\e903";
+}
+
+.icon-t-shirt:before {
+  content: "\e904";
+}
+
 .icon-clip:before {
   content: "\e90c";
 }
 
-.icon-envelope:before {
+.icon-eye-hidden:before {
+  content: "\e905";
+}
+
+.icon-eye:before {
+  content: "\e906";
+}
+
+.icon-soccer-ball:before {
+  content: "\e907";
+}
+
+.icon-sports-shoe:before {
   content: "\e90d";
+}
+
+.icon-mail-envelope-open:before {
+  content: "\e90e";
+}
+
+.icon-mail-envelope-closed:before {
+  content: "\e90f";
+}
+
+.icon-printer:before {
+  content: "\e910";
+}
+
+.icon-envelope:before {
+  content: "\e911";
+}
+
+.icon-cart:before {
+  content: "\e912";
 }
 
 .icon-clock:before {
@@ -334,59 +378,95 @@ body {
 }
 
 .icon-play:before {
-  content: "\e90e";
-}
-
-.icon-pause:before {
-  content: "\e90f";
-}
-
-.icon-refresh:before {
   content: "\e916";
 }
 
-.icon-phone:before {
+.icon-pause:before {
   content: "\e917";
 }
 
-.icon-cancel:before {
-  content: "\e910";
-}
-
-.icon-azurepipelines:before {
+.icon-refresh:before {
   content: "\e918";
 }
 
+.icon-phone:before {
+  content: "\e919";
+}
+
+.icon-cancel:before {
+  content: "\e91a";
+}
+
+.icon-gift:before {
+  content: "\e91b";
+}
+
+.icon-earth:before {
+  content: "\e91c";
+}
+
+.icon-azurepipelines:before {
+  content: "\e91d";
+}
+
 .icon-facebook:before {
-  content: "\e900";
+  content: "\e91e";
 }
 
 .icon-instagram:before {
-  content: "\e901";
+  content: "\e91f";
 }
 
 .icon-messenger:before {
-  content: "\e902";
+  content: "\e920";
 }
 
 .icon-skype:before {
-  content: "\e903";
+  content: "\e921";
 }
 
 .icon-viber:before {
-  content: "\e904";
+  content: "\e922";
 }
 
 .icon-vk:before {
-  content: "\e905";
+  content: "\e923";
 }
 
 .icon-whatsapp:before {
-  content: "\e906";
+  content: "\e924";
 }
 
 .icon-youtube:before {
-  content: "\e911";
+  content: "\e925";
+}
+
+.icon-airplane:before {
+  content: "\e926";
+}
+
+.icon-computer-laptop:before {
+  content: "\e927";
+}
+
+.icon-travel-car:before {
+  content: "\e928";
+}
+
+.icon-arrow-thin-left:before {
+  content: "\e92b";
+}
+
+.icon-cheveron-left:before {
+  content: "\e929";
+}
+
+.icon-cheveron-right:before {
+  content: "\e92a";
+}
+
+.icon-catalog:before {
+  content: "\e92c";
 }
 
 .slick-carousel {
@@ -583,22 +663,13 @@ body {
 
 @media (max-width: 767.98px) {
   .header-nav__box--info-support a {
-    border: 1px solid var(--color_global);
-    background-color: var(--color_global);
-    padding: 12px;
-    border-radius: 50%;
+    display: none;
   }
 }
 
 .header-nav__box--info-support a .icon {
   font-size: 16px;
   color: var(--color_global);
-}
-
-@media (max-width: 767.98px) {
-  .header-nav__box--info-support a .icon {
-    color: white;
-  }
 }
 
 .header-nav__box--info-support a span {
@@ -609,12 +680,6 @@ body {
 
 .header-nav__box--info-support a span:hover {
   color: var(--color_global);
-}
-
-@media (max-width: 767.98px) {
-  .header-nav__box--info-support a span {
-    display: none;
-  }
 }
 
 .header-content {
@@ -644,7 +709,7 @@ body {
   }
 }
 
-.header-content__box--catalog .icon-arrow-left {
+.header-content__box--catalog .icon-arrow-thin-left {
   position: absolute;
   top: 0;
   left: 0;
@@ -661,6 +726,7 @@ body {
   padding: 0 20px;
   color: white;
   background-color: var(--color_red);
+  position: relative;
 }
 
 .header-content__box--catalog__btn:hover {
@@ -669,8 +735,124 @@ body {
 
 .header-content__box--catalog__btn span {
   font: 13px "NotoSansArmenian-ExtraBold", sans-serif;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  margin: auto;
+}
+
+.header-content__box--catalog__btn .icon {
+  font-size: 14px;
+  margin-left: auto;
+}
+
+@media (max-width: 767.98px) {
+  .header-content__box--catalog__btn .icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: 9;
+  }
+}
+
+.header-content__box--search {
+  max-width: 588px;
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  padding: 8px 5px 8px 14px;
+  position: relative;
+}
+
+.header-content__box--search-input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  font: 15px "NotoSansArmenian-Regular", sans-serif;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 27px;
+  padding-right: 37px;
+  color: var(--color_text);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 767.98px) {
+  .header-content__box--search-input {
+    padding-right: 17px;
+  }
+}
+
+.header-content__box--search-input:hover::-webkit-input-placeholder {
+  color: var(--color_red_hover);
+}
+
+.header-content__box--search-input:hover:-ms-input-placeholder {
+  color: var(--color_red_hover);
+}
+
+.header-content__box--search-input:hover::-ms-input-placeholder {
+  color: var(--color_red_hover);
+}
+
+.header-content__box--search-input:hover::placeholder {
+  color: var(--color_red_hover);
+}
+
+.header-content__box--search-input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.header-content__box--search-input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.header-content__box--search-input:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.header-content__box--search-input:focus::placeholder {
+  opacity: 0;
+}
+
+.header-content__box--search-input:focus + .icon-search {
+  color: #AFB6BD;
+}
+
+.header-content__box--search .icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 9;
+}
+
+.header-content__box--search .icon-search {
+  font-size: 16px;
+  color: var(--color_red);
+  left: 15px;
+}
+
+.header-content__box--search .icon-cancel {
+  font-size: 12px;
+  color: var(--color_red);
+  right: 13px;
+  cursor: pointer;
+}
+
+.header-content__box--icons {
+  margin-left: auto;
+}
+
+.header-content__box--icons a + a {
+  margin-left: 10px;
+}
+
+.header-content__box--icons-link {
+  font-size: 24px;
+  color: var(--color_red);
+  cursor: pointer;
 }
 
 .headerCatalog {

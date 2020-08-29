@@ -81,19 +81,12 @@
                     a {
 
                         @include xs {
-                            border: 1px solid var(--color_global);
-                            background-color: var(--color_global);
-                            padding: 12px;
-                            border-radius: 50%;
+                            display: none;
                         }
 
                         .icon {
                             font-size: 16px;
                             color: var(--color_global);
-
-                            @include xs {
-                                color: white;
-                            }
                         }
 
                         span {
@@ -103,10 +96,6 @@
 
                             &:hover {
                                 color: var(--color_global);
-                            }
-
-                            @include xs {
-                                display: none;
                             }
                         }
                     }
@@ -142,7 +131,7 @@
                     }
                 }
 
-                .icon-arrow-left {
+                .icon-arrow-thin-left {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -157,6 +146,7 @@
                     padding: 0 20px;
                     color: white;
                     background-color: var(--color_red);
+                    position: relative;
 
 
                     &:hover {
@@ -165,9 +155,100 @@
 
                     span {
                         font: 13px $Extrabold;
-                        letter-spacing: 0.05em;
+                        letter-spacing: 0.08em;
                         text-transform: uppercase;
+                        margin: auto;
                     }
+
+                    .icon{
+                        font-size: 14px;
+                        margin-left: auto;
+
+                        @include xs{
+                            position: absolute;
+                            right: 15px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            z-index: 9;
+                        }
+                    }
+                }
+            }
+
+            &--search {
+                max-width: 588px;
+                @include wh(100%, 40px);
+                background-color: white;
+                padding: 8px 5px 8px 14px;
+                position: relative;
+
+                &-input {
+                    @include wh(100%);
+                    border: 0;
+                    font: 15px $Regular;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    padding-left: 27px;
+                    padding-right: 37px;
+                    color: var(--color_text);
+                    letter-spacing: 0.04em;
+
+                    @include xs {
+                        padding-right: 17px;
+                    }
+
+                    &::placeholder,
+                    &::-moz-placeholder {
+                        font: 15px $Regular;
+                        color: var(--color_text);
+                    }
+
+                    &:hover {
+                        &::placeholder {
+                            color: var(--color_red_hover);
+                        }
+                    }
+
+                    &:focus {
+                        &::placeholder {
+                            opacity: 0;
+                        }
+                    }
+
+                    &:focus+.icon-search {
+                        color: #AFB6BD;
+                    }
+                }
+
+                .icon {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 9;
+                }
+
+                .icon-search {
+                    font-size: 16px;
+                    color: var(--color_red);
+                    left: 15px;
+                }
+
+                .icon-cancel {
+                    font-size: 12px;
+                    color: var(--color_red);
+                    right: 13px;
+                    cursor: pointer;
+                }
+            }
+            &--icons{
+                margin-left: auto;
+                a+a{
+                    margin-left: 10px;
+                }
+                &-link{
+                    font-size: 24px;
+                    color: var(--color_red);
+                    cursor: pointer;
                 }
             }
         }
@@ -384,7 +465,7 @@
                                         display: block;
                                     }
 
-                                    @include xs{
+                                    @include xs {
                                         padding: 15px;
                                     }
                                 }
@@ -406,7 +487,7 @@
                             @include lg {
                                 width: 100%;
 
-                                &:not(:nth-child(1)):not(:nth-child(2)){
+                                &:not(:nth-child(1)):not(:nth-child(2)) {
                                     display: none;
                                 }
                             }
