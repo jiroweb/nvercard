@@ -1,11 +1,46 @@
 $(document).ready(function () {
+    $(document).ready(function () {
+        // expand function
+        $('body').on('click', '.click-expand', function (e) {
+            let this_data = $(this).attr('data-expand');
+            let this_child = $(this).parent().find('.expand-block:first');
+
+            let arrow = $(this).find('.icon-arrow');
+
+            if (arrow.hasClass('icon-arrow__top')) {
+                $(arrow).removeClass('icon-arrow__top');
+            } else {
+                $(arrow).addClass('icon-arrow__top');
+            }
+            $(arrow).toggleClass('icon-arrow__bottom');
+
+            if (this_data === 'true') {
+                this_child.hide();
+                $(this).attr('data-expand', 'false');
+            } else if (this_data === 'false') {
+                this_child.show();
+                $(this).attr('data-expand', 'true');
+            } else {
+                this_child.hide();
+            }
+        });
+    });
+
+    // change_active function
+    $('body').on('click', '.change_active', function () {
+        let thic_parent = $(this).parent();
+        let this_active = $(thic_parent).find('.change_active');
+        $(this_active).removeClass('active');
+        $(this).addClass('active');
+    });
+
     // catalog function
 
-    function clickCatalogBtnIcon(){
+    function clickCatalogBtnIcon() {
         if ($('.clickCatalogBtnIcon').hasClass('icon-catalog')) {
             $('.icon-catalog').removeClass('icon-catalog');
             $('.clickCatalogBtnIcon').addClass('icon-cancel');
-        }else if($('.clickCatalogBtnIcon').hasClass('icon-cancel')){
+        } else if ($('.clickCatalogBtnIcon').hasClass('icon-cancel')) {
             $('.icon-cancel').removeClass('icon-cancel');
             $('.clickCatalogBtnIcon').addClass('icon-catalog');
         }

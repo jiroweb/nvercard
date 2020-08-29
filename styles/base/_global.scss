@@ -5,9 +5,16 @@
 './icons',
 
 // modules
-'../modules/slick-slider';
+'../modules/slick-slider',
+'../modules/bread-crumb',
+'../modules/cards',
+'../modules/increment',
+'../modules/buttons',
 
+// componetns
 
+'../components/header',
+'../components/catalog';
 
 // container  -- START
 .container {
@@ -24,6 +31,21 @@
 
 
 
+// title  -- START
+.global-title {
+    h1 {
+        font: 24px/36px $Extrabold;
+        color: var(--black_color);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+        @include sm {
+            font: 24px/24px $Extrabold;
+        }
+    }
+}
+
+// title  -- END
 
 
 

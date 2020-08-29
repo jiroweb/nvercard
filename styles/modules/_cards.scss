@@ -1,0 +1,79 @@
+.cards {
+    margin: 0 -1.5px;
+
+    @include lg {
+        margin: 0;
+    }
+
+    &-product {
+        width: 25%;
+        padding: 1.5px;
+        position: relative;
+        transition: all .3s ease;
+
+        &:hover{
+            box-shadow: 5px 5px 20px #cbcbcb;
+            z-index: 999;
+        }
+
+        @include sm {
+            padding: 1.5px 0;
+        }
+
+        &__item {
+            height: 100%;
+            background-color: white;
+            padding: 40px 25px 40px;
+
+            @include sm {
+                padding: 26px 15px 15px;
+            }
+
+            &--img {
+                height: 153px;
+                margin: 0 auto 30px;
+            }
+
+            &--name {
+                margin-bottom: 25px;
+
+                @include sm {
+                    min-height: auto;
+                }
+
+                a {
+                    font: 16px/1.25 $Semibold;
+                    color: #3b474e;
+
+                    &:hover {
+                        color: var(--color_global);
+                    }
+                }
+            }
+
+            &--price {
+                margin-bottom: 25px;
+
+                p {
+                    font: 21px $Regular;
+                    color: var(--color_text);
+                    letter-spacing: -0.36px;
+                }
+            }
+        }
+
+        &__icon{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 999;
+            font-size: 20px;
+            color: var(--color_text);
+
+            &:hover{
+                color: var(--color_global);
+            }
+            
+        }
+    }
+}
