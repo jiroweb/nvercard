@@ -1,806 +1,669 @@
 <!DOCTYPE html>
 <html lang="am">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="og:image"
-      content="./assets/img/tag-meta/transparent-card.png"
-    />
-    <title>nvercard</title>
-    <link
-      rel="icon"
-      href="./assets/img/favicon/icon-x32.png"
-      type="image/png"
-      sizes="32x32"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
 
-  <body>
-    <!-- ====================== -HTML5-HEADER-START- ====================== -->
-    <header class="header">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta name="og:image" content="./assets/img/tag-meta/transparent-card.png" />
+   <title>nvercard</title>
+   <link rel="icon" href="./assets/img/favicon/icon-x32.png" type="image/png" sizes="32x32" />
+   <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+   <!-- ====================== -HTML5-HEADER-START- ====================== -->
+   <header class="header">
       <nav class="header-nav d_f a_i_c" id="nav">
-        <div class="container">
-          <div class="header-nav__box d_f">
-            <a
-              href="#"
-              [routerLink]="['/home']"
-              class="header-nav__box--logo d_f j_c_c a_i_c"
-            >
-              <img src="./assets/img/logo/logo-text.png" alt="logo" />
-            </a>
-            <div class="header-nav__box--menu d_f a_i_c">
-              <ul class="header-nav__box--menu-list d_f a_i_c">
-                <li class="header-nav__box--menu-list__item">
-                  <a
-                    href="#"
-                    class="header-nav__box--menu-list__item--link header-nav__box--menu-link"
-                    >Գլխավոր
-                  </a>
-                </li>
-                <li class="header-nav__box--menu-list__item">
-                  <a
-                    href="#"
-                    class="header-nav__box--menu-list__item--link header-nav__box--menu-link"
-                    >Մեր մասին
-                  </a>
-                </li>
-                <li class="header-nav__box--menu-list__item">
-                  <a
-                    href="#"
-                    class="header-nav__box--menu-list__item--link header-nav__box--menu-link"
-                    >Գործընկերներ
-                  </a>
-                </li>
-                <li class="header-nav__box--menu-list__item">
-                  <a
-                    href="#"
-                    class="header-nav__box--menu-list__item--link header-nav__box--menu-link"
-                    >Կոնտակտներ
-                  </a>
-                </li>
-              </ul>
-            </div>
+         <div class="container">
+            <div class="header-nav__box d_f">
+               <a href="#" [routerLink]="['/home']" class="header-nav__box--logo d_f j_c_c a_i_c">
+                  <img src="./assets/img/logo/logo-text.png" alt="logo" />
+               </a>
+               <div class="header-nav__box--menu d_f a_i_c">
+                  <ul class="header-nav__box--menu-list d_f a_i_c">
+                     <li class="header-nav__box--menu-list__item">
+                        <a href="#" class="header-nav__box--menu-list__item--link header-nav__box--menu-link">Գլխավոր
+                        </a>
+                     </li>
+                     <li class="header-nav__box--menu-list__item">
+                        <a href="#" class="header-nav__box--menu-list__item--link header-nav__box--menu-link">Մեր մասին
+                        </a>
+                     </li>
+                     <li class="header-nav__box--menu-list__item">
+                        <a href="#"
+                           class="header-nav__box--menu-list__item--link header-nav__box--menu-link">Գործընկերներ
+                        </a>
+                     </li>
+                     <li class="header-nav__box--menu-list__item">
+                        <a href="#" class="header-nav__box--menu-list__item--link header-nav__box--menu-link">Կոնտակտներ
+                        </a>
+                     </li>
+                  </ul>
+               </div>
 
-            <div class="header-nav__box--info d_f a_i_c">
-              <div class="header-nav__box--info-support d_f a_i_c">
-                <p>Գործում է 24/7 սկզբունքով</p>
-                <a href="tel:37496060424" class="d_f a_i_c">
-                  <i class="icon icon-phone"></i>
-                  <span>+374 (96) 06 04 24</span>
-                </a>
-              </div>
+               <div class="header-nav__box--info d_f a_i_c">
+                  <div class="header-nav__box--info-support d_f a_i_c">
+                     <p>Գործում է 24/7 սկզբունքով</p>
+                     <a href="tel:37496060424" class="d_f a_i_c">
+                        <i class="icon icon-phone"></i>
+                        <span>+374 (96) 06 04 24</span>
+                     </a>
+                  </div>
 
-              <button class="header-nav__box--info-btn d_none">
-                <i class="icon icon-search"></i>
-              </button>
-              <div class="header-nav__box--info-search d_none">
-                <form class="header-nav__box--info-search__form d_f">
-                  <input
-                    class="header-nav__box--info-search__form--input"
-                    type="text"
-                    placeholder="Որոնել..."
-                  />
-                  <button class="header-nav__box--info-search__form--btn">
-                    <i class="icon icon-search"></i>
+                  <button class="header-nav__box--info-btn d_none">
+                     <i class="icon icon-search"></i>
                   </button>
-                </form>
-                <button class="header-nav__box--info-search__btn">
-                  <i class="icon icon-cancel"></i>
-                </button>
-              </div>
+                  <div class="header-nav__box--info-search d_none">
+                     <form class="header-nav__box--info-search__form d_f">
+                        <input class="header-nav__box--info-search__form--input" type="text" placeholder="Որոնել..." />
+                        <button class="header-nav__box--info-search__form--btn">
+                           <i class="icon icon-search"></i>
+                        </button>
+                     </form>
+                     <button class="header-nav__box--info-search__btn">
+                        <i class="icon icon-cancel"></i>
+                     </button>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
+         </div>
       </nav>
 
       <div class="header-content">
-        <div class="container">
-          <div class="header-content__box d_f">
-            <div class="header-content__box--catalog boxCatalogBtn d_f a_i_c">
-              <i
-                class="icon icon-arrow-thin-left arrowBackToCategories d_none"
-              ></i>
-              <button
-                class="header-content__box--catalog__btn clickCatalogOpenClose d_f a_i_c j_c_c window-click"
-              >
-                <span class="select-zone__nameCatalog">Բաժիններ</span>
-                <i class="icon icon-catalog clickCatalogBtnIcon"></i>
-              </button>
+         <div class="container">
+            <div class="header-content__box d_f">
+               <div class="header-content__box--catalog boxCatalogBtn d_f a_i_c">
+                  <i class="icon icon-arrow-thin-left arrowBackToCategories d_none"></i>
+                  <button class="header-content__box--catalog__btn clickCatalogOpenClose d_f a_i_c j_c_c window-click">
+                     <span class="select-zone__nameCatalog">Բաժիններ</span>
+                     <i class="icon icon-catalog clickCatalogBtnIcon"></i>
+                  </button>
+               </div>
+               <form class="header-content__box--search">
+                  <input class="header-content__box--search-input" type="text" placeholder="Որոնել..." />
+                  <i class="icon icon-search"></i>
+                  <i class="icon icon-cancel d_none"></i>
+               </form>
+               <div class="header-content__box--icons d_f a_i_c">
+                  <a href="#" class="header-content__box--icons-link d_f a_i_c j_c_c">
+                     <i class="icon icon-login"></i>
+                  </a>
+                  <a href="#" class="header-content__box--icons-link d_f a_i_c j_c_c">
+                     <i class="icon icon-heart"></i>
+                  </a>
+                  <a href="#" class="header-content__box--icons-link d_f a_i_c j_c_c">
+                     <i class="icon icon-cart"></i>
+                  </a>
+               </div>
             </div>
-            <form class="header-content__box--search">
-              <input
-                class="header-content__box--search-input"
-                type="text"
-                placeholder="Որոնել..."
-              />
-              <i class="icon icon-search"></i>
-              <i class="icon icon-cancel d_none"></i>
-            </form>
-            <div class="header-content__box--icons d_f a_i_c">
-              <a
-                href="#"
-                class="header-content__box--icons-link d_f a_i_c j_c_c"
-              >
-                <i class="icon icon-login"></i>
-              </a>
-              <a
-                href="#"
-                class="header-content__box--icons-link d_f a_i_c j_c_c"
-              >
-                <i class="icon icon-heart"></i>
-              </a>
-              <a
-                href="#"
-                class="header-content__box--icons-link d_f a_i_c j_c_c"
-              >
-                <i class="icon icon-cart"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+         </div>
 
-        <div class="headerCatalog d_none">
-          <div class="header-catalog">
-            <div class="container header-catalog__container">
-              <ul class="header-catalog__list">
-                <li class="header-catalog__list--item catalogItem">
-                  <a
-                    href="#"
-                    class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click"
-                  >
-                    <p class="d_f a_i_c">
-                      <i
-                        class="icon icon-health d_f a_i_c j_content_center"
-                      ></i>
-                      <span>Խնամք</span>
-                    </p>
-                    <i class="icon icon-cheveron-right"></i>
-                  </a>
-                  <ul class="header-catalog__list--item-sub catalogSubMenu">
-                    <li
-                      class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start"
-                    >
-                      <div
-                        class="header-catalog__list--item-sub__categories--box"
-                      >
-                        <p
-                          class="header-catalog__list--item-sub__categories--box-title"
-                        >
-                          Խնամք
-                        </p>
-                        <ul
-                          class="header-catalog__list--item-sub__categories--box-links d_f f_w"
-                        >
-                          <li><a href="#">Վարսահարդարում</a></li>
-                          <li><a href="#">Մատնահարդարում</a></li>
-                          <li><a href="#">Դիմահարդարում</a></li>
-                          <li><a href="#">Մերսում</a></li>
-                          <li><a href="#">SPA</a></li>
-                          <li><a href="#">Դաջվածք</a></li>
-                          <li><a href="#">Ֆիթնես</a></li>
-                          <li><a href="#">Սպորտ</a></li>
+         <div class="headerCatalog d_none">
+            <div class="header-catalog">
+               <div class="container header-catalog__container">
+                  <ul class="header-catalog__list">
+                     <li class="header-catalog__list--item catalogItem">
+                        <a href="#"
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
+                           <p class="d_f a_i_c">
+                              <i class="icon icon-health d_f a_i_c j_content_center"></i>
+                              <span>Խնամք</span>
+                           </p>
+                           <i class="icon icon-cheveron-right"></i>
+                        </a>
+                        <ul class="header-catalog__list--item-sub catalogSubMenu">
+                           <li
+                              class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
+                              <div class="header-catalog__list--item-sub__categories--box">
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    Խնամք
+                                 </p>
+                                 <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
+                                    <li><a href="#">Վարսահարդարում</a></li>
+                                    <li><a href="#">Մատնահարդարում</a></li>
+                                    <li><a href="#">Դիմահարդարում</a></li>
+                                    <li><a href="#">Մերսում</a></li>
+                                    <li><a href="#">SPA</a></li>
+                                    <li><a href="#">Դաջվածք</a></li>
+                                    <li><a href="#">Ֆիթնես</a></li>
+                                    <li><a href="#">Սպորտ</a></li>
+                                 </ul>
+                              </div>
+                              <div class="header-catalog__list--item-sub__categories--img d_f f_w">
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                              </div>
+                           </li>
                         </ul>
-                      </div>
-                      <div
-                        class="header-catalog__list--item-sub__categories--img d_f f_w"
-                      >
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
+                     </li>
+                     <li class="header-catalog__list--item catalogItem">
+                        <a href="#"
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
+                           <p class="d_f a_i_c">
+                              <i class="icon icon-t-shirt d_f a_i_c j_content_center"></i>
+                              <span>Հագուստ</span>
+                           </p>
+                           <i class="icon icon-cheveron-right"></i>
                         </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li class="header-catalog__list--item catalogItem">
-                  <a
-                    href="#"
-                    class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click"
-                  >
-                    <p class="d_f a_i_c">
-                      <i
-                        class="icon icon-t-shirt d_f a_i_c j_content_center"
-                      ></i>
-                      <span>Հագուստ</span>
-                    </p>
-                    <i class="icon icon-cheveron-right"></i>
-                  </a>
-                  <ul class="header-catalog__list--item-sub catalogSubMenu">
-                    <li
-                      class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start"
-                    >
-                      <div
-                        class="header-catalog__list--item-sub__categories--box"
-                      >
-                        <p
-                          class="header-catalog__list--item-sub__categories--box-title"
-                        >
-                          Հագուստ
-                        </p>
-                        <ul
-                          class="header-catalog__list--item-sub__categories--box-links d_f f_w"
-                        >
-                          <li><a href="#">Կանացի</a></li>
-                          <li><a href="#">Տղամարդու</a></li>
-                          <li><a href="#">Մանկական</a></li>
-                          <li><a href="#">Կենդանիների</a></li>
-                          <li><a href="#">Հագուստի աքսեսուարներ</a></li>
+                        <ul class="header-catalog__list--item-sub catalogSubMenu">
+                           <li
+                              class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
+                              <div class="header-catalog__list--item-sub__categories--box">
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    Հագուստ
+                                 </p>
+                                 <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
+                                    <li><a href="#">Կանացի</a></li>
+                                    <li><a href="#">Տղամարդու</a></li>
+                                    <li><a href="#">Մանկական</a></li>
+                                    <li><a href="#">Կենդանիների</a></li>
+                                    <li><a href="#">Հագուստի աքսեսուարներ</a></li>
+                                 </ul>
+                              </div>
+                              <div class="header-catalog__list--item-sub__categories--img d_f f_w">
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                              </div>
+                           </li>
                         </ul>
-                      </div>
-                      <div
-                        class="header-catalog__list--item-sub__categories--img d_f f_w"
-                      >
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
+                     </li>
+                     <li class="header-catalog__list--item catalogItem">
+                        <a href="#"
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
+                           <p class="d_f a_i_c">
+                              <i class="icon icon-clock1 d_f a_i_c j_content_center"></i>
+                              <span>Աքսեսուարներ</span>
+                           </p>
+                           <i class="icon icon-cheveron-right"></i>
                         </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li class="header-catalog__list--item catalogItem">
-                  <a
-                    href="#"
-                    class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click"
-                  >
-                    <p class="d_f a_i_c">
-                      <i
-                        class="icon icon-clock1 d_f a_i_c j_content_center"
-                      ></i>
-                      <span>Աքսեսուարներ</span>
-                    </p>
-                    <i class="icon icon-cheveron-right"></i>
-                  </a>
-                  <ul class="header-catalog__list--item-sub catalogSubMenu">
-                    <li
-                      class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start"
-                    >
-                      <div
-                        class="header-catalog__list--item-sub__categories--box"
-                      >
-                        <p
-                          class="header-catalog__list--item-sub__categories--box-title"
-                        >
-                          Աքսեսուարներ
-                        </p>
-                        <ul
-                          class="header-catalog__list--item-sub__categories--box-links d_f f_w"
-                        >
-                          <li><a href="#">Հեռախոսի</a></li>
-                          <li><a href="#">Համակարգչի</a></li>
-                          <li><a href="#">Հագուստի</a></li>
-                          <li><a href="#">Ավտոմեքենայի</a></li>
-                          <li><a href="#">Գրասենյակի</a></li>
-                          <li><a href="#">Տան</a></li>
-                          <li><a href="#">Այլ էլեկտրոտեխնիկայի</a></li>
+                        <ul class="header-catalog__list--item-sub catalogSubMenu">
+                           <li
+                              class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
+                              <div class="header-catalog__list--item-sub__categories--box">
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    Աքսեսուարներ
+                                 </p>
+                                 <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
+                                    <li><a href="#">Հեռախոսի</a></li>
+                                    <li><a href="#">Համակարգչի</a></li>
+                                    <li><a href="#">Հագուստի</a></li>
+                                    <li><a href="#">Ավտոմեքենայի</a></li>
+                                    <li><a href="#">Գրասենյակի</a></li>
+                                    <li><a href="#">Տան</a></li>
+                                    <li><a href="#">Այլ էլեկտրոտեխնիկայի</a></li>
+                                 </ul>
+                              </div>
+                              <div class="header-catalog__list--item-sub__categories--img d_f f_w">
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                              </div>
+                           </li>
                         </ul>
-                      </div>
-                      <div
-                        class="header-catalog__list--item-sub__categories--img d_f f_w"
-                      >
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
+                     </li>
+                     <li class="header-catalog__list--item catalogItem">
+                        <a href="#"
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
+                           <p class="d_f a_i_c">
+                              <i class="icon icon-computer-laptop d_f a_i_c j_content_center"></i>
+                              <span>էլեկտրոտեխնիկա</span>
+                           </p>
+                           <i class="icon icon-cheveron-right"></i>
                         </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li class="header-catalog__list--item catalogItem">
-                  <a
-                    href="#"
-                    class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click"
-                  >
-                    <p class="d_f a_i_c">
-                      <i
-                        class="icon icon-computer-laptop d_f a_i_c j_content_center"
-                      ></i>
-                      <span>էլեկտրոտեխնիկա</span>
-                    </p>
-                    <i class="icon icon-cheveron-right"></i>
-                  </a>
-                  <ul class="header-catalog__list--item-sub catalogSubMenu">
-                    <li
-                      class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start"
-                    >
-                      <div
-                        class="header-catalog__list--item-sub__categories--box"
-                      >
-                        <p
-                          class="header-catalog__list--item-sub__categories--box-title"
-                        >
-                          էլեկտրոտեխնիկա
-                        </p>
-                        <ul
-                          class="header-catalog__list--item-sub__categories--box-links d_f f_w"
-                        >
-                          <li><a href="#">Աուդիո-Վիդեո/Համակարգիչներ</a></li>
-                          <li><a href="#">Խոշոր կենցաղային</a></li>
-                          <li><a href="#">Խոհանոց և տուն</a></li>
-                          <li><a href="#">Գեղեցկության/առողջության</a></li>
-                          <li><a href="#">Հեռախոսներ և աքսեսուարներ</a></li>
-                          <li><a href="#">Խաղալիքներ</a></li>
-                          <li><a href="#">Գործիքներ</a></li>
-                          <li><a href="#">Այլ</a></li>
+                        <ul class="header-catalog__list--item-sub catalogSubMenu">
+                           <li
+                              class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
+                              <div class="header-catalog__list--item-sub__categories--box">
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    էլեկտրոտեխնիկա
+                                 </p>
+                                 <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
+                                    <li><a href="#">Աուդիո-Վիդեո/Համակարգիչներ</a></li>
+                                    <li><a href="#">Խոշոր կենցաղային</a></li>
+                                    <li><a href="#">Խոհանոց և տուն</a></li>
+                                    <li><a href="#">Գեղեցկության/առողջության</a></li>
+                                    <li><a href="#">Հեռախոսներ և աքսեսուարներ</a></li>
+                                    <li><a href="#">Խաղալիքներ</a></li>
+                                    <li><a href="#">Գործիքներ</a></li>
+                                    <li><a href="#">Այլ</a></li>
+                                 </ul>
+                              </div>
+                              <div class="header-catalog__list--item-sub__categories--img d_f f_w">
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                              </div>
+                           </li>
                         </ul>
-                      </div>
-                      <div
-                        class="header-catalog__list--item-sub__categories--img d_f f_w"
-                      >
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
+                     </li>
+                     <li class="header-catalog__list--item catalogItem">
+                        <a href="#"
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
+                           <p class="d_f a_i_c">
+                              <i class="icon icon-travel-car d_f a_i_c j_content_center"></i>
+                              <span>Ծառայություններ</span>
+                           </p>
+                           <i class="icon icon-cheveron-right"></i>
                         </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li class="header-catalog__list--item catalogItem">
-                  <a
-                    href="#"
-                    class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click"
-                  >
-                    <p class="d_f a_i_c">
-                      <i
-                        class="icon icon-travel-car d_f a_i_c j_content_center"
-                      ></i>
-                      <span>Ծառայություններ</span>
-                    </p>
-                    <i class="icon icon-cheveron-right"></i>
-                  </a>
-                  <ul class="header-catalog__list--item-sub catalogSubMenu">
-                    <li
-                      class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start"
-                    >
-                      <div
-                        class="header-catalog__list--item-sub__categories--box"
-                      >
-                        <p
-                          class="header-catalog__list--item-sub__categories--box-title"
-                        >
-                          Ավտոմասեր և սպասարկում
-                        </p>
-                        <ul
-                          class="header-catalog__list--item-sub__categories--box-links d_f f_w"
-                        >
-                          <li>
-                            <a href="#">Ավտոպահեստամասեր և աքսեսուարներ</a>
-                          </li>
-                          <li><a href="#">Մեքենայի վերանորոգում</a></li>
-                          <li>
-                            <a href="#">Ավտոլվացում/ավտոլվացման պարագաներ</a>
-                          </li>
-                          <li>
-                            <a href="#">Վերանորոգման այլ ծառայություններ</a>
-                          </li>
-                          <li><a href="#">Մաքրման ծառայություններ</a></li>
-                          <li><a href="#">Այլ</a></li>
+                        <ul class="header-catalog__list--item-sub catalogSubMenu">
+                           <li
+                              class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
+                              <div class="header-catalog__list--item-sub__categories--box">
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    Ավտոմասեր և սպասարկում
+                                 </p>
+                                 <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
+                                    <li>
+                                       <a href="#">Ավտոպահեստամասեր և աքսեսուարներ</a>
+                                    </li>
+                                    <li><a href="#">Մեքենայի վերանորոգում</a></li>
+                                    <li>
+                                       <a href="#">Ավտոլվացում/ավտոլվացման պարագաներ</a>
+                                    </li>
+                                    <li>
+                                       <a href="#">Վերանորոգման այլ ծառայություններ</a>
+                                    </li>
+                                    <li><a href="#">Մաքրման ծառայություններ</a></li>
+                                    <li><a href="#">Այլ</a></li>
+                                 </ul>
+                              </div>
+                              <div class="header-catalog__list--item-sub__categories--img d_f f_w">
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                              </div>
+                           </li>
                         </ul>
-                      </div>
-                      <div
-                        class="header-catalog__list--item-sub__categories--img d_f f_w"
-                      >
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
+                     </li>
+                     <li class="header-catalog__list--item catalogItem">
+                        <a href="#"
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
+                           <p class="d_f a_i_c">
+                              <i class="icon icon-home d_f a_i_c j_content_center"></i>
+                              <span>Տան պարագաներ</span>
+                           </p>
+                           <i class="icon icon-cheveron-right"></i>
                         </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li class="header-catalog__list--item catalogItem">
-                  <a
-                    href="#"
-                    class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click"
-                  >
-                    <p class="d_f a_i_c">
-                      <i class="icon icon-home d_f a_i_c j_content_center"></i>
-                      <span>Տան պարագաներ</span>
-                    </p>
-                    <i class="icon icon-cheveron-right"></i>
-                  </a>
-                  <ul class="header-catalog__list--item-sub catalogSubMenu">
-                    <li
-                      class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start"
-                    >
-                      <div
-                        class="header-catalog__list--item-sub__categories--box"
-                      >
-                        <p
-                          class="header-catalog__list--item-sub__categories--box-title"
-                        >
-                          Տան պարագաներ
-                        </p>
-                        <ul
-                          class="header-catalog__list--item-sub__categories--box-links d_f f_w"
-                        >
-                          <li><a href="#">Կահույք</a></li>
-                          <li><a href="#">Անկողնային պարագաներ</a></li>
-                          <li><a href="#">Ննջասենյակի աքսեսուարներ</a></li>
-                          <li><a href="#">Հյուրասենյակի աքսեսուարներ</a></li>
-                          <li><a href="#">Խոհանոցային պարագաներ</a></li>
-                          <li><a href="#">Տան խնամք/Ծառայություններ</a></li>
-                          <li><a href="#">Այլ</a></li>
+                        <ul class="header-catalog__list--item-sub catalogSubMenu">
+                           <li
+                              class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
+                              <div class="header-catalog__list--item-sub__categories--box">
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    Տան պարագաներ
+                                 </p>
+                                 <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
+                                    <li><a href="#">Կահույք</a></li>
+                                    <li><a href="#">Անկողնային պարագաներ</a></li>
+                                    <li><a href="#">Ննջասենյակի աքսեսուարներ</a></li>
+                                    <li><a href="#">Հյուրասենյակի աքսեսուարներ</a></li>
+                                    <li><a href="#">Խոհանոցային պարագաներ</a></li>
+                                    <li><a href="#">Տան խնամք/Ծառայություններ</a></li>
+                                    <li><a href="#">Այլ</a></li>
+                                 </ul>
+                              </div>
+                              <div class="header-catalog__list--item-sub__categories--img d_f f_w">
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                              </div>
+                           </li>
                         </ul>
-                      </div>
-                      <div
-                        class="header-catalog__list--item-sub__categories--img d_f f_w"
-                      >
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
+                     </li>
+                     <li class="header-catalog__list--item catalogItem">
+                        <a href="#"
+                           class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click">
+                           <p class="d_f a_i_c">
+                              <i class="icon icon-earth d_f a_i_c j_content_center"></i>
+                              <span>Տուրիզմ</span>
+                           </p>
+                           <i class="icon icon-cheveron-right"></i>
                         </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li class="header-catalog__list--item catalogItem">
-                  <a
-                    href="#"
-                    class="header-catalog__list--item-name clickCatalogName change_activeCatalog d_f a_i_c j_c_b window-click"
-                  >
-                    <p class="d_f a_i_c">
-                      <i class="icon icon-earth d_f a_i_c j_content_center"></i>
-                      <span>Տուրիզմ</span>
-                    </p>
-                    <i class="icon icon-cheveron-right"></i>
-                  </a>
-                  <ul class="header-catalog__list--item-sub catalogSubMenu">
-                    <li
-                      class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start"
-                    >
-                      <div
-                        class="header-catalog__list--item-sub__categories--box"
-                      >
-                        <p
-                          class="header-catalog__list--item-sub__categories--box-title"
-                        >
-                          Տան պարագաներ
-                        </p>
-                        <ul
-                          class="header-catalog__list--item-sub__categories--box-links d_f f_w"
-                        >
-                          <li><a href="#">Ներքին</a></li>
-                          <li><a href="#">Արտագնա</a></li>
-                          <li><a href="#">Ավիատոմսեր</a></li>
-                          <li><a href="#">Հյուրանոցեր և հանգստյան տներ</a></li>
-                          <li><a href="#">Ռեստորան</a></li>
-                          <li><a href="#">Զվարճանք</a></li>
-                          <li><a href="#">Այլ</a></li>
+                        <ul class="header-catalog__list--item-sub catalogSubMenu">
+                           <li
+                              class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
+                              <div class="header-catalog__list--item-sub__categories--box">
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    Տան պարագաներ
+                                 </p>
+                                 <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
+                                    <li><a href="#">Ներքին</a></li>
+                                    <li><a href="#">Արտագնա</a></li>
+                                    <li><a href="#">Ավիատոմսեր</a></li>
+                                    <li><a href="#">Հյուրանոցեր և հանգստյան տներ</a></li>
+                                    <li><a href="#">Ռեստորան</a></li>
+                                    <li><a href="#">Զվարճանք</a></li>
+                                    <li><a href="#">Այլ</a></li>
+                                 </ul>
+                              </div>
+                              <div class="header-catalog__list--item-sub__categories--img d_f f_w">
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                                 <a href="#">
+                                    <img src="./assets/img/cards/transparent-card.png" />
+                                 </a>
+                              </div>
+                           </li>
                         </ul>
-                      </div>
-                      <div
-                        class="header-catalog__list--item-sub__categories--img d_f f_w"
-                      >
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                        <a href="#">
-                          <img src="./assets/img/cards/transparent-card.png" />
-                        </a>
-                      </div>
-                    </li>
+                     </li>
                   </ul>
-                </li>
-              </ul>
+               </div>
             </div>
-          </div>
-        </div>
+         </div>
       </div>
-    </header>
-    <!-- ======================= -HTML5-HEADER-END- ======================= -->
-    <!-- ===================== -HTML5-SLIDER-START- ======================= -->
-    <!-- ====================== -HTML5-SLIDER-END- ======================== -->
-    <!-- ===================== -HTML5-ACTUAL-START- ======================= -->
-    <section class="actual">
+   </header>
+   <!-- ======================= -HTML5-HEADER-END- ======================= -->
+   <!-- ===================== -HTML5-SLIDER-START- ======================= -->
+   <!-- ====================== -HTML5-SLIDER-END- ======================== -->
+   <!-- ===================== -HTML5-ACTUAL-START- ======================= -->
+   <section class="actual">
       <div class="container">
-        <div class="actual-block">
-          <div class="section-title">
-            <h2>լավագույն վաճառք</h2>
-          </div>
-          <div class="cards d_f f_w">
-            <div class="cards-product">
-              <div class="cards-product__item">
-                <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
-                  <img src="./assets/img/cards/transparent-card.png" />
-                </a>
-                <div class="cards-product__item--name">
-                  <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
-                </div>
-                <div class="cards-product__item--price">
-                  <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
-                </div>
-                <div class="cards-product__item--btn d_f f_n_w">
-                  <a href="#" class="btn-global__red btn-global">Գնել</a>
-                </div>
-              </div>
-              <button class="cards-product__icon">
-                <i class="icon icon-heart d_f a_i_c j_c_c"></i>
-              </button>
+         <div class="actual-block">
+            <div class="section-title">
+               <h2>լավագույն վաճառք</h2>
             </div>
-            <div class="cards-product">
-              <div class="cards-product__item">
-                <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
-                  <img src="./assets/img/cards/transparent-card.png" />
-                </a>
-                <div class="cards-product__item--name">
-                  <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
-                </div>
-                <div class="cards-product__item--price">
-                  <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
-                </div>
-                <div class="cards-product__item--btn d_f f_n_w">
-                  <a href="#" class="btn-global__red btn-global">Գնել</a>
-                </div>
-              </div>
-              <button class="cards-product__icon">
-                <i class="icon icon-heart d_f a_i_c j_c_c"></i>
-              </button>
+            <div class="cards d_f f_w">
+               <div class="cards-product">
+                  <div class="cards-product__item">
+                     <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
+                        <img src="./assets/img/cards/transparent-card.png" />
+                     </a>
+                     <div class="cards-product__item--name">
+                        <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
+                     </div>
+                     <div class="cards-product__item--price">
+                        <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
+                     </div>
+                     <div class="cards-product__item--btn d_f f_n_w">
+                        <a href="#" class="btn-global__red btn-global">Գնել</a>
+                     </div>
+                  </div>
+                  <button class="cards-product__icon">
+                     <i class="icon icon-heart d_f a_i_c j_c_c"></i>
+                  </button>
+               </div>
+               <div class="cards-product">
+                  <div class="cards-product__item">
+                     <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
+                        <img src="./assets/img/cards/transparent-card.png" />
+                     </a>
+                     <div class="cards-product__item--name">
+                        <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
+                     </div>
+                     <div class="cards-product__item--price">
+                        <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
+                     </div>
+                     <div class="cards-product__item--btn d_f f_n_w">
+                        <a href="#" class="btn-global__red btn-global">Գնել</a>
+                     </div>
+                  </div>
+                  <button class="cards-product__icon">
+                     <i class="icon icon-heart d_f a_i_c j_c_c"></i>
+                  </button>
+               </div>
+               <div class="cards-product">
+                  <div class="cards-product__item">
+                     <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
+                        <img src="./assets/img/cards/transparent-card.png" />
+                     </a>
+                     <div class="cards-product__item--name">
+                        <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
+                     </div>
+                     <div class="cards-product__item--price">
+                        <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
+                     </div>
+                     <div class="cards-product__item--btn d_f f_n_w">
+                        <a href="#" class="btn-global__red btn-global">Գնել</a>
+                     </div>
+                  </div>
+                  <button class="cards-product__icon">
+                     <i class="icon icon-heart d_f a_i_c j_c_c"></i>
+                  </button>
+               </div>
+               <div class="cards-product">
+                  <div class="cards-product__item">
+                     <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
+                        <img src="./assets/img/cards/transparent-card.png" />
+                     </a>
+                     <div class="cards-product__item--name">
+                        <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
+                     </div>
+                     <div class="cards-product__item--price">
+                        <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
+                     </div>
+                     <div class="cards-product__item--btn d_f f_n_w">
+                        <a href="#" class="btn-global__red btn-global">Գնել</a>
+                     </div>
+                  </div>
+                  <button class="cards-product__icon">
+                     <i class="icon icon-heart d_f a_i_c j_c_c"></i>
+                  </button>
+               </div>
+               <div class="cards-product">
+                  <div class="cards-product__item">
+                     <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
+                        <img src="./assets/img/cards/transparent-card.png" />
+                     </a>
+                     <div class="cards-product__item--name">
+                        <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
+                     </div>
+                     <div class="cards-product__item--price">
+                        <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
+                     </div>
+                     <div class="cards-product__item--btn d_f f_n_w">
+                        <a href="#" class="btn-global__red btn-global">Գնել</a>
+                     </div>
+                  </div>
+                  <button class="cards-product__icon">
+                     <i class="icon icon-heart d_f a_i_c j_c_c"></i>
+                  </button>
+               </div>
+               <div class="cards-product">
+                  <div class="cards-product__item">
+                     <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
+                        <img src="./assets/img/cards/transparent-card.png" />
+                     </a>
+                     <div class="cards-product__item--name">
+                        <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
+                     </div>
+                     <div class="cards-product__item--price">
+                        <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
+                     </div>
+                     <div class="cards-product__item--btn d_f f_n_w">
+                        <a href="#" class="btn-global__red btn-global">Գնել</a>
+                     </div>
+                  </div>
+                  <button class="cards-product__icon">
+                     <i class="icon icon-heart d_f a_i_c j_c_c"></i>
+                  </button>
+               </div>
+               <div class="cards-product">
+                  <div class="cards-product__item">
+                     <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
+                        <img src="./assets/img/cards/transparent-card.png" />
+                     </a>
+                     <div class="cards-product__item--name">
+                        <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
+                     </div>
+                     <div class="cards-product__item--price">
+                        <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
+                     </div>
+                     <div class="cards-product__item--btn d_f f_n_w">
+                        <a href="#" class="btn-global__red btn-global">Գնել</a>
+                     </div>
+                  </div>
+                  <button class="cards-product__icon">
+                     <i class="icon icon-heart d_f a_i_c j_c_c"></i>
+                  </button>
+               </div>
+               <div class="cards-product">
+                  <div class="cards-product__item">
+                     <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
+                        <img src="./assets/img/cards/transparent-card.png" />
+                     </a>
+                     <div class="cards-product__item--name">
+                        <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
+                     </div>
+                     <div class="cards-product__item--price">
+                        <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
+                     </div>
+                     <div class="cards-product__item--btn d_f f_n_w">
+                        <a href="#" class="btn-global__red btn-global">Գնել</a>
+                     </div>
+                  </div>
+                  <button class="cards-product__icon">
+                     <i class="icon icon-heart d_f a_i_c j_c_c"></i>
+                  </button>
+               </div>
             </div>
-            <div class="cards-product">
-              <div class="cards-product__item">
-                <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
-                  <img src="./assets/img/cards/transparent-card.png" />
-                </a>
-                <div class="cards-product__item--name">
-                  <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
-                </div>
-                <div class="cards-product__item--price">
-                  <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
-                </div>
-                <div class="cards-product__item--btn d_f f_n_w">
-                  <a href="#" class="btn-global__red btn-global">Գնել</a>
-                </div>
-              </div>
-              <button class="cards-product__icon">
-                <i class="icon icon-heart d_f a_i_c j_c_c"></i>
-              </button>
+            <div class="section-btn d_f j_c_c a_i_c">
+               <a href="#" class="section-btn__block"> Տեսնել ավելին </a>
             </div>
-            <div class="cards-product">
-              <div class="cards-product__item">
-                <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
-                  <img src="./assets/img/cards/transparent-card.png" />
-                </a>
-                <div class="cards-product__item--name">
-                  <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
-                </div>
-                <div class="cards-product__item--price">
-                  <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
-                </div>
-                <div class="cards-product__item--btn d_f f_n_w">
-                  <a href="#" class="btn-global__red btn-global">Գնել</a>
-                </div>
-              </div>
-              <button class="cards-product__icon">
-                <i class="icon icon-heart d_f a_i_c j_c_c"></i>
-              </button>
-            </div>
-            <div class="cards-product">
-              <div class="cards-product__item">
-                <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
-                  <img src="./assets/img/cards/transparent-card.png" />
-                </a>
-                <div class="cards-product__item--name">
-                  <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
-                </div>
-                <div class="cards-product__item--price">
-                  <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
-                </div>
-                <div class="cards-product__item--btn d_f f_n_w">
-                  <a href="#" class="btn-global__red btn-global">Գնել</a>
-                </div>
-              </div>
-              <button class="cards-product__icon">
-                <i class="icon icon-heart d_f a_i_c j_c_c"></i>
-              </button>
-            </div>
-            <div class="cards-product">
-              <div class="cards-product__item">
-                <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
-                  <img src="./assets/img/cards/transparent-card.png" />
-                </a>
-                <div class="cards-product__item--name">
-                  <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
-                </div>
-                <div class="cards-product__item--price">
-                  <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
-                </div>
-                <div class="cards-product__item--btn d_f f_n_w">
-                  <a href="#" class="btn-global__red btn-global">Գնել</a>
-                </div>
-              </div>
-              <button class="cards-product__icon">
-                <i class="icon icon-heart d_f a_i_c j_c_c"></i>
-              </button>
-            </div>
-            <div class="cards-product">
-              <div class="cards-product__item">
-                <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
-                  <img src="./assets/img/cards/transparent-card.png" />
-                </a>
-                <div class="cards-product__item--name">
-                  <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
-                </div>
-                <div class="cards-product__item--price">
-                  <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
-                </div>
-                <div class="cards-product__item--btn d_f f_n_w">
-                  <a href="#" class="btn-global__red btn-global">Գնել</a>
-                </div>
-              </div>
-              <button class="cards-product__icon">
-                <i class="icon icon-heart d_f a_i_c j_c_c"></i>
-              </button>
-            </div>
-            <div class="cards-product">
-              <div class="cards-product__item">
-                <a href="#" class="cards-product__item--img d_f a_i_c j_c_c">
-                  <img src="./assets/img/cards/transparent-card.png" />
-                </a>
-                <div class="cards-product__item--name">
-                  <a href="#" title="LC WAIKIKI">LC WAIKIKI</a>
-                </div>
-                <div class="cards-product__item--price">
-                  <p><span>5.000</span> - <span>2.000.000</span> ֏</p>
-                </div>
-                <div class="cards-product__item--btn d_f f_n_w">
-                  <a href="#" class="btn-global__red btn-global">Գնել</a>
-                </div>
-              </div>
-              <button class="cards-product__icon">
-                <i class="icon icon-heart d_f a_i_c j_c_c"></i>
-              </button>
-            </div>
-          </div>
-          <div class="section-btn d_f j_c_c a_i_c">
-            <a href="#" class="section-btn__block"> Տեսնել ավելին </a>
-          </div>
-        </div>
+         </div>
       </div>
-    </section>
-    <!-- ====================== -HTML5-ACTUAL-END- ======================== -->
-    <!-- ==================== -HTML5-PARTNERS-START- ====================== -->
-    <!-- ===================== -HTML5-PARTNERS-END- ======================= -->
+   </section>
+   <!-- ====================== -HTML5-ACTUAL-END- ======================== -->
+   <!-- ==================== -HTML5-PARTNERS-START- ====================== -->
+   <!-- ===================== -HTML5-PARTNERS-END- ======================= -->
 
-    <!-- ===================== -HTML5-FOOTER-START- ======================= -->
-    <footer class="footer">
+   <!-- ===================== -HTML5-FOOTER-START- ======================= -->
+   <footer class="footer">
       <div class="footer-main">
-        <div class="container">
-          <div class="footer-main__block d_f j_c_b">
-            <div class="footer-main__about">
-              <div class="section-title">
-                <h2>Նվեր քարտ</h2>
-              </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit
-                ipsum laboriosam eaque veritatis explicabo non, soluta
-                accusantium, quisquam expedita hic, officiis sunt corrupti
-                maiores quasi aut. Ullam eligendi sapiente reprehenderit?
-              </p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+         <div class="container">
+            <div class="footer-main__block d_f j_c_b">
+               <div class="footer-main__about">
+                  <div class="section-title">
+                     <h2>Նվեր քարտ</h2>
+                  </div>
+                  <p>
+                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit
+                     ipsum laboriosam eaque veritatis explicabo non, soluta
+                     accusantium, quisquam expedita hic, officiis sunt corrupti
+                     maiores quasi aut. Ullam eligendi sapiente reprehenderit?
+                  </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+               </div>
+               <div class="footer-main__follow">
+                  <div class="section-title">
+                     <h2>Հետևեք մեզ</h2>
+                  </div>
+                  <ul class="d_f f_d_c">
+                     <li>
+                        <a href="#" class="d_f a_i_c"><i class="icon icon-facebook"></i>
+                           <p>facebook</p>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#" class="d_f a_i_c"><i class="icon icon-instagram"></i>
+                           <p>instagram</p>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#" class="d_f a_i_c"><i class="icon icon-whatsapp"></i>
+                           <p>whatsapp</p>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="footer-main__video">
+                  <div class="section-title">
+                     <h2>Մեր մասին</h2>
+                  </div>
+                  <div class="single-video__block">
+                     <video poster="assets/img/cards/transparent-card.png" class="video" preload="none"
+                        src="assets/img/video/video1.mp4"></video>
+                     <div class="video-play__bg">
+                        <span class="video-play__icon"></span>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="footer-main__follow">
-              <div class="section-title">
-                <h2>Հետևեք մեզ</h2>
-              </div>
-              <ul class="d_f f_d_c">
-                <li>
-                  <a href="#" class="d_f a_i_c"
-                    ><i class="icon icon-facebook"></i>
-                    <p>facebook</p></a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="d_f a_i_c"
-                    ><i class="icon icon-instagram"></i>
-                    <p>instagram</p></a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="d_f a_i_c"
-                    ><i class="icon icon-whatsapp"></i>
-                    <p>whatsapp</p></a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="footer-main__video">
-              <div class="section-title">
-                <h2>Մեր մասին</h2>
-              </div>
-              <div class="single-video__block">
-                <video
-                  poster="assets/img/cards/transparent-card.png"
-                  class="video"
-                  preload="none"
-                  src="assets/img/video/video1.mp4"
-                ></video>
-                <div class="video-play__bg">
-                  <span class="video-play__icon"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+         </div>
       </div>
       <div class="footer-second">
-        <div class="container">
-          <div class="footer-second__part d_f j_c_b a_i_c">
-            <div class="footer-second__part--list">
-              <ul class="d_f j_c_b">
-                <li><a href="#">Գլխավոր</a></li>
-                <li><a href="#">Մեր մասին</a></li>
-                <li><a href="#">Գործընկերներ</a></li>
-                <li><a href="#">Կոնտակտներ</a></li>
-              </ul>
+         <div class="container">
+            <div class="footer-second__part d_f j_c_b a_i_c">
+               <div class="footer-second__part--list">
+                  <ul class="d_f j_c_b">
+                     <li><a href="#">Գլխավոր</a></li>
+                     <li><a href="#">Մեր մասին</a></li>
+                     <li><a href="#">Գործընկերներ</a></li>
+                     <li><a href="#">Կոնտակտներ</a></li>
+                  </ul>
+               </div>
+               <div class="footer-second__part--info">
+                  <p>Կայքը պատրաստվել է 2020թ.-ին</p>
+               </div>
             </div>
-            <div class="footer-second__part--info">
-              <p>Կայքը պատրաստվել է 2020թ.-ին</p>
-            </div>
-          </div>
-        </div>
+         </div>
       </div>
-    </footer>
+   </footer>
+   <!-- ======================= -HTML5-FOOTER-END- ======================= -->
 
-    <!-- ======================= -HTML5-FOOTER-END- ======================= -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="./assets/js/my-scripts.js"></script>
+</body>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./assets/js/my-scripts.js"></script>
-  </body>
 </html>

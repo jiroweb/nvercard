@@ -661,7 +661,7 @@ body {
   right: 10px;
   z-index: 999;
   font-size: 20px;
-  color: grey;
+  color: #c5c5c5;
 }
 
 .cards-product__icon:hover {
