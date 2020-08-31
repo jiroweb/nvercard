@@ -68,10 +68,10 @@
             right: 10px;
             z-index: 999;
             font-size: 20px;
-            color: var(--color_text);
+            color: grey;
 
             &:hover{
-                color: var(--color_global);
+                color: var(--color_red);
             }
             
         }

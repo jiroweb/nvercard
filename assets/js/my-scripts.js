@@ -118,3 +118,13 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 });
+   // function for play video
+   $('.video-play__bg').click(function () {
+    var this_prt = $(this).parent()
+    var parent_video = $(this_prt)
+    var icon_video = $(parent_video).find(".video-play__bg")
+    var video = $(parent_video).find(".video")
+    $(video).trigger('play')
+    $(video).attr("controls", "controls")
+    $(icon_video).fadeOut()
+});

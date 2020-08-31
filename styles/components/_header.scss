@@ -242,12 +242,12 @@
             }
             &--icons{
                 margin-left: auto;
-                margin-top: auto;
                 &-link{
                     margin-left: 25px;
                     font-size: 30px;
                     color: var(--color_red);
                     cursor: pointer;
+                    
                 }
             }
         }
@@ -323,7 +323,6 @@
             &-name {
                 min-height: 45px;
                 padding: 5px 22px 5px 15px;
-
                 position: relative;
 
                 p {
@@ -344,8 +343,8 @@
                     }
                 }
 
-                .icon {
-                    font-size: 10px;
+                .icon-cheveron-right {
+                    font-size: 15px;
                     color: #AFB6BD;
 
                 }
@@ -365,7 +364,7 @@
                         }
                     }
 
-                    .icon {
+                    .icon-cheveron-right {
                         color: var(--color_global_hover);
                     }
                 }

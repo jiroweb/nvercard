@@ -282,6 +282,7 @@ body {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
 }
 
 .icon::before {
@@ -566,6 +567,10 @@ body {
   color: #828282;
 }
 
+.crumb-list__item .icon-cheveron-right {
+  font-size: 16px;
+}
+
 .crumb-list__item--link {
   color: #828282;
 }
@@ -656,11 +661,11 @@ body {
   right: 10px;
   z-index: 999;
   font-size: 20px;
-  color: var(--color_text);
+  color: grey;
 }
 
 .cards-product__icon:hover {
-  color: var(--color_global);
+  color: var(--color_red);
 }
 
 @font-face {
@@ -1015,7 +1020,6 @@ button[disabled] {
 
 .header-content__box--icons {
   margin-left: auto;
-  margin-top: auto;
 }
 
 .header-content__box--icons-link {
@@ -1127,8 +1131,8 @@ button[disabled] {
   color: var(--color_text);
 }
 
-.header-catalog__list--item-name .icon {
-  font-size: 10px;
+.header-catalog__list--item-name .icon-cheveron-right {
+  font-size: 15px;
   color: #AFB6BD;
 }
 
@@ -1144,7 +1148,7 @@ button[disabled] {
   color: var(--color_global);
 }
 
-.header-catalog__list--item-name.active .icon, .header-catalog__list--item-name:hover .icon {
+.header-catalog__list--item-name.active .icon-cheveron-right, .header-catalog__list--item-name:hover .icon-cheveron-right {
   color: var(--color_global_hover);
 }
 
@@ -1510,6 +1514,134 @@ button[disabled] {
   color: var(--color_global);
 }
 
+/*=====================-FOOTE-STYLE-START-========================*/
+.footer {
+  background-color: #ececec;
+}
+
+.footer-main {
+  border-bottom: 1px dotted var(--color-global);
+}
+
+.footer-main__block {
+  padding: 50px 0 30px;
+}
+
+.footer-main__about p {
+  font: 16px "NotoSansArmenian-Regular", sans-serif;
+  max-width: 400px;
+  width: 100%;
+  color: grey;
+}
+
+.footer-main__about p + p {
+  margin-top: 30px;
+}
+
+.footer-main__follow ul li + li {
+  margin-top: 15px;
+}
+
+.footer-main__follow ul a {
+  color: grey;
+}
+
+.footer-main__follow ul a .icon {
+  margin-right: 10px;
+  font-size: 36px;
+}
+
+.footer-main__follow ul a p {
+  font: 22px "NotoSansArmenian-ExtraBold", sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.footer-second {
+  padding: 15px 0;
+}
+
+.footer-second__part--list {
+  font: 18px "NotoSansArmenian-Regular", sans-serif;
+  color: var(--color_global);
+  -webkit-transition: var(--transition-all);
+  transition: var(--transition-all);
+}
+
+.footer-second__part--list ul li a {
+  font-size: 16px;
+  color: var(--color-global);
+  -webkit-transition: var(--transition-all);
+  transition: var(--transition-all);
+}
+
+.footer-second__part--list ul li a:hover {
+  color: var(--color_red_hover);
+}
+
+.footer-second__part--list ul li + li a {
+  margin-left: 10px;
+}
+
+.footer-second__part--info {
+  color: white;
+  font: 18px "NotoSansArmenian-Regular", sans-serif;
+}
+
+.single-video__block {
+  max-width: 400px;
+  width: 100%;
+  height: 190px;
+  -webkit-transition: var(--transition-all);
+  transition: var(--transition-all);
+  position: relative;
+  overflow: hidden;
+}
+
+.video-play__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.single-video__block .video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.video-play__icon {
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.video-play__icon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-left: 25px solid #FFFFFF;
+  border-bottom: 15px solid transparent;
+  top: 50%;
+  left: 55%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  z-index: 999;
+}
+
 .container {
   max-width: 1580px;
   width: 100%;
@@ -1534,6 +1666,41 @@ button[disabled] {
   .global-title h1 {
     font: 24px/24px "NotoSansArmenian-ExtraBold", sans-serif;
   }
+}
+
+.section-title {
+  margin: 30px 0;
+}
+
+.section-title h2 {
+  font: 28px/28px "NotoSansArmenian-ExtraBold", sans-serif;
+  color: var(--color_global);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 1023.98px) {
+  .section-title h2 {
+    font: 24px/24px "NotoSansArmenian-ExtraBold", sans-serif;
+  }
+}
+
+.section-btn {
+  margin: 25px 0;
+}
+
+.section-btn__block {
+  padding: 10px 30px;
+  border: 1px solid var(--color_global);
+  color: var(--color_global);
+  font: 20px "NotoSansArmenian-ExtraBold", sans-serif;
+  border-radius: var(--border-radius);
+  translate: var(--transition-all);
+}
+
+.section-btn__block:hover {
+  color: var(--color_global_hover);
+  border: 1px solid var(--color_global_hover);
 }
 
 .d_none {

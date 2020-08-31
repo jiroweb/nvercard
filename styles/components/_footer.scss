@@ -1,0 +1,126 @@
+/*=====================-FOOTE-STYLE-START-========================*/
+
+.footer{
+    background-color: #ececec;
+    &-main{
+        border-bottom: 1px dotted var(--color-global);
+        &__block{
+            padding: 50px 0 30px;
+        }
+        &__about{
+            p{
+                font: 16px $Regular;
+                max-width: 400px;
+                width: 100%;
+                color: grey;
+                &+p{
+                    margin-top: 30px;
+                }
+
+            }
+        }
+        &__follow{
+            ul{
+                li+li{
+                    margin-top: 15px;
+                }
+                a{
+                    color: grey;
+                    .icon{
+                        margin-right: 10px;
+                        font-size: 36px;
+                    }
+                    p{
+                        font: 22px $Extrabold;
+                        letter-spacing: 0.03em;
+                        
+                    }
+                }
+            }
+        }
+    }
+    &-second{
+        padding: 15px 0;
+        &__part{
+            &--list{
+                font: 18px $Regular;
+                color: var(--color_global);
+                transition: var(--transition-all);
+                ul{
+                    li{
+                        a{
+                            font-size: 16px;
+                            color: var(--color-global);
+                            transition: var(--transition-all);
+                            &:hover{
+                                color: var(--color_red_hover);
+                            }
+                        }
+                        &+li{
+                            a{
+                                margin-left: 10px; 
+                            }
+                        }
+                    }
+                }
+            }
+            &--info{
+                color: white;
+                font: 18px $Regular;
+            }
+
+        }
+    }
+}
+
+
+.single-video__block {
+    max-width: 400px;
+    width: 100%;
+    height: 190px;
+    transition: var(--transition-all);
+    position: relative;
+    overflow: hidden;
+}
+
+.video-play__bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.single-video__block .video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.video-play__icon {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.video-play__icon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-left: 25px solid #FFFFFF;
+    border-bottom: 15px solid transparent;
+    top: 50%;
+    left: 55%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 999;
+}
+
