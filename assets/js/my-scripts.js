@@ -15,13 +15,13 @@ $(document).ready(function () {
             $(arrow).toggleClass('icon-arrow__bottom');
 
             if (this_data === 'true') {
-                this_child.hide();
+                this_child.slideUp(250);
                 $(this).attr('data-expand', 'false');
             } else if (this_data === 'false') {
-                this_child.show();
+                this_child.slideDown(250);
                 $(this).attr('data-expand', 'true');
             } else {
-                this_child.hide();
+                this_child.slideUp(250);
             }
         });
     });

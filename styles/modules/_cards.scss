@@ -1,29 +1,29 @@
 .cards {
-    margin: 0 -1.5px;
+    margin: -10px; 
 
-    @include lg {
-        margin: 0;
+    &-catalog{
+        margin: -1.5px;
     }
 
     &-product {
-        width: 25%;
-        padding: 1.5px;
-        position: relative;
-        transition: all .3s ease;
+        width: 20%;
+        padding: 10px;
 
-        &:hover{
-            box-shadow: 5px 5px 20px #cbcbcb;
-            z-index: 999;
-        }
+        &-catalog{
+            width: 25%;
+            padding: 1.5px;
 
-        @include sm {
-            padding: 1.5px 0;
+            &:hover{
+                box-shadow: 5px 5px 20px #cbcbcb;
+                z-index: 999;
+            }
         }
 
         &__item {
             height: 100%;
             background-color: white;
             padding: 40px 25px 40px;
+            position: relative;
 
             @include sm {
                 padding: 26px 15px 15px;

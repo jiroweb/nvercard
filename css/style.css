@@ -580,39 +580,34 @@ body {
 }
 
 .cards {
-  margin: 0 -1.5px;
+  margin: -10px;
 }
 
-@media (max-width: 1279.98px) {
-  .cards {
-    margin: 0;
-  }
+.cards-catalog {
+  margin: -1.5px;
 }
 
 .cards-product {
-  width: 25%;
-  padding: 1.5px;
-  position: relative;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  width: 20%;
+  padding: 10px;
 }
 
-.cards-product:hover {
+.cards-product-catalog {
+  width: 25%;
+  padding: 1.5px;
+}
+
+.cards-product-catalog:hover {
   -webkit-box-shadow: 5px 5px 20px #cbcbcb;
           box-shadow: 5px 5px 20px #cbcbcb;
   z-index: 999;
-}
-
-@media (max-width: 1023.98px) {
-  .cards-product {
-    padding: 1.5px 0;
-  }
 }
 
 .cards-product__item {
   height: 100%;
   background-color: white;
   padding: 40px 25px 40px;
+  position: relative;
 }
 
 @media (max-width: 1023.98px) {
@@ -1024,9 +1019,8 @@ button[disabled] {
 
 .header-content__box--icons-link {
   margin-left: 25px;
-  font-size: 30px;
+  font-size: 22px;
   color: var(--color_red);
-  cursor: pointer;
 }
 
 .headerCatalog {
@@ -1325,10 +1319,6 @@ button[disabled] {
 @font-face {
   src: url("../assets/fonts/NotoSansArmenian/NotoSansArmenian-ExtraBold.ttf") format("truetype");
   font-family: "NotoSansArmenian-ExtraBold";
-}
-
-.catalog {
-  margin: 25px 0;
 }
 
 @media (max-width: 1279.98px) {
@@ -1655,52 +1645,34 @@ button[disabled] {
   }
 }
 
-.global-title h1 {
+.title {
+  margin-bottom: 28px;
+}
+
+.title-all {
+  color: var(--color_text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.title-global {
   font: 24px/36px "NotoSansArmenian-ExtraBold", sans-serif;
-  color: var(--black_color);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 @media (max-width: 1023.98px) {
-  .global-title h1 {
-    font: 24px/24px "NotoSansArmenian-ExtraBold", sans-serif;
+  .title-global {
+    line-height: 36px;
   }
 }
 
-.section-title {
-  margin: 30px 0;
-}
-
-.section-title h2 {
-  font: 28px/28px "NotoSansArmenian-ExtraBold", sans-serif;
-  color: var(--color_global);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+.title-second {
+  font: 20px/24px "NotoSansArmenian-ExtraBold", sans-serif;
 }
 
 @media (max-width: 1023.98px) {
-  .section-title h2 {
-    font: 24px/24px "NotoSansArmenian-ExtraBold", sans-serif;
+  .title-second {
+    font: 24px/36px "NotoSansArmenian-ExtraBold", sans-serif;
   }
-}
-
-.section-btn {
-  margin: 25px 0;
-}
-
-.section-btn__block {
-  padding: 10px 30px;
-  border: 1px solid var(--color_global);
-  color: var(--color_global);
-  font: 20px "NotoSansArmenian-ExtraBold", sans-serif;
-  border-radius: var(--border-radius);
-  translate: var(--transition-all);
-}
-
-.section-btn__block:hover {
-  color: var(--color_global_hover);
-  border: 1px solid var(--color_global_hover);
 }
 
 .d_none {

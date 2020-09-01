@@ -160,11 +160,11 @@
                         margin: auto;
                     }
 
-                    .icon{
+                    .icon {
                         font-size: 17px;
                         margin-left: auto;
 
-                        @include xs{
+                        @include xs {
                             position: absolute;
                             right: 15px;
                             top: 50%;
@@ -240,14 +240,14 @@
                     cursor: pointer;
                 }
             }
-            &--icons{
+
+            &--icons {
                 margin-left: auto;
-                &-link{
+
+                &-link {
                     margin-left: 25px;
-                    font-size: 30px;
+                    font-size: 22px;
                     color: var(--color_red);
-                    cursor: pointer;
-                    
                 }
             }
         }
