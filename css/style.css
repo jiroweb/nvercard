@@ -469,6 +469,10 @@ body {
   content: "\e92d";
 }
 
+.icon-catalog-cancel:before {
+  content: "\e92d";
+}
+
 .icon-catalog:before {
   content: "\e92c";
 }
@@ -563,12 +567,8 @@ body {
 
 .crumb-list__item {
   padding: 5px 4px;
-  font: 13px/16px "NotoSansArmenian-Regular", sans-serif;
+  font: 13px/13px "NotoSansArmenian-Regular", sans-serif;
   color: #828282;
-}
-
-.crumb-list__item .icon-cheveron-right {
-  font-size: 16px;
 }
 
 .crumb-list__item--link {
@@ -608,12 +608,6 @@ body {
   background-color: white;
   padding: 40px 25px 40px;
   position: relative;
-}
-
-@media (max-width: 1023.98px) {
-  .cards-product__item {
-    padding: 26px 15px 15px;
-  }
 }
 
 .cards-product__item--img {
@@ -742,6 +736,71 @@ button[disabled] {
   cursor: default !important;
 }
 
+body {
+  padding-top: 140px;
+}
+
+@media (max-width: 767.98px) {
+  body {
+    padding-top: 126px;
+  }
+}
+
+.container {
+  max-width: 1580px;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1279.98px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+.title {
+  margin-bottom: 28px;
+}
+
+.title-all {
+  color: var(--color_text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.title-global {
+  font: 24px/36px "NotoSansArmenian-ExtraBold", sans-serif;
+}
+
+@media (max-width: 1023.98px) {
+  .title-global {
+    line-height: 36px;
+  }
+}
+
+.title-second {
+  font: 20px/24px "NotoSansArmenian-ExtraBold", sans-serif;
+}
+
+@media (max-width: 1023.98px) {
+  .title-second {
+    font: 24px/36px "NotoSansArmenian-ExtraBold", sans-serif;
+  }
+}
+
+.d_none {
+  display: none;
+}
+
+.d_block {
+  display: block;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
 @font-face {
   src: url("../assets/fonts/NotoSansArmenian/NotoSansArmenian-Regular.ttf") format("truetype");
   font-family: "NotoSansArmenian-Regular";
@@ -757,14 +816,32 @@ button[disabled] {
   font-family: "NotoSansArmenian-ExtraBold";
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999999;
+  background-color: white;
+}
+
 .header-nav {
   position: relative;
   padding: 8px 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-.header-nav.onscroll {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+.header-nav.nav-scrollDown {
+  margin-top: -76px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (max-width: 767.98px) {
+  .header-nav.nav-scrollDown {
+    margin-top: -62px;
+  }
 }
 
 .header-nav__box--logo {
@@ -821,13 +898,19 @@ button[disabled] {
   }
 }
 
+@media (max-width: 1023.98px) {
+  .header-nav__box--info-support {
+    display: none;
+  }
+}
+
 .header-nav__box--info-support p {
   font: 15px/18px "NotoSansArmenian-Regular", sans-serif;
   color: #828282;
   margin-right: 25px;
 }
 
-@media (max-width: 1023.98px) {
+@media (max-width: 1279.98px) {
   .header-nav__box--info-support p {
     display: none;
   }
@@ -854,10 +937,53 @@ button[disabled] {
   color: var(--color_global);
 }
 
+@media (max-width: 767.98px) {
+  .header-nav__box--info-btn {
+    display: block;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    color: white;
+    background-color: var(--color_red);
+    border-radius: 50%;
+  }
+  .header-nav__box--info-search {
+    width: 100%;
+    height: 62px;
+    background-color: #797979;
+    padding: 8px 5px 8px 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+  }
+  .header-nav__box--info-search__form {
+    width: calc(100% - 30px);
+    position: relative;
+  }
+  .header-nav__box--info-search__form .icon-search {
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 0;
+    z-index: 9;
+    font-size: 18px;
+    color: white;
+    background-color: var(--color_red);
+  }
+  .header-nav__box--info-search__btn {
+    width: 50px;
+    font-size: 18px;
+    color: white;
+  }
+}
+
 .header-content {
   background-color: #ececec;
   padding: 12px 0;
-  z-index: 99999999;
   position: relative;
 }
 
@@ -866,9 +992,15 @@ button[disabled] {
   max-width: 170px;
   width: 100%;
   height: 100%;
+  margin-right: 20px;
 }
 
 @media (max-width: 767.98px) {
+  .header-content__box--catalog {
+    min-width: 140px;
+    max-width: 140px;
+    margin-right: 0;
+  }
   .header-content__box--catalog.active {
     position: fixed;
     top: 0;
@@ -878,6 +1010,15 @@ button[disabled] {
     min-width: 100%;
     max-width: 100%;
     background-color: var(--color_red);
+    z-index: 99999;
+  }
+  .header-content__box--catalog.active .header-content__box--catalog__btn .icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: 9;
   }
 }
 
@@ -888,6 +1029,8 @@ button[disabled] {
   width: 40px;
   height: 40px;
   line-height: 40px;
+  font-size: 16px;
+  color: white;
   text-align: center;
   z-index: 999999;
 }
@@ -905,6 +1048,15 @@ button[disabled] {
   background-color: var(--color_red_hover);
 }
 
+@media (max-width: 767.98px) {
+  .header-content__box--catalog__btn {
+    padding: 0 15px;
+  }
+  .header-content__box--catalog__btn:hover {
+    background-color: var(--color_red);
+  }
+}
+
 .header-content__box--catalog__btn span {
   font: 13px "NotoSansArmenian-ExtraBold", sans-serif;
   letter-spacing: 0.08em;
@@ -912,20 +1064,15 @@ button[disabled] {
   margin: auto;
 }
 
-.header-content__box--catalog__btn .icon {
-  font-size: 17px;
-  margin-left: auto;
+@media (max-width: 767.98px) {
+  .header-content__box--catalog__btn span {
+    margin: 0;
+  }
 }
 
-@media (max-width: 767.98px) {
-  .header-content__box--catalog__btn .icon {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    z-index: 9;
-  }
+.header-content__box--catalog__btn .icon {
+  font-size: 14px;
+  margin-left: auto;
 }
 
 .header-content__box--search {
@@ -935,6 +1082,12 @@ button[disabled] {
   background-color: white;
   padding: 8px 5px 8px 14px;
   position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .header-content__box--search {
+    display: none;
+  }
 }
 
 .header-content__box--search-input {
@@ -952,44 +1105,14 @@ button[disabled] {
 
 @media (max-width: 767.98px) {
   .header-content__box--search-input {
-    padding-right: 17px;
+    padding-right: 60px;
+    padding-left: 15px;
   }
 }
 
-.header-content__box--search-input:hover::-webkit-input-placeholder {
-  color: var(--color_red_hover);
-}
-
-.header-content__box--search-input:hover:-ms-input-placeholder {
-  color: var(--color_red_hover);
-}
-
-.header-content__box--search-input:hover::-ms-input-placeholder {
-  color: var(--color_red_hover);
-}
-
-.header-content__box--search-input:hover::placeholder {
-  color: var(--color_red_hover);
-}
-
-.header-content__box--search-input:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-
-.header-content__box--search-input:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-
-.header-content__box--search-input:focus::-ms-input-placeholder {
-  opacity: 0;
-}
-
-.header-content__box--search-input:focus::placeholder {
-  opacity: 0;
-}
-
-.header-content__box--search-input:focus + .icon-search {
-  color: #AFB6BD;
+.header-content__box--search-input::placeholder, .header-content__box--search-input::-moz-placeholder {
+  font: 15px "NotoSansArmenian-Regular", sans-serif;
+  color: var(--color_text);
 }
 
 .header-content__box--search .icon {
@@ -1018,9 +1141,32 @@ button[disabled] {
 }
 
 .header-content__box--icons-link {
-  margin-left: 25px;
-  font-size: 22px;
+  margin-left: 35px;
+  font-size: 24px;
   color: var(--color_red);
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .header-content__box--icons-link {
+    margin-left: 25px;
+  }
+}
+
+.header-content__box--icons-link:hover {
+  color: var(--color_red_hover);
+}
+
+.header-content__box--icons-link__counter {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 22px;
+  height: 22px;
+  background-color: var(--color_red);
+  color: white;
+  font: 12px "NotoSansArmenian-Regular", sans-serif;
+  border-radius: 50%;
 }
 
 .headerCatalog {
@@ -1106,16 +1252,22 @@ button[disabled] {
   position: relative;
 }
 
+@media (max-width: 767.98px) {
+  .header-catalog__list--item-name {
+    padding: 5px 15px;
+  }
+}
+
 .header-catalog__list--item-name p {
   width: calc(100% - 6px);
   padding-right: 10px;
 }
 
 .header-catalog__list--item-name p .icon {
-  font-size: 17px;
+  font-size: 24px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 22px;
-          flex: 0 0 22px;
+      -ms-flex: 0 0 24px;
+          flex: 0 0 24px;
   color: #3C444B;
   margin-right: 11px;
 }
@@ -1630,60 +1782,5 @@ button[disabled] {
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   z-index: 999;
-}
-
-.container {
-  max-width: 1580px;
-  width: 100%;
-  padding: 0 40px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1279.98px) {
-  .container {
-    padding: 0 16px;
-  }
-}
-
-.title {
-  margin-bottom: 28px;
-}
-
-.title-all {
-  color: var(--color_text);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.title-global {
-  font: 24px/36px "NotoSansArmenian-ExtraBold", sans-serif;
-}
-
-@media (max-width: 1023.98px) {
-  .title-global {
-    line-height: 36px;
-  }
-}
-
-.title-second {
-  font: 20px/24px "NotoSansArmenian-ExtraBold", sans-serif;
-}
-
-@media (max-width: 1023.98px) {
-  .title-second {
-    font: 24px/36px "NotoSansArmenian-ExtraBold", sans-serif;
-  }
-}
-
-.d_none {
-  display: none;
-}
-
-.d_block {
-  display: block;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */

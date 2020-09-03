@@ -5,7 +5,7 @@
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <meta name="og:image" content="./assets/img/tag-meta/transparent-card.png" />
-   <title>nvercard</title>
+   <title>Գլխավոր</title>
    <link rel="icon" href="./assets/img/favicon/icon-x32.png" type="image/png" sizes="32x32" />
    <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -16,7 +16,7 @@
       <nav class="header-nav d_f a_i_c" id="nav">
          <div class="container">
             <div class="header-nav__box d_f">
-               <a href="#" [routerLink]="['/home']" class="header-nav__box--logo d_f j_c_c a_i_c">
+               <a href="#" class="header-nav__box--logo d_f j_c_c a_i_c">
                   <img src="./assets/img/logo/logo-text.png" alt="logo" />
                </a>
                <div class="header-nav__box--menu d_f a_i_c">
@@ -50,19 +50,13 @@
                      </a>
                   </div>
 
-                  <button class="header-nav__box--info-btn d_none">
-                     <i class="icon icon-search"></i>
-                  </button>
-                  <div class="header-nav__box--info-search d_none">
-                     <form class="header-nav__box--info-search__form d_f">
-                        <input class="header-nav__box--info-search__form--input" type="text" placeholder="Որոնել..." />
-                        <button class="header-nav__box--info-search__form--btn">
-                           <i class="icon icon-search"></i>
-                        </button>
+                  <button class="header-nav__box--info-btn icon icon-search d_none clickMobileSearsh"></button>
+                  <div class="header-nav__box--info-search d_none mobileSearchForm">
+                     <form class="header-nav__box--info-search__form d_f ">
+                        <input class="header-content__box--search-input" type="text" placeholder="Որոնել..." />
+                        <button class="header-nav__box--info-search__form--btn icon icon-search"></button>
                      </form>
-                     <button class="header-nav__box--info-search__btn">
-                        <i class="icon icon-cancel"></i>
-                     </button>
+                     <button class="header-nav__box--info-search__btn icon icon-cancel clickMobileSearsClose"></button>
                   </div>
                </div>
             </div>
@@ -82,12 +76,16 @@
                <form class="header-content__box--search">
                   <input class="header-content__box--search-input" type="text" placeholder="Որոնել..." />
                   <i class="icon icon-search"></i>
-                  <i class="icon icon-cancel d_none"></i>
+                  <i class="icon icon-catalog-cancel d_none"></i>
                </form>
                <div class="header-content__box--icons d_f a_i_c">
                   <a href="#" class="header-content__box--icons-link icon icon-login"></a>
-                  <a href="#" class="header-content__box--icons-link icon icon-heart"></a>
-                  <a href="#" class="header-content__box--icons-link icon icon-cart"></a>
+                  <a href="#" class="header-content__box--icons-link icon icon-heart">
+                     <span class="header-content__box--icons-link__counter d_f a_i_c j_c_c">23</span>
+                  </a>
+                  <a href="#" class="header-content__box--icons-link icon icon-cart">
+                     <span class="header-content__box--icons-link__counter d_f a_i_c j_c_c">65</span>
+                  </a>
                </div>
             </div>
          </div>
@@ -412,7 +410,7 @@
    <!-- ===================== -HTML5-SLIDER-START- ======================= -->
    <!-- ====================== -HTML5-SLIDER-END- ======================== -->
    <!-- ===================== -HTML5-ACTUAL-START- ======================= -->
-   <section class="actual">
+   <!-- <section class="actual">
       <div class="container">
          <div class="actual-block">
             <div class="title">
@@ -439,13 +437,13 @@
             </div>
          </div>
       </div>
-   </section>
+   </section> -->
    <!-- ====================== -HTML5-ACTUAL-END- ======================== -->
    <!-- ==================== -HTML5-PARTNERS-START- ====================== -->
    <!-- ===================== -HTML5-PARTNERS-END- ======================= -->
 
    <!-- ===================== -HTML5-FOOTER-START- ======================= -->
-   <footer class="footer">
+   <!-- <footer class="footer">
       <div class="footer-main">
          <div class="container">
             <div class="footer-main__block d_f j_c_b">
@@ -515,7 +513,7 @@
             </div>
          </div>
       </div>
-   </footer>
+   </footer> -->
    <!-- ======================= -HTML5-FOOTER-END- ======================= -->
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

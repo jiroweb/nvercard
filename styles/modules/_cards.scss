@@ -25,10 +25,6 @@
             padding: 40px 25px 40px;
             position: relative;
 
-            @include sm {
-                padding: 26px 15px 15px;
-            }
-
             &--img {
                 height: 153px;
                 margin: 0 auto 30px;

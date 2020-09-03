@@ -9,13 +9,20 @@
 '../modules/bread-crumb',
 '../modules/cards',
 '../modules/increment',
-'../modules/buttons',
+'../modules/buttons';
 
-// componetns
 
-'../components/header',
-'../components/catalog',
-'../components/footer';
+
+// body
+
+body {
+    padding-top: 140px;
+
+    @include xs {
+        padding-top: 126px;
+    }
+}
+
 
 // container  -- START
 .container {
@@ -37,7 +44,7 @@
 .title {
     margin-bottom: 28px;
 
-    &-all{
+    &-all {
         color: var(--color_text);
         text-transform: uppercase;
         letter-spacing: 0.04em;
@@ -51,7 +58,7 @@
         }
     }
 
-    &-second{
+    &-second {
         font: 20px/24px $Extrabold;
 
         @include sm {
@@ -80,4 +87,10 @@
     overflow: hidden;
 }
 
-// // overflow-hidden -- END
+// overflow-hidden -- END
+
+
+// componetns
+@import '../components/header',
+'../components/catalog',
+'../components/footer';

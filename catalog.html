@@ -16,8 +16,8 @@
       <nav class="header-nav d_f a_i_c" id="nav">
          <div class="container">
             <div class="header-nav__box d_f">
-               <a href="#" [routerLink]="['/home']" class="header-nav__box--logo d_f j_c_c a_i_c">
-                  <img src="./assets/img/logo/logo-text.png" alt="logo">
+               <a href="#" class="header-nav__box--logo d_f j_c_c a_i_c">
+                  <img src="./assets/img/logo/logo-text.png" alt="logo" />
                </a>
                <div class="header-nav__box--menu d_f a_i_c">
                   <ul class="header-nav__box--menu-list d_f a_i_c">
@@ -50,18 +50,13 @@
                      </a>
                   </div>
 
-                  <button class="header-nav__box--info-btn d_none">
-                     <i class="icon icon-search"></i>
-                  </button>
-                  <div class="header-nav__box--info-search d_none">
-                     <form class="header-nav__box--info-search__form d_f">
-                        <input class="header-nav__box--info-search__form--input" type="text" placeholder="Որոնել...">
-                        <button class="header-nav__box--info-search__form--btn"><i
-                              class="icon icon-search"></i></button>
+                  <button class="header-nav__box--info-btn icon icon-search d_none clickMobileSearsh"></button>
+                  <div class="header-nav__box--info-search d_none mobileSearchForm">
+                     <form class="header-nav__box--info-search__form d_f ">
+                        <input class="header-content__box--search-input" type="text" placeholder="Որոնել..." />
+                        <button class="header-nav__box--info-search__form--btn icon icon-search"></button>
                      </form>
-                     <button class="header-nav__box--info-search__btn">
-                        <i class="icon icon-cancel"></i>
-                     </button>
+                     <button class="header-nav__box--info-search__btn icon icon-cancel clickMobileSearsClose"></button>
                   </div>
                </div>
             </div>
@@ -79,14 +74,18 @@
                   </button>
                </div>
                <form class="header-content__box--search">
-                  <input class="header-content__box--search-input" type="text" placeholder="Որոնել...">
+                  <input class="header-content__box--search-input" type="text" placeholder="Որոնել..." />
                   <i class="icon icon-search"></i>
-                  <i class="icon icon-cancel d_none"></i>
+                  <i class="icon icon-catalog-cancel d_none"></i>
                </form>
                <div class="header-content__box--icons d_f a_i_c">
                   <a href="#" class="header-content__box--icons-link icon icon-login"></a>
-                  <a href="#" class="header-content__box--icons-link icon icon-heart"></a>
-                  <a href="#" class="header-content__box--icons-link icon icon-cart"></a>
+                  <a href="#" class="header-content__box--icons-link icon icon-heart">
+                     <span class="header-content__box--icons-link__counter d_f a_i_c j_c_c">23</span>
+                  </a>
+                  <a href="#" class="header-content__box--icons-link icon icon-cart">
+                     <span class="header-content__box--icons-link__counter d_f a_i_c j_c_c">65</span>
+                  </a>
                </div>
             </div>
          </div>
@@ -108,7 +107,8 @@
                            <li
                               class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
                               <div class="header-catalog__list--item-sub__categories--box">
-                                 <p class="header-catalog__list--item-sub__categories--box-title">Խնամք
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    Խնամք
                                  </p>
                                  <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
                                     <li><a href="#">Վարսահարդարում</a></li>
@@ -123,16 +123,16 @@
                               </div>
                               <div class="header-catalog__list--item-sub__categories--img d_f f_w">
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                               </div>
                            </li>
@@ -151,7 +151,8 @@
                            <li
                               class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
                               <div class="header-catalog__list--item-sub__categories--box">
-                                 <p class="header-catalog__list--item-sub__categories--box-title">Հագուստ
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    Հագուստ
                                  </p>
                                  <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
                                     <li><a href="#">Կանացի</a></li>
@@ -163,16 +164,16 @@
                               </div>
                               <div class="header-catalog__list--item-sub__categories--img d_f f_w">
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                               </div>
                            </li>
@@ -191,7 +192,8 @@
                            <li
                               class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
                               <div class="header-catalog__list--item-sub__categories--box">
-                                 <p class="header-catalog__list--item-sub__categories--box-title">Աքսեսուարներ
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    Աքսեսուարներ
                                  </p>
                                  <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
                                     <li><a href="#">Հեռախոսի</a></li>
@@ -205,16 +207,16 @@
                               </div>
                               <div class="header-catalog__list--item-sub__categories--img d_f f_w">
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                               </div>
                            </li>
@@ -233,7 +235,8 @@
                            <li
                               class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
                               <div class="header-catalog__list--item-sub__categories--box">
-                                 <p class="header-catalog__list--item-sub__categories--box-title">էլեկտրոտեխնիկա
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    էլեկտրոտեխնիկա
                                  </p>
                                  <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
                                     <li><a href="#">Աուդիո-Վիդեո/Համակարգիչներ</a></li>
@@ -248,16 +251,16 @@
                               </div>
                               <div class="header-catalog__list--item-sub__categories--img d_f f_w">
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                               </div>
                            </li>
@@ -276,29 +279,36 @@
                            <li
                               class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
                               <div class="header-catalog__list--item-sub__categories--box">
-                                 <p class="header-catalog__list--item-sub__categories--box-title">Ավտոմասեր և սպասարկում
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    Ավտոմասեր և սպասարկում
                                  </p>
                                  <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
-                                    <li><a href="#">Ավտոպահեստամասեր և աքսեսուարներ</a></li>
+                                    <li>
+                                       <a href="#">Ավտոպահեստամասեր և աքսեսուարներ</a>
+                                    </li>
                                     <li><a href="#">Մեքենայի վերանորոգում</a></li>
-                                    <li><a href="#">Ավտոլվացում/ավտոլվացման պարագաներ</a></li>
-                                    <li><a href="#">Վերանորոգման այլ ծառայություններ</a></li>
+                                    <li>
+                                       <a href="#">Ավտոլվացում/ավտոլվացման պարագաներ</a>
+                                    </li>
+                                    <li>
+                                       <a href="#">Վերանորոգման այլ ծառայություններ</a>
+                                    </li>
                                     <li><a href="#">Մաքրման ծառայություններ</a></li>
                                     <li><a href="#">Այլ</a></li>
                                  </ul>
                               </div>
                               <div class="header-catalog__list--item-sub__categories--img d_f f_w">
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                               </div>
                            </li>
@@ -317,7 +327,8 @@
                            <li
                               class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
                               <div class="header-catalog__list--item-sub__categories--box">
-                                 <p class="header-catalog__list--item-sub__categories--box-title">Տան պարագաներ
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    Տան պարագաներ
                                  </p>
                                  <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
                                     <li><a href="#">Կահույք</a></li>
@@ -331,16 +342,16 @@
                               </div>
                               <div class="header-catalog__list--item-sub__categories--img d_f f_w">
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                               </div>
                            </li>
@@ -359,7 +370,8 @@
                            <li
                               class="header-catalog__list--item-sub__categories scrollbar d_f j_content_start a_items_start">
                               <div class="header-catalog__list--item-sub__categories--box">
-                                 <p class="header-catalog__list--item-sub__categories--box-title">Տան պարագաներ
+                                 <p class="header-catalog__list--item-sub__categories--box-title">
+                                    Տան պարագաներ
                                  </p>
                                  <ul class="header-catalog__list--item-sub__categories--box-links d_f f_w">
                                     <li><a href="#">Ներքին</a></li>
@@ -373,16 +385,16 @@
                               </div>
                               <div class="header-catalog__list--item-sub__categories--img d_f f_w">
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                                  <a href="#">
-                                    <img src="./assets/img/cards/transparent-card.png">
+                                    <img src="./assets/img/cards/transparent-card.png" />
                                  </a>
                               </div>
                            </li>
@@ -402,14 +414,9 @@
             <li class="crumb-list__item">
                <a href="#" class="crumb-list__item--link">Գլխավոր</a>
             </li>
-            <li class="crumb-list__item">
-               <i class="icon icon-cheveron-right d_f"></i>
-            </li>
-            <li class="crumb-list__item">Բաժիններ
-            </li>
-            <li class="crumb-list__item">
-               <i class="icon icon-cheveron-right d_f"></i>
-            </li>
+            <li class="crumb-list__item icon icon-cheveron-right"></li>
+            <li class="crumb-list__item">Բաժիններ</li>
+            <li class="crumb-list__item icon icon-cheveron-right"></li>
             <li class="crumb-list__item">Խնամք</li>
          </ul>
       </div>

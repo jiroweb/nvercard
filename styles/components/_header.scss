@@ -1,14 +1,27 @@
 @import '../../styles/base/shared';
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999999;
+    background-color: white;
 
     // nav
     &-nav {
         position: relative;
         padding: 8px 0;
+        transition: all .3s ease-in-out;
 
-        &.onscroll {
-            transform: translateY(-100%);
+        &.nav-scrollDown {
+            margin-top: -76px;
+            visibility: hidden;
+            opacity: 0;
+
+            @include xs {
+                margin-top: -62px;
+            }
         }
 
         &__box {
@@ -68,12 +81,16 @@
 
                 &-support {
 
+                    @include sm {
+                        display: none;
+                    }
+
                     p {
                         font: 15px/18px $Regular;
                         color: #828282;
                         margin-right: 25px;
 
-                        @include sm {
+                        @include lg {
                             display: none;
                         }
                     }
@@ -100,6 +117,53 @@
                         }
                     }
                 }
+
+                @include xs {
+                    &-btn {
+                        display: block;
+                        width: 44px;
+                        height: 44px;
+                        font-size: 18px;
+                        color: white;
+                        background-color: var(--color_red);
+                        border-radius: 50%;
+                    }
+
+                    &-search {
+                        width: 100%;
+                        height: 62px;
+                        background-color: #797979;
+                        padding: 8px 5px 8px 14px;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        z-index: 99999;
+
+                        &__form {
+                            width: calc(100% - 30px);
+                            position: relative;
+
+                            .icon-search {
+                                width: 50px;
+                                height: 100%;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: 0;
+                                z-index: 9;
+                                font-size: 18px;
+                                color: white;
+                                background-color: var(--color_red);
+                            }
+                        }
+
+                        &__btn {
+                            width: 50px;
+                            font-size: 18px;
+                            color: white;
+                        }
+                    }
+                }
             }
         }
     }
@@ -108,7 +172,6 @@
     &-content {
         background-color: #ececec;
         padding: 12px 0;
-        z-index: 99999999;
         position: relative;
 
         &__box {
@@ -117,8 +180,13 @@
                 min-width: 170px;
                 max-width: 170px;
                 @include wh(100%);
+                margin-right: 20px;
 
                 @include xs {
+                    min-width: 140px;
+                    max-width: 140px;
+                    margin-right: 0;
+
                     &.active {
                         position: fixed;
                         top: 0;
@@ -128,6 +196,15 @@
                         min-width: 100%;
                         max-width: 100%;
                         background-color: var(--color_red);
+                        z-index: 99999;
+
+                        .header-content__box--catalog__btn .icon {
+                            position: absolute;
+                            right: 15px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            z-index: 9;
+                        }
                     }
                 }
 
@@ -137,6 +214,8 @@
                     left: 0;
                     @include wh(40px);
                     line-height: 40px;
+                    font-size: 16px;
+                    color: white;
                     text-align: center;
                     z-index: 999999;
                 }
@@ -148,9 +227,16 @@
                     background-color: var(--color_red);
                     position: relative;
 
-
                     &:hover {
                         background-color: var(--color_red_hover);
+                    }
+
+                    @include xs {
+                        padding: 0 15px;
+
+                        &:hover {
+                            background-color: var(--color_red);
+                        }
                     }
 
                     span {
@@ -158,19 +244,15 @@
                         letter-spacing: 0.08em;
                         text-transform: uppercase;
                         margin: auto;
+
+                        @include xs {
+                            margin: 0;
+                        }
                     }
 
                     .icon {
-                        font-size: 17px;
+                        font-size: 14px;
                         margin-left: auto;
-
-                        @include xs {
-                            position: absolute;
-                            right: 15px;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            z-index: 9;
-                        }
                     }
                 }
             }
@@ -181,6 +263,10 @@
                 background-color: white;
                 padding: 8px 5px 8px 14px;
                 position: relative;
+
+                @include xs {
+                    display: none;
+                }
 
                 &-input {
                     @include wh(100%);
@@ -194,29 +280,14 @@
                     letter-spacing: 0.04em;
 
                     @include xs {
-                        padding-right: 17px;
+                        padding-right: 60px;
+                        padding-left: 15px;
                     }
 
                     &::placeholder,
                     &::-moz-placeholder {
                         font: 15px $Regular;
                         color: var(--color_text);
-                    }
-
-                    &:hover {
-                        &::placeholder {
-                            color: var(--color_red_hover);
-                        }
-                    }
-
-                    &:focus {
-                        &::placeholder {
-                            opacity: 0;
-                        }
-                    }
-
-                    &:focus+.icon-search {
-                        color: #AFB6BD;
                     }
                 }
 
@@ -245,9 +316,30 @@
                 margin-left: auto;
 
                 &-link {
-                    margin-left: 25px;
-                    font-size: 22px;
+                    margin-left: 35px;
+                    font-size: 24px;
                     color: var(--color_red);
+                    position: relative;
+
+                    @include xs {
+                        margin-left: 25px;
+                    }
+
+                    &:hover{
+                        color: var(--color_red_hover);
+                    }
+
+                    &__counter{
+                        position: absolute;
+                        top: -12px;
+                        right: -12px;
+                        width: 22px;
+                        height: 22px;
+                        background-color: var(--color_red);
+                        color: white;
+                        font: 12px $Regular;
+                        border-radius: 50%;
+                    }
                 }
             }
         }
@@ -325,13 +417,17 @@
                 padding: 5px 22px 5px 15px;
                 position: relative;
 
+                @include xs {
+                    padding: 5px 15px;
+                }
+
                 p {
                     width: calc(100% - 6px);
                     padding-right: 10px;
 
                     .icon {
-                        font-size: 17px;
-                        flex: 0 0 22px;
+                        font-size: 24px;
+                        flex: 0 0 24px;
                         color: #3C444B;
                         margin-right: 11px;
 
