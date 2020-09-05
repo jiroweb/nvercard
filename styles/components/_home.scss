@@ -1,0 +1,28 @@
+@import '../../styles/base/shared';
+
+
+// banner
+
+.banner{
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 15px 0;
+    margin-bottom: 50px;
+    position: relative;
+
+    @include sm{
+        min-height: 300px;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .2);
+    }
+}

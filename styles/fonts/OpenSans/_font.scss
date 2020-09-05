@@ -1,0 +1,17 @@
+// FONT FAMILY NAME AS VARS
+$OpneSansSemibold: 'OpenSans-SemiBold',
+sans-serif; // 600
+
+
+$font-path:'../assets/fonts/OpenSans/';
+$list: 'OpenSans-SemiBold';
+
+@each $name in $list {
+    $src: $font-path + $name;
+
+    @font-face {
+        src: url($src + '.ttf') format('truetype');
+        font-family: $name;
+    }
+}
+

@@ -13,6 +13,11 @@
   font-family: "NotoSansArmenian-ExtraBold";
 }
 
+@font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+  font-family: "OpenSans-SemiBold";
+}
+
 *,
 *:before,
 *:after {
@@ -469,10 +474,6 @@ body {
   content: "\e92d";
 }
 
-.icon-catalog-cancel:before {
-  content: "\e92d";
-}
-
 .icon-catalog:before {
   content: "\e92c";
 }
@@ -639,7 +640,7 @@ body {
 }
 
 .cards-product__item--price p {
-  font: 21px "NotoSansArmenian-Regular", sans-serif;
+  font: 20px "OpenSans-SemiBold", sans-serif;
   color: var(--color_text);
   letter-spacing: -0.36px;
 }
@@ -670,6 +671,11 @@ body {
 @font-face {
   src: url("../assets/fonts/NotoSansArmenian/NotoSansArmenian-ExtraBold.ttf") format("truetype");
   font-family: "NotoSansArmenian-ExtraBold";
+}
+
+@font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+  font-family: "OpenSans-SemiBold";
 }
 
 .increment {
@@ -785,7 +791,7 @@ body {
 
 @media (max-width: 1023.98px) {
   .title-second {
-    font: 24px/36px "NotoSansArmenian-ExtraBold", sans-serif;
+    font: 18px/24px "NotoSansArmenian-ExtraBold", sans-serif;
   }
 }
 
@@ -814,6 +820,11 @@ body {
 @font-face {
   src: url("../assets/fonts/NotoSansArmenian/NotoSansArmenian-ExtraBold.ttf") format("truetype");
   font-family: "NotoSansArmenian-ExtraBold";
+}
+
+@font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+  font-family: "OpenSans-SemiBold";
 }
 
 .header {
@@ -1473,6 +1484,11 @@ body {
   font-family: "NotoSansArmenian-ExtraBold";
 }
 
+@font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+  font-family: "OpenSans-SemiBold";
+}
+
 @media (max-width: 1279.98px) {
   .catalog-box {
     display: block;
@@ -1782,5 +1798,51 @@ body {
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   z-index: 999;
+}
+
+@font-face {
+  src: url("../assets/fonts/NotoSansArmenian/NotoSansArmenian-Regular.ttf") format("truetype");
+  font-family: "NotoSansArmenian-Regular";
+}
+
+@font-face {
+  src: url("../assets/fonts/NotoSansArmenian/NotoSansArmenian-SemiBold.ttf") format("truetype");
+  font-family: "NotoSansArmenian-SemiBold";
+}
+
+@font-face {
+  src: url("../assets/fonts/NotoSansArmenian/NotoSansArmenian-ExtraBold.ttf") format("truetype");
+  font-family: "NotoSansArmenian-ExtraBold";
+}
+
+@font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+  font-family: "OpenSans-SemiBold";
+}
+
+.banner {
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 15px 0;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+@media (max-width: 1023.98px) {
+  .banner {
+    min-height: 300px;
+  }
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=style.css.map */

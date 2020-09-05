@@ -36,15 +36,15 @@ $(document).ready(function () {
 
     // catalog function
 
-    function clickCatalogBtnIcon() {
-        if ($('.clickCatalogBtnIcon').hasClass('icon-catalog')) {
-            $('.icon-catalog').removeClass('icon-catalog');
-            $('.clickCatalogBtnIcon').addClass('icon-catalog-cancel');
-        } else if ($('.clickCatalogBtnIcon').hasClass('icon-catalog-cancel')) {
-            $('.icon-catalog-cancel').removeClass('icon-catalog-cancel');
-            $('.clickCatalogBtnIcon').addClass('icon-catalog');
-        }
-    }
+    // function clickCatalogBtnIcon() {
+    //     if ($('.clickCatalogBtnIcon').hasClass('icon-catalog')) {
+    //         $('.icon-catalog').removeClass('icon-catalog');
+    //         $('.clickCatalogBtnIcon').addClass('icon-catalog-cancel');
+    //     } else if ($('.clickCatalogBtnIcon').hasClass('icon-catalog-cancel')) {
+    //         $('.icon-catalog-cancel').removeClass('icon-catalog-cancel');
+    //         $('.clickCatalogBtnIcon').addClass('icon-catalog');
+    //     }
+    // }
 
     if (window.screen.width >= 768) {
         $('body').on('click', '.clickCatalogOpenClose', function () {
@@ -53,7 +53,8 @@ $(document).ready(function () {
             $('.catalogSubMenu').removeClass('open');
             $('.arrowBackToCategories').hide();
             $('body').toggleClass('overflow-hidden');
-            clickCatalogBtnIcon();
+            $('.clickCatalogBtnIcon').toggle();
+            $('.clickCatalogBtnIconClose').toggle();
             $('.catalogItem').each(function () {
                 let this_parent = $(this).parent();
                 let this_childrn = $(this_parent).children();
@@ -65,15 +66,6 @@ $(document).ready(function () {
 
             $('.headerCatalog').toggle();
         });
-        // function for window click
-        // $(window).on('click', function (e) {
-        //     if (!$(e.target).closest('.window-click').length) {
-        //         $('.headerCatalog').hide();
-        //         $('.clickCatalogName, .boxCatalogBtn').removeClass('active');
-        //         $('.catalogSubMenu').removeClass('open');
-        //         clickCatalogBtnIcon();
-        //     }
-        // });
     }
 
     if (window.screen.width < 768) {
@@ -85,7 +77,8 @@ $(document).ready(function () {
             $('.arrowBackToCategories').hide();
             $('.select-zone__nameCatalog').text('Բաժիններ');
             $('body').toggleClass('overflow-hidden');
-            clickCatalogBtnIcon();
+            $('.clickCatalogBtnIcon').toggle();
+            $('.clickCatalogBtnIconClose').toggle();
         });
         $('body').on('click', '.arrowBackToCategories', function () {
             $(this).hide();
@@ -114,10 +107,23 @@ $(document).ready(function () {
             $('.arrowBackToCategories').show();
         }
     });
+
     $('body').on('mouseover', '.change_activeCatalog', function () {
         let this_active = $('.change_activeCatalog');
         $(this_active).removeClass('active');
         $(this).addClass('active');
+    });
+
+     // function for window click
+     $(window).on('click', function (e) {
+        if (!$(e.target).closest('.window-click').length) {
+            $('.headerCatalog').hide();
+            $('.clickCatalogName, .boxCatalogBtn').removeClass('active');
+            $('.catalogSubMenu').removeClass('open');
+            $('.clickCatalogBtnIcon').show();
+            $('.clickCatalogBtnIconClose, .arrowBackToCategories').hide();
+            $('.select-zone__nameCatalog').text('Բաժիններ');
+        }
     });
 
     // nav-scrollDown
@@ -138,13 +144,13 @@ $(document).ready(function () {
         });
     });
 
-    $('body').on('click', '.clickMobileSearsh', function (){
+    $('body').on('click', '.clickMobileSearsh', function () {
         $('.mobileSearchForm').css({
             display: 'flex',
         })
     });
 
-    $('body').on('click', '.clickMobileSearsClose', function (){
+    $('body').on('click', '.clickMobileSearsClose', function () {
         $('.mobileSearchForm').css({
             display: 'none',
         })
