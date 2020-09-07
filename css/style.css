@@ -181,94 +181,6 @@ body {
   background-color: #F7F8F9;
 }
 
-.d_f {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.d_i_f {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.f_w {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.f_n_w {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-
-.f_r {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.f_d_c {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.j_c_st {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.j_c_e {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.j_c_c {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.j_c_b {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.a_i_s {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.a_i_e {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.a_i_c {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-:root {
-  --color_global: #10c459;
-  --color_global_hover: #30e076;
-  --color_red: #cd123f;
-  --color_red_hover: #a6093d;
-  --color_text: #232c31;
-  --border-radius: 6px;
-  --transition-all: .3s;
-}
-
 @font-face {
   font-family: 'icomoon';
   src: url("../assets/fonts/icons/icomoon.eot?mbk7ji");
@@ -480,6 +392,94 @@ body {
 
 .icon-cart:before {
   content: "\e92e";
+}
+
+.d_f {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d_i_f {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.f_w {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.f_n_w {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.f_r {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.f_d_c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.j_c_st {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.j_c_e {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.j_c_c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.j_c_b {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.a_i_s {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.a_i_e {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.a_i_c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+:root {
+  --color_global: #10c459;
+  --color_global_hover: #30e076;
+  --color_red: #cd123f;
+  --color_red_hover: #a6093d;
+  --color_text: #232c31;
+  --border-radius: 6px;
+  --transition-all: .3s;
 }
 
 .slick-carousel {
@@ -950,7 +950,9 @@ body {
 
 @media (max-width: 767.98px) {
   .header-nav__box--info-btn {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 44px;
     height: 44px;
     font-size: 18px;
