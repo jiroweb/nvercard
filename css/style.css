@@ -18,169 +18,6 @@
   font-family: "OpenSans-SemiBold";
 }
 
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  outline: none;
-}
-
-div,
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-iframe,
-ol,
-ul,
-li,
-form,
-label,
-i,
-footer,
-header,
-menu,
-nav,
-a,
-table,
-thead,
-tbody,
-tfoot,
-tr,
-th,
-td,
-video,
-canvas,
-section,
-main object,
-address,
-code,
-em,
-small,
-strong,
-var,
-article,
-aside,
-details,
-figure,
-summary,
-time,
-mark,
-audio,
-center {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-}
-
-iframe,
-article,
-aside,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-main,
-picture {
-  display: block;
-}
-
-ol,
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-th {
-  text-align: left;
-}
-
-input {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-input[type="password"] {
-  font: 17px Verdana, sans-serif !important;
-}
-
-input[type="radio"], input[type="checkbox"] {
-  display: none;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-          appearance: none;
-}
-
-input:-webkit-autofill {
-  -webkit-transition: background-color 100000s ease-in-out 0s;
-  transition: background-color 100000s ease-in-out 0s;
-}
-
-a {
-  display: inline-block;
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-  background-color: transparent;
-}
-
-input,
-button,
-select,
-textarea {
-  display: inline-block;
-  padding: 0;
-  border: 0;
-  outline: none;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-strong {
-  font-weight: bold;
-}
-
-[hidden] {
-  display: none !important;
-}
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #F7F8F9;
-}
-
 @font-face {
   font-family: 'icomoon';
   src: url("../assets/fonts/icons/icomoon.eot?mbk7ji");
@@ -470,6 +307,169 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+iframe,
+ol,
+ul,
+li,
+form,
+label,
+i,
+footer,
+header,
+menu,
+nav,
+a,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td,
+video,
+canvas,
+section,
+main object,
+address,
+code,
+em,
+small,
+strong,
+var,
+article,
+aside,
+details,
+figure,
+summary,
+time,
+mark,
+audio,
+center {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+iframe,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main,
+picture {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: left;
+}
+
+input {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+input[type="password"] {
+  font: 17px Verdana, sans-serif !important;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  display: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+input:-webkit-autofill {
+  -webkit-transition: background-color 100000s ease-in-out 0s;
+  transition: background-color 100000s ease-in-out 0s;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+input,
+button,
+select,
+textarea {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+strong {
+  font-weight: bold;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #F7F8F9;
 }
 
 :root {
@@ -1853,16 +1853,6 @@ body {
   .banner {
     min-height: 300px;
   }
-}
-
-.banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .advantage {
