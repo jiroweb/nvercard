@@ -123,6 +123,7 @@ $(document).ready(function () {
             $('.clickCatalogBtnIcon').show();
             $('.clickCatalogBtnIconClose, .arrowBackToCategories').hide();
             $('.select-zone__nameCatalog').text('Բաժիններ');
+            $('body').removeClass('overflow-hidden');
         }
     });
 

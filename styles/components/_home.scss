@@ -1,9 +1,13 @@
 @import '../../styles/base/shared';
+// home
 
+.home-title{
+    text-align: center;
+}
 
 // banner
 
-.banner{
+.banner {
     min-height: 600px;
     background-size: cover;
     background-position: center;
@@ -12,11 +16,11 @@
     margin-bottom: 50px;
     position: relative;
 
-    @include sm{
+    @include sm {
         min-height: 300px;
     }
 
-    &::before{
+    &::before {
         content: "";
         position: absolute;
         top: 0;
@@ -24,5 +28,74 @@
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, .2);
+    }
+}
+
+// advantage
+.advantage {
+    margin-bottom: 45px;
+
+    &-block {
+        margin: -15px;
+
+        @include xs {
+            margin: 0;
+        }
+
+        &__item {
+            width: 43%;
+            padding: 30px;
+
+            @include sm {
+                width: 50%;
+            }
+
+            @include xs {
+                width: 100%;
+                padding: 15px 0;
+            }
+
+            &--img {
+                @include wh(100px);
+
+                @include sm {
+                    margin-bottom: 25px;
+                }
+
+                @include xs {
+                    @include wh(50px);
+                    margin-bottom: 15px;
+                }
+            }
+
+            &--text {
+                width: calc(100% - 100px);
+                padding-left: 25px;
+
+                @include sm {
+                    width: calc(100% - 50px);
+                    padding-left: 15px;
+                }
+
+                h3 {
+                    font: 20px/28px $Semibold;
+                    color: var(--color_text);
+                    margin-bottom: 15px;
+
+                    @include xs {
+                        font-size: 18px;
+                    }
+                }
+
+                p {
+                    font: 16px/24px $Regular;
+                    color: var(--color_text);
+
+                    @include xs {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
     }
 }

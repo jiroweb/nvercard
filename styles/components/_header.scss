@@ -326,11 +326,11 @@
                         margin-left: 25px;
                     }
 
-                    &:hover{
+                    &:hover {
                         color: var(--color_red_hover);
                     }
 
-                    &__counter{
+                    &__counter {
                         position: absolute;
                         top: -12px;
                         right: -12px;
@@ -389,7 +389,7 @@
 
     &__list {
         width: 340px;
-        padding: 25px 15px;
+        padding: 25px 15px 0;
         background-color: #F5F5F5;
 
         @include xs {
@@ -464,6 +464,19 @@
                     .icon-cheveron-right {
                         color: var(--color_global_hover);
                     }
+                }
+            }
+
+            &-all {
+                font: 16px $Regular;
+                color: var(--color_text);
+                padding: 11px 15px;
+                text-align: center;
+                display: block;
+    
+                &:hover {
+                    background-color: var(--color_red);
+                    color: white;
                 }
             }
 
@@ -601,5 +614,7 @@
                 }
             }
         }
+
+       
     }
 }
