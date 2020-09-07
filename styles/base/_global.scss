@@ -52,18 +52,18 @@ body {
     }
 
     &-global {
-        font: 32px/38px $Extrabold;
+        font: 28px/32px $Extrabold;
 
         @include sm {
-            line-height: 36px;
+            font: 24px/28px $Extrabold;
         }
     }
 
     &-second {
-        font: 26px/28px $Extrabold;
+        font: 24px/28px $Extrabold;
 
         @include sm {
-            font: 22px/24px $Extrabold;
+            font: 20px/24px $Extrabold;
         }
     }
 }

@@ -776,22 +776,22 @@ body {
 }
 
 .title-global {
-  font: 32px/38px "NotoSansArmenian-ExtraBold", sans-serif;
+  font: 28px/32px "NotoSansArmenian-ExtraBold", sans-serif;
 }
 
 @media (max-width: 1023.98px) {
   .title-global {
-    line-height: 36px;
+    font: 24px/28px "NotoSansArmenian-ExtraBold", sans-serif;
   }
 }
 
 .title-second {
-  font: 26px/28px "NotoSansArmenian-ExtraBold", sans-serif;
+  font: 24px/28px "NotoSansArmenian-ExtraBold", sans-serif;
 }
 
 @media (max-width: 1023.98px) {
   .title-second {
-    font: 22px/24px "NotoSansArmenian-ExtraBold", sans-serif;
+    font: 20px/24px "NotoSansArmenian-ExtraBold", sans-serif;
   }
 }
 
