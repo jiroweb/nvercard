@@ -130,7 +130,7 @@ $(document).ready(function () {
     // nav-scrollDown
     $(function () {
         let lastScrollTop = 0,
-            delta = 0;
+            delta = 140;
         $(window).scroll(function (event) {
             let st = $(this).scrollTop();
             if (Math.abs(lastScrollTop - st) <= delta) return;
