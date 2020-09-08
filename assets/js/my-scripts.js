@@ -156,4 +156,8 @@ $(document).ready(function () {
             display: 'none',
         })
     });
+
+
+    // animation js
+    new WOW().init();
 });
