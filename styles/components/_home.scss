@@ -1,198 +1,238 @@
-@import '../../styles/base/shared';
+@import "../../styles/base/shared";
 // home
 
 .home-title {
-    text-align: center;
+  text-align: center;
 }
 
 // banner
 
 .banner {
-    min-height: 600px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 15px 0;
-    margin-bottom: 50px;
-    position: relative;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 15px 0;
+  margin-bottom: 50px;
+  position: relative;
 
-    @include sm {
-        min-height: 300px;
-    }
+  @include sm {
+    min-height: 300px;
+  }
 
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     right: 0;
-    //     bottom: 0;
-    //     background-color: rgba(0, 0, 0, .2);
-    // }
+  // &::before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //     background-color: rgba(0, 0, 0, .2);
+  // }
 }
 
 // advantage
 .advantage {
-    margin-bottom: 45px;
+  margin-bottom: 45px;
 
-    &-block {
-        margin: -15px;
+  &-block {
+    margin: -15px;
+
+    @include xs {
+      margin: 0;
+    }
+
+    &__item {
+      width: 43%;
+      padding: 30px;
+
+      @include sm {
+        width: 50%;
+      }
+
+      @include xs {
+        width: 100%;
+        padding: 15px 0;
+      }
+
+      &--img {
+        @include wh(100px);
+
+        @include sm {
+          margin-bottom: 25px;
+        }
 
         @include xs {
-            margin: 0;
+          @include wh(50px);
+          margin-bottom: 15px;
+        }
+      }
+
+      &--text {
+        width: calc(100% - 100px);
+        padding-left: 25px;
+
+        @include sm {
+          width: calc(100% - 50px);
+          padding-left: 15px;
         }
 
-        &__item {
-            width: 43%;
-            padding: 30px;
+        h3 {
+          font: 20px/28px $Semibold;
+          color: var(--color_text);
+          margin-bottom: 15px;
 
-            @include sm {
-                width: 50%;
-            }
-
-            @include xs {
-                width: 100%;
-                padding: 15px 0;
-            }
-
-            &--img {
-                @include wh(100px);
-
-                @include sm {
-                    margin-bottom: 25px;
-                }
-
-                @include xs {
-                    @include wh(50px);
-                    margin-bottom: 15px;
-                }
-            }
-
-            &--text {
-                width: calc(100% - 100px);
-                padding-left: 25px;
-
-                @include sm {
-                    width: calc(100% - 50px);
-                    padding-left: 15px;
-                }
-
-                h3 {
-                    font: 20px/28px $Semibold;
-                    color: var(--color_text);
-                    margin-bottom: 15px;
-
-                    @include xs {
-                        font-size: 18px;
-                    }
-                }
-
-                p {
-                    font: 16px/24px $Regular;
-                    color: var(--color_text);
-
-                    @include xs {
-                        font-size: 14px;
-                    }
-                }
-            }
+          @include xs {
+            font-size: 18px;
+          }
         }
+
+        p {
+          font: 16px/24px $Regular;
+          color: var(--color_text);
+
+          @include xs {
+            font-size: 14px;
+          }
+        }
+      }
     }
+  }
+}
+// order
+.order {
+  margin-bottom: 45px;
+  &-block {
+    &__list {
+      margin: 0 -10px;
+      &--item {
+        padding: 0 10px;
+        width: 25%;
+        &-step {
+          border: 3px ridge;
+          border-color: #fd1d1d;
+          padding: 15px;
+          border-radius: 20px;
+          position: relative;
+          height: 170px;
+          &__number {
+            position: absolute;
+            top: -29px;
+            left: -12px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(159deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+            color: white;
+            font: 40px $Extrabold;
+          }
+          &__text {
+            h3 {
+              text-align: right;
+              margin-bottom: 20px;
+            }
+            p {
+              font: 16px/24px $Regular;
+              color: var(--color_text);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // faq
 
 .faq {
-    margin-bottom: 45px;
+  margin-bottom: 45px;
 
-    &-block {
+  &-block {
+    &__item {
+      border-radius: 4px;
+      background-color: rgba(241, 243, 243, 0.9);
+      padding: 23px;
 
-        &__item {
-            border-radius: 4px;
-            background-color: rgba(241, 243, 243, 0.9);
-            padding: 23px;
+      & + & {
+        margin-top: 20px;
+      }
 
-            &+&{
-                margin-top: 20px;
-            }
+      &--title {
+        &-name {
+          width: calc(100% - 18px);
+          padding-right: 20px;
+          font: 18px $Regular;
+          letter-spacing: -0.21px;
+          color: var(--color_text);
+          cursor: pointer;
 
-            &--title {
-
-                &-name {
-                    width: calc(100% - 18px);
-                    padding-right: 20px;
-                    font: 18px $Regular;
-                    letter-spacing: -.21px;
-                    color: var(--color_text);
-                    cursor: pointer;
-
-                    @include xs{
-                        font-size: 16px;
-                    }
-                }
-
-                &-icon {
-                    @include wh(18px);
-                    display: block;
-                    position: relative;
-
-                    &::before,
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        left: 0;
-                        right: 0;
-                        margin: auto;
-                        background-color: #4f565a;
-                    }
-
-                    &::before {
-                        width: 100%;
-                        height: 2px;
-                    }
-
-                    &::after {
-                        width: 2px;
-                        height: 100%;
-                    }
-                }
-
-                &:hover &-name {
-                    color: var(--color_global);
-                }
-
-                &:hover &-icon {
-
-                    &::before,
-                    &::after {
-                        background-color: var(--color_global);
-                    }
-                }
-
-                &[data-expand="true"] &-name {
-                    color: var(--color_global);
-                }
-
-                &[data-expand="true"] &-icon::before {
-                    background-color: var(--color_global);
-                }
-
-                &[data-expand="true"] &-icon::after {
-                    content: none;
-                }
-            }
-
-            &--description {
-                font: 16px/22px $Regular;
-                color: #1a1a1a;
-                margin-top: 22px;
-
-                @include xs{
-                    font-size: 14px;
-                }
-            }
+          @include xs {
+            font-size: 16px;
+          }
         }
+
+        &-icon {
+          @include wh(18px);
+          display: block;
+          position: relative;
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: #4f565a;
+          }
+
+          &::before {
+            width: 100%;
+            height: 2px;
+          }
+
+          &::after {
+            width: 2px;
+            height: 100%;
+          }
+        }
+
+        &:hover &-name {
+          color: var(--color_global);
+        }
+
+        &:hover &-icon {
+          &::before,
+          &::after {
+            background-color: var(--color_global);
+          }
+        }
+
+        &[data-expand="true"] &-name {
+          color: var(--color_global);
+        }
+
+        &[data-expand="true"] &-icon::before {
+          background-color: var(--color_global);
+        }
+
+        &[data-expand="true"] &-icon::after {
+          content: none;
+        }
+      }
+
+      &--description {
+        font: 16px/22px $Regular;
+        color: #1a1a1a;
+        margin-top: 22px;
+
+        @include xs {
+          font-size: 14px;
+        }
+      }
     }
+  }
 }

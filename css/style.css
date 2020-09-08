@@ -1941,6 +1941,50 @@ body {
   }
 }
 
+.order {
+  margin-bottom: 45px;
+}
+
+.order-block__list {
+  margin: 0 -10px;
+}
+
+.order-block__list--item {
+  padding: 0 10px;
+  width: 25%;
+}
+
+.order-block__list--item-step {
+  border: 3px ridge;
+  border-color: #fd1d1d;
+  padding: 15px;
+  border-radius: 20px;
+  position: relative;
+  height: 170px;
+}
+
+.order-block__list--item-step__number {
+  position: absolute;
+  top: -29px;
+  left: -12px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(159deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  color: white;
+  font: 40px "NotoSansArmenian-ExtraBold", sans-serif;
+}
+
+.order-block__list--item-step__text h3 {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.order-block__list--item-step__text p {
+  font: 16px/24px "NotoSansArmenian-Regular", sans-serif;
+  color: var(--color_text);
+}
+
 .faq {
   margin-bottom: 45px;
 }
@@ -1959,7 +2003,7 @@ body {
   width: calc(100% - 18px);
   padding-right: 20px;
   font: 18px "NotoSansArmenian-Regular", sans-serif;
-  letter-spacing: -.21px;
+  letter-spacing: -0.21px;
   color: var(--color_text);
   cursor: pointer;
 }
