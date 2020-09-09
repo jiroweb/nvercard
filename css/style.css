@@ -1743,70 +1743,80 @@ body {
 }
 
 .footer-main {
-  border-bottom: 1px dotted var(--color-global);
+  border-bottom: 1px dashed var(--color_global);
 }
 
 .footer-main__block {
   padding: 50px 0 30px;
 }
 
-.footer-main__about p {
+.footer-main__block--menu {
+  width: 30%;
+}
+
+.footer-main__block--menu ul li {
+  margin-top: 20px;
+}
+
+.footer-main__block--menu ul li a {
+  font: 18px "NotoSansArmenian-Regular", sans-serif;
+  color: var(--color_text);
+  -webkit-transition: var(--transition-all);
+  transition: var(--transition-all);
+}
+
+.footer-main__block--menu ul li a:hover {
+  color: var(--color_global_hover);
+}
+
+.footer-main__block--menu-logo {
+  max-width: 200px;
+  width: 100%;
+  height: 40px;
+}
+
+.footer-main__about {
+  width: 70%;
+}
+
+.footer-main__about--text-title {
+  margin-bottom: 20px;
+}
+
+.footer-main__about--text-title h2 {
+  color: var(--color_global);
+  font: 22px "NotoSansArmenian-ExtraBold", sans-serif;
+}
+
+.footer-main__about--text p {
   font: 16px "NotoSansArmenian-Regular", sans-serif;
   max-width: 400px;
   width: 100%;
-  color: grey;
+  color: var(--color_text);
 }
 
-.footer-main__about p + p {
+.footer-main__about--text p + p {
   margin-top: 30px;
-}
-
-.footer-main__follow ul li + li {
-  margin-top: 15px;
-}
-
-.footer-main__follow ul a {
-  color: grey;
-}
-
-.footer-main__follow ul a .icon {
-  margin-right: 10px;
-  font-size: 36px;
-}
-
-.footer-main__follow ul a p {
-  font: 22px "NotoSansArmenian-ExtraBold", sans-serif;
-  letter-spacing: 0.03em;
 }
 
 .footer-second {
   padding: 15px 0;
 }
 
-.footer-second__part--list {
-  font: 18px "NotoSansArmenian-Regular", sans-serif;
-  color: var(--color_global);
-  -webkit-transition: var(--transition-all);
-  transition: var(--transition-all);
+.footer-second__part--list ul li + li {
+  margin-left: 15px;
 }
 
 .footer-second__part--list ul li a {
-  font-size: 16px;
-  color: var(--color-global);
-  -webkit-transition: var(--transition-all);
-  transition: var(--transition-all);
+  color: grey;
 }
 
-.footer-second__part--list ul li a:hover {
-  color: var(--color_red_hover);
-}
-
-.footer-second__part--list ul li + li a {
-  margin-left: 10px;
+.footer-second__part--list ul li a .icon {
+  font-size: 36px;
 }
 
 .footer-second__part--info {
-  color: white;
+  color: grey;
   font: 18px "NotoSansArmenian-Regular", sans-serif;
 }
 
@@ -1856,7 +1866,7 @@ body {
   width: 0;
   height: 0;
   border-top: 15px solid transparent;
-  border-left: 25px solid #FFFFFF;
+  border-left: 25px solid #ffffff;
   border-bottom: 15px solid transparent;
   top: 50%;
   left: 55%;
