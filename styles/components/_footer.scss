@@ -1,128 +1,148 @@
 /*=====================-FOOTE-STYLE-START-========================*/
 
 .footer {
-  background-color: #ececec;
-  &-main {
-    border-bottom: 1px dashed var(--color_global);
-    &__block {
-      padding: 50px 0 30px;
-      &--menu {
-        width: 30%;
-        ul {
-          li {
-            margin-top: 20px;
+    background-color: #ececec;
+    padding: 25px 0;
 
-            a {
-              font: 18px $Regular;
-              color: var(--color_text);
-              transition: var(--transition-all);
-              &:hover {
-                color: var(--color_global_hover);
-              }
+    &-main {
+
+        &__block {
+
+            @include xs{
+                display: block;
             }
-          }
-        }
-        &-logo {
-          max-width: 200px;
-          width: 100%;
-          height: 40px;
-        }
-      }
-    }
-    &__about {
-      width: 70%;
-      &--text {
-        &-title{  
-            margin-bottom: 20px;
-        h2 {
-          color: var(--color_global);
-          font: 22px $Extrabold;
-        }
-    }
-        p {
-          font: 16px $Regular;
-          max-width: 400px;
-          width: 100%;
-          color: var(--color_text);
-          & + p {
-            margin-top: 30px;
-          }
-        }
-      }
-    }
-  }
-  &-second {
-    padding: 15px 0;
-    &__part {
-      &--list {
-        ul {
-          li {
-            & + li {
-              margin-left: 15px;
+
+            &--logo {
+                width: 80px;
+                height: 130px;
+
+                @include xs{
+                    margin: 0 auto 25px;
+                }
             }
-            a {
-              color: grey;
-              .icon {
-                font-size: 36px;
-              }
+
+            &--info {
+                width: calc(100% - 80px);
+                padding-left: 45px;
+
+                @include xs {
+                    width: 100%;
+                    padding-left: 0;
+                    align-items: flex-start;
+                }
+
+                &-menu {
+
+                    @include xs {
+                        width: 40%;
+                        display: block;
+                    }
+
+                    &__item {
+
+                        &+& {
+                            margin-left: 15px;
+
+                            @include xs {
+                                margin-top: 15px;
+                                margin-left: 0;
+                            }
+                        }
+
+                        &--link {
+                            font: 15px $Regular;
+                            color: var(--color_text);
+
+                            &:hover {
+                                color: var(--color_global);
+                            }
+
+                            @include xs{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+
+                &-callcenter {
+                    margin-left: auto;
+
+                    @include sm {
+                        width: 100%;
+                        margin-top: 25px;
+                        margin-left: 0;
+                    }
+
+                    @include xs {
+                        width: 60%;
+                        display: block;
+                        margin-top: 0;
+                        text-align: right;
+                    }
+
+                    &__link {
+                        font: 15px $OpneSansSemibold;
+                        color: var(--color_global);
+                        margin-right: 20px;
+
+                        &:hover {
+                            color: var(--color_red);
+                        }
+
+                        @include xs {
+                            margin-bottom: 10px;
+                            margin-right: 0;
+                        }
+                    }
+
+                    &__icon {
+                        font-size: 20px;
+                        color: var(--color_global);
+                        margin-left: 15px;
+
+                        &:hover {
+                            color: var(--color_red);
+                        }
+                    }
+                }
+
+                &-rules {
+                    width: 100%;
+                    margin-top: 35px;
+
+                    @include xs {
+                        display: block;
+                    }
+
+                    &__nvercard {
+                        font: 14px $Regular;
+                        color: #797F83;
+
+                        span {
+                            font: 14px $OpneSansSemibold;
+                        }
+
+                        @include sm {
+                            width: 100%;
+                            margin-top: 15px;
+                        }
+                    }
+
+                    &__link {
+                        font: 14px $Regular;
+                        color: #797F83;
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: var(--color_global);
+                        }
+
+                        @include xs{
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
             }
-          }
         }
-      }
-      &--info {
-        color: grey;
-        font: 18px $Regular;
-      }
     }
-  }
-}
-
-.single-video__block {
-  max-width: 400px;
-  width: 100%;
-  height: 190px;
-  transition: var(--transition-all);
-  position: relative;
-  overflow: hidden;
-}
-
-.video-play__bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.single-video__block .video {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-}
-
-.video-play__icon {
-  position: absolute;
-  width: 76px;
-  height: 76px;
-  border: 1px solid white;
-  background-color: transparent;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.video-play__icon:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 15px solid transparent;
-  border-left: 25px solid #ffffff;
-  border-bottom: 15px solid transparent;
-  top: 50%;
-  left: 55%;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 999;
 }
