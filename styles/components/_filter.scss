@@ -1,0 +1,211 @@
+@import '../../styles/base/shared';
+
+.catalog-box__cards--filter{
+    background-color: white;
+    padding: 10px 20px;
+    margin-bottom: 1.5px;
+    &-main{
+        &__dropdown{
+            position: relative;
+            &--choose{
+                input{
+                    background: white;
+                    cursor: pointer;
+                }
+            }
+            &--sections{
+                display: none;
+                position: absolute;
+                z-index: 99999999;
+                width: 100%;
+                padding: 10px;
+                top: 25px;
+                border-radius: 5px;
+                background-color: var(--color_global);
+                ul{
+                    li{
+                        font: 14px $Extrabold;
+                        color: white;
+                        padding: 10px 0;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        &+li{
+                            border-top: 1px solid white;
+                        }
+                        &:hover{
+                            color: var(--color_red_hover);
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    &-btn{
+        button{
+            padding: 5px 15px;
+            background-color: var(--color_red);
+            border-radius: var(--border-radius);
+            color: white;
+            font: 16px $Extrabold;
+        }
+    }
+}
+li {
+    cursor: pointer;
+}
+
+.active {
+    color: red
+}
+
+.dropdown-btn {
+    width: 150px;
+}
+ 
+.filter-section{
+    width: 350px;
+    height: 30px;
+
+}
+
+
+.filter-slider {
+    width: 100%;
+    margin-left: 30px;
+    position: relative;
+    height: 5px;
+}
+
+.filter-slider>div {
+    position: absolute;
+    left: 13px;
+    right: 15px;
+    height: 5px;
+}
+
+.filter-slider>div>.inverse-left {
+    position: absolute;
+    left: 0;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #CCC;
+    margin: 0 7px;
+}
+
+.filter-slider>div>.inverse-right {
+    position: absolute;
+    right: 0;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #CCC;
+    margin: 0 7px;
+}
+
+
+.filter-slider>div>.range {
+    position: absolute;
+    left: 0;
+    height: 5px;
+    border-radius: 14px;
+    background-color: #d02128;
+}
+
+.filter-slider .range-thumb{
+    position: absolute;
+    top: -7px;
+    z-index: 2;
+    height: 20px;
+    width: 20px;
+    text-align: left;
+    margin-left: -11px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    background-color: #FFF;
+    border-radius: 50%;
+    outline: none;
+}
+
+.filter-slider .range-calc {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 3;
+    height: 30px;
+    top: -14px;
+    width: 100%;
+    opacity: 0;
+}
+
+.filter-slider .range-calc:focus::-webkit-slider-runnable-track {
+    background: transparent;
+    border: transparent;
+}
+
+.filter-slider .range-calc:focus {
+    outline: none;
+}
+
+.filter-slider .range-calc::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 28px;
+    height: 28px;
+    border-radius: 0px;
+    border: 0 none;
+    background: red;
+    -webkit-appearance: none;
+}
+
+.filter-slider .range-calc::-ms-fill-lower {
+    background: transparent;
+    border: 0 none;
+}
+
+.filter-slider .range-calc::-ms-fill-upper {
+    background: transparent;
+    border: 0 none;
+}
+
+.filter-slider .range-calc::-ms-tooltip {
+    display: none;
+}
+
+.filter-slider>div>[sign] {
+    opacity: 0;
+    position: absolute;
+    margin-left: -26px;
+    z-index: 999999;
+    top: -45px;
+    background-color: #d02128;
+    color: #fff;
+    width: 50px;
+    height: 35px;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.filter-slider>div>[sign]:after {
+    position: absolute;
+    content: '';
+    left: 2px;
+    border-radius: 16px;
+    top: 27px;
+    border-left: 23px solid transparent;
+    border-right: 23px solid transparent;
+    border-top-width: 19px;
+    border-top-style: solid;
+    border-top-color: #d02128;
+}
+
+.filter-slider>div>[sign]>span {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.filter-slider:hover>div>[sign] {
+    opacity: 1;
+}
+/*=======================-FILTER-STYLE-END-=========================*/

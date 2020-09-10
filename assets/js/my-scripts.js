@@ -160,4 +160,55 @@ $(document).ready(function () {
 
     // animation js
     new WOW().init();
+
+
+    // filters
+    
+    $('.dropdown-click__open').on('click', function () {
+        $('.dropdown-modal').hide()
+    })
+
+    $('.dropdown-click__open').on('click', function () {
+        let parent = $(this).parent()
+        let child = $(parent).find('.dropdown-modal')
+        $(child).fadeToggle()
+        if ($('.dropdown-modal').is(":hidden")) {
+            $('.dropdown').removeClass('dropdown-modal__open')
+        }
+        $(parent).addClass('dropdown-modal__open')
+    })
+
+    $('.select-item').on('click', function () {
+        let this_parent = $(this).parent()
+        let parent_this = $(this_parent).parent()
+        let parent = $(parent_this).parent()
+        let child_select_input = $(parent).find('.select-zone__input')
+        let select_text = $(this).text()
+        $(child_select_input).val(select_text);
+    })
+    
+    //  ================ -RANGE-JS-START- ================
+ 
+ 
+    $('#range-calc').on('input', function () {
+        this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+        let value = (this.value/parseInt(this.max))*100
+        var children = this.parentNode.childNodes[1].childNodes;
+        children[1].style.width=value+'%';
+        children[5].style.left=value+'%';
+        children[7].style.left=value+'%';children[11].style.left=value+'%';
+        children[11].childNodes[1].innerHTML=this.value;
+    })
+    $('#range-calc__second').on('input', function () {
+         this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+        let value = (this.value/parseInt(this.max))*100
+        var children = this.parentNode.childNodes[1].childNodes;
+        children[3].style.width=(100-value)+'%';
+        children[5].style.right=(100-value)+'%';
+        children[9].style.left=value+'%';children[13].style.left=value+'%';
+        children[13].childNodes[1].innerHTML=this.value;
+    })
+
+
+
 });
