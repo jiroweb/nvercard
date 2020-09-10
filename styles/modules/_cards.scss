@@ -1,5 +1,5 @@
 .cards {
-    margin: -10px; 
+    margin: -10px;
 
     &-catalog{
         margin: -1.5px;
@@ -8,6 +8,18 @@
     &-product {
         width: 20%;
         padding: 10px;
+
+        @include xl{
+            width: 25%;
+        }
+
+        @include sm{
+            width: 50%;
+        }
+
+        @include xs{
+            width: 100%;
+        }
 
         &-catalog{
             width: 25%;
@@ -68,6 +80,14 @@
 
             &:hover{
                 color: var(--color_red);
+            }
+
+            &.active{
+                color: var(--color_red);
+
+                &:hover{
+                    opacity: .8;
+                }
             }
             
         }

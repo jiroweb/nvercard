@@ -10,7 +10,8 @@
 '../modules/cards',
 '../modules/increment',
 '../modules/buttons',
-'../modules/animation';
+'../modules/animation',
+'../modules/empty';
 
 
 
@@ -18,6 +19,8 @@
 
 body {
     padding-top: 140px;
+    display: flex;
+    flex-direction: column;
 
     @include xs {
         padding-top: 126px;
@@ -53,7 +56,7 @@ body {
     }
 
     &-global {
-        font: 28px/32px $Extrabold;
+        font: 28px/40px $Extrabold;
 
         @include sm {
             font: 24px/28px $Extrabold;
@@ -96,5 +99,6 @@ body {
 // componetns
 @import '../components/header',
 '../components/catalog',
+'../components/favorites',
 '../components/footer',
 '../components/home';

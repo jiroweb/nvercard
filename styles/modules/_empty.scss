@@ -1,0 +1,74 @@
+.empty {
+    padding: 62px 15px 98px;
+    background-color: white;
+    margin-top: 29px;
+    margin-bottom: 50px;
+
+    @include sm {
+        padding: 30px 15px 40px;
+    }
+
+    &-box {
+        max-width: 1010px;
+        width: 100%;
+        margin: auto;
+
+        @include sm {
+            display: block;
+        }
+
+        &__text {
+            width: calc(100% - 400px);
+            color: var(--color_text);
+            padding-right: 50px;
+
+            @include sm {
+                width: 100%;
+                text-align: center;
+                padding-right: 0;
+            }
+
+            &--title {
+                font: 27px $Regular;
+                margin-bottom: 28px;
+
+                @include xs{
+                    font-size: 22px;
+                }
+            }
+
+            &--info {
+                font: 20px $Regular;
+
+                @include xs{
+                    font-size: 16px;
+                }
+
+                a {
+                    color: var(--color_global);
+
+                    &:hover {
+                        color: var(--color_red);
+                    }
+                }
+            }
+
+            &--btn {
+                max-width: 220px;
+                width: 100%;
+                margin: 30px auto 0;
+            }
+        }
+
+        &__img {
+            max-width: 400px;
+            @include wh(100%, 400px);
+
+            @include sm {
+                max-width: 100%;
+                margin-top: 30px;
+                height: 300px;
+            }
+        }
+    }
+}

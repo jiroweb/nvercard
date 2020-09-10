@@ -593,6 +593,24 @@ body {
   padding: 10px;
 }
 
+@media (max-width: 1439.98px) {
+  .cards-product {
+    width: 25%;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .cards-product {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cards-product {
+    width: 100%;
+  }
+}
+
 .cards-product-catalog {
   width: 25%;
   padding: 1.5px;
@@ -656,6 +674,14 @@ body {
 
 .cards-product__icon:hover {
   color: var(--color_red);
+}
+
+.cards-product__icon.active {
+  color: var(--color_red);
+}
+
+.cards-product__icon.active:hover {
+  opacity: .8;
 }
 
 @font-face {
@@ -792,8 +818,103 @@ button[disabled] {
           animation-name: fadeIn;
 }
 
+.empty {
+  padding: 62px 15px 98px;
+  background-color: white;
+  margin-top: 29px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1023.98px) {
+  .empty {
+    padding: 30px 15px 40px;
+  }
+}
+
+.empty-box {
+  max-width: 1010px;
+  width: 100%;
+  margin: auto;
+}
+
+@media (max-width: 1023.98px) {
+  .empty-box {
+    display: block;
+  }
+}
+
+.empty-box__text {
+  width: calc(100% - 400px);
+  color: var(--color_text);
+  padding-right: 50px;
+}
+
+@media (max-width: 1023.98px) {
+  .empty-box__text {
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
+}
+
+.empty-box__text--title {
+  font: 27px "NotoSansArmenian-Regular", sans-serif;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 767.98px) {
+  .empty-box__text--title {
+    font-size: 22px;
+  }
+}
+
+.empty-box__text--info {
+  font: 20px "NotoSansArmenian-Regular", sans-serif;
+}
+
+@media (max-width: 767.98px) {
+  .empty-box__text--info {
+    font-size: 16px;
+  }
+}
+
+.empty-box__text--info a {
+  color: var(--color_global);
+}
+
+.empty-box__text--info a:hover {
+  color: var(--color_red);
+}
+
+.empty-box__text--btn {
+  max-width: 220px;
+  width: 100%;
+  margin: 30px auto 0;
+}
+
+.empty-box__img {
+  max-width: 400px;
+  width: 100%;
+  height: 400px;
+}
+
+@media (max-width: 1023.98px) {
+  .empty-box__img {
+    max-width: 100%;
+    margin-top: 30px;
+    height: 300px;
+  }
+}
+
 body {
   padding-top: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (max-width: 767.98px) {
@@ -826,7 +947,7 @@ body {
 }
 
 .title-global {
-  font: 28px/32px "NotoSansArmenian-ExtraBold", sans-serif;
+  font: 28px/40px "NotoSansArmenian-ExtraBold", sans-serif;
 }
 
 @media (max-width: 1023.98px) {
@@ -1737,10 +1858,34 @@ body {
   color: var(--color_global);
 }
 
-/*=====================-FOOTE-STYLE-START-========================*/
+@font-face {
+  src: url("../assets/fonts/NotoSansArmenian/NotoSansArmenian-Regular.ttf") format("truetype");
+  font-family: "NotoSansArmenian-Regular";
+}
+
+@font-face {
+  src: url("../assets/fonts/NotoSansArmenian/NotoSansArmenian-SemiBold.ttf") format("truetype");
+  font-family: "NotoSansArmenian-SemiBold";
+}
+
+@font-face {
+  src: url("../assets/fonts/NotoSansArmenian/NotoSansArmenian-ExtraBold.ttf") format("truetype");
+  font-family: "NotoSansArmenian-ExtraBold";
+}
+
+@font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+  font-family: "OpenSans-SemiBold";
+}
+
+.favorites {
+  margin-bottom: 80px;
+}
+
 .footer {
   background-color: #ececec;
   padding: 25px 0;
+  margin-top: auto;
 }
 
 @media (max-width: 767.98px) {
