@@ -818,7 +818,6 @@ button[disabled] {
           animation-name: fadeIn;
 }
 
-<<<<<<< Updated upstream
 .empty {
   padding: 62px 15px 98px;
   background-color: white;
@@ -907,7 +906,6 @@ button[disabled] {
   }
 }
 
-=======
 @font-face {
   src: url("../assets/fonts/NotoSansArmenian/NotoSansArmenian-Regular.ttf") format("truetype");
   font-family: "NotoSansArmenian-Regular";
@@ -1139,7 +1137,6 @@ li {
 }
 
 /*=======================-FILTER-STYLE-END-=========================*/
->>>>>>> Stashed changes
 body {
   padding-top: 140px;
   display: -webkit-box;
