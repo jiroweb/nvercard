@@ -1341,7 +1341,7 @@ body {
 }
 
 .header-nav__box--info-support a span {
-  font: 15px/18px "NotoSansArmenian-SemiBold", sans-serif;
+  font: 15px/18px "OpenSans-SemiBold", sans-serif;
   color: var(--color_text);
   margin-left: 10px;
 }
