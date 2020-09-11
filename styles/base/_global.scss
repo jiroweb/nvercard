@@ -28,7 +28,6 @@ body {
 }
 
 
-
 // container  -- START
 .container {
     max-width: 1580px;
@@ -98,7 +97,8 @@ body {
 
 // componetns
 @import '../components/header',
+'../components/footer',
+'../components/home',
 '../components/catalog',
 '../components/favorites',
-'../components/footer',
-'../components/home';
+'../components/about';
