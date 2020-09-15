@@ -2074,7 +2074,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 15px 0;
+  padding: 30px 0;
   margin-bottom: 70px;
   position: relative;
 }
@@ -2159,6 +2159,25 @@ body {
   .banner-block__text--description {
     font: 16px/24px "NotoSansArmenian-Regular", sans-serif;
   }
+}
+
+.banner-block {
+  color: white;
+  max-width: 800px;
+  width: 100%;
+}
+
+.banner-block span {
+  font: 14px "NotoSansArmenian-Regular", sans-serif;
+}
+
+.banner-block h1 {
+  font: 36px "NotoSansArmenian-ExtraBold", sans-serif;
+  margin: 20px 0;
+}
+
+.banner-block p {
+  font: 18px/22px "NotoSansArmenian-SemiBold", sans-serif;
 }
 
 .advantage {
