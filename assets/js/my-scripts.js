@@ -165,28 +165,28 @@ $(document).ready(function () {
 
     // filters
 
-    // $('.dropdown-click__open').on('click', function () {
-    //     $('.dropdown-modal').hide()
-    // })
+    $('.dropdown-click__open').on('click', function () {
+        $('.dropdown-modal').hide()
+    })
 
-    // $('.dropdown-click__open').on('click', function () {
-    //     let parent = $(this).parent()
-    //     let child = $(parent).find('.dropdown-modal')
-    //     $(child).fadeToggle()
-    //     if ($('.dropdown-modal').is(":hidden")) {
-    //         $('.dropdown').removeClass('dropdown-modal__open')
-    //     }
-    //     $(parent).addClass('dropdown-modal__open')
-    // })
+    $('.dropdown-click__open').on('click', function () {
+        let parent = $(this).parent()
+        let child = $(parent).find('.dropdown-modal')
+        $(child).fadeToggle()
+        if ($('.dropdown-modal').is(":hidden")) {
+            $('.dropdown').removeClass('dropdown-modal__open')
+        }
+        $(parent).addClass('dropdown-modal__open')
+    })
 
-    // $('.select-item').on('click', function () {
-    //     let this_parent = $(this).parent()
-    //     let parent_this = $(this_parent).parent()
-    //     let parent = $(parent_this).parent()
-    //     let child_select_input = $(parent).find('.select-zone__input')
-    //     let select_text = $(this).text()
-    //     $(child_select_input).val(select_text);
-    // })
+    $('.select-item').on('click', function () {
+        let this_parent = $(this).parent()
+        let parent_this = $(this_parent).parent()
+        let parent = $(parent_this).parent()
+        let child_select_input = $(parent).find('.select-zone__input')
+        let select_text = $(this).text()
+        $(child_select_input).val(select_text);
+    })
 
     //  ================ -RANGE-JS-START- ================
 

@@ -53,9 +53,7 @@
 }
 
 
-.dropdown-btn {
-    width: 150px;
-}
+
  
 .filter-section{
     width: 350px;
@@ -69,14 +67,69 @@
     margin-left: 30px;
     position: relative;
     height: 5px;
+    &__block{
+        position: absolute;
+        left: 13px;
+        right: 15px;
+        height: 5px;
+        
+    }
+    .range-thumb{
+        position: absolute;
+        top: -7px;
+        z-index: 2;
+        height: 20px;
+        width: 20px;
+        text-align: left;
+        margin-left: -11px;
+        cursor: pointer;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+        background-color: #FFF;
+        border-radius: 50%;
+        outline: none;
+    }
+    .range-calc {
+        position: absolute;
+        pointer-events: none;
+        -webkit-appearance: none;
+        z-index: 3;
+        height: 30px;
+        top: -14px;
+        width: 100%;
+        opacity: 0;
+        &:focus {
+            outline: none;
+            &::-webkit-slider-runnable-track {
+                background: transparent;
+                border: transparent;
+            }
+        }
+        &::-webkit-slider-thumb {
+            pointer-events: all;
+            width: 28px;
+            height: 28px;
+            border-radius: 0px;
+            border: 0 none;
+            background: red;
+            -webkit-appearance: none;
+        }
+        &::-ms-fill-lower {
+            background: transparent;
+            border: 0 none;
+        }
+        &::-ms-fill-upper {
+            background: transparent;
+            border: 0 none;
+        }
+        &::-ms-tooltip {
+            display: none;
+        }
+        
+        
+    }
+
 }
 
-.filter-slider>div {
-    position: absolute;
-    left: 13px;
-    right: 15px;
-    height: 5px;
-}
 
 .filter-slider>div>.inverse-left {
     position: absolute;
@@ -105,64 +158,6 @@
     background-color: #d02128;
 }
 
-.filter-slider .range-thumb{
-    position: absolute;
-    top: -7px;
-    z-index: 2;
-    height: 20px;
-    width: 20px;
-    text-align: left;
-    margin-left: -11px;
-    cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-    background-color: #FFF;
-    border-radius: 50%;
-    outline: none;
-}
-
-.filter-slider .range-calc {
-    position: absolute;
-    pointer-events: none;
-    -webkit-appearance: none;
-    z-index: 3;
-    height: 30px;
-    top: -14px;
-    width: 100%;
-    opacity: 0;
-}
-
-.filter-slider .range-calc:focus::-webkit-slider-runnable-track {
-    background: transparent;
-    border: transparent;
-}
-
-.filter-slider .range-calc:focus {
-    outline: none;
-}
-
-.filter-slider .range-calc::-webkit-slider-thumb {
-    pointer-events: all;
-    width: 28px;
-    height: 28px;
-    border-radius: 0px;
-    border: 0 none;
-    background: red;
-    -webkit-appearance: none;
-}
-
-.filter-slider .range-calc::-ms-fill-lower {
-    background: transparent;
-    border: 0 none;
-}
-
-.filter-slider .range-calc::-ms-fill-upper {
-    background: transparent;
-    border: 0 none;
-}
-
-.filter-slider .range-calc::-ms-tooltip {
-    display: none;
-}
 
 .filter-slider>div>[sign] {
     opacity: 0;

@@ -976,10 +976,6 @@ button[disabled] {
   font: 16px "NotoSansArmenian-ExtraBold", sans-serif;
 }
 
-.dropdown-btn {
-  width: 150px;
-}
-
 .filter-section {
   width: 350px;
   height: 30px;
@@ -992,37 +988,11 @@ button[disabled] {
   height: 5px;
 }
 
-.filter-slider > div {
+.filter-slider__block {
   position: absolute;
   left: 13px;
   right: 15px;
   height: 5px;
-}
-
-.filter-slider > div > .inverse-left {
-  position: absolute;
-  left: 0;
-  height: 5px;
-  border-radius: 10px;
-  background-color: #CCC;
-  margin: 0 7px;
-}
-
-.filter-slider > div > .inverse-right {
-  position: absolute;
-  right: 0;
-  height: 5px;
-  border-radius: 10px;
-  background-color: #CCC;
-  margin: 0 7px;
-}
-
-.filter-slider > div > .range {
-  position: absolute;
-  left: 0;
-  height: 5px;
-  border-radius: 14px;
-  background-color: #d02128;
 }
 
 .filter-slider .range-thumb {
@@ -1052,13 +1022,13 @@ button[disabled] {
   opacity: 0;
 }
 
+.filter-slider .range-calc:focus {
+  outline: none;
+}
+
 .filter-slider .range-calc:focus::-webkit-slider-runnable-track {
   background: transparent;
   border: transparent;
-}
-
-.filter-slider .range-calc:focus {
-  outline: none;
 }
 
 .filter-slider .range-calc::-webkit-slider-thumb {
@@ -1083,6 +1053,32 @@ button[disabled] {
 
 .filter-slider .range-calc::-ms-tooltip {
   display: none;
+}
+
+.filter-slider > div > .inverse-left {
+  position: absolute;
+  left: 0;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #CCC;
+  margin: 0 7px;
+}
+
+.filter-slider > div > .inverse-right {
+  position: absolute;
+  right: 0;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #CCC;
+  margin: 0 7px;
+}
+
+.filter-slider > div > .range {
+  position: absolute;
+  left: 0;
+  height: 5px;
+  border-radius: 14px;
+  background-color: #d02128;
 }
 
 .filter-slider > div > [sign] {
@@ -2159,25 +2155,6 @@ body {
   .banner-block__text--description {
     font: 16px/24px "NotoSansArmenian-Regular", sans-serif;
   }
-}
-
-.banner-block {
-  color: white;
-  max-width: 800px;
-  width: 100%;
-}
-
-.banner-block span {
-  font: 14px "NotoSansArmenian-Regular", sans-serif;
-}
-
-.banner-block h1 {
-  font: 36px "NotoSansArmenian-ExtraBold", sans-serif;
-  margin: 20px 0;
-}
-
-.banner-block p {
-  font: 18px/22px "NotoSansArmenian-SemiBold", sans-serif;
 }
 
 .advantage {
