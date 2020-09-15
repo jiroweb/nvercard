@@ -8,7 +8,7 @@
 // banner
 
 .banner {
-    min-height: 600px;
+    height: 600px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,7 +17,78 @@
     position: relative;
 
     @include sm {
-        min-height: 300px;
+        height: auto;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .2);
+    }
+
+    &-container{
+        height: 100%;
+    }
+
+    &-block {
+        height: 100%;
+        position: relative;
+        z-index: 9;
+
+        &__text {
+            max-width: 835px;
+            width: 100%;
+            padding-right: 16px;
+            color: white;
+
+            &--info {
+                font: 15px/20px $Regular;
+                margin-bottom: 12px;
+
+                span {
+                    font: 15px/20px $OpneSansSemibold;
+                }
+            }
+
+            &--title {
+                font: 48px $Semibold;
+                margin-bottom: 20px;
+
+                @include xl {
+                    font: 40px $Semibold;
+                }
+
+                @include xs {
+                    font: 28px $Semibold;
+                }
+
+                span {
+                    color: var(--color_red);
+                    font-style: italic;
+
+                    @include xs{
+                        display: block;
+                    }
+                }
+            }
+
+            &--description {
+                max-width: 580px;
+                width: 100%;
+                font: 18px/32px $Regular;
+
+                @include xs {
+                    font: 16px/24px $Regular;
+                }
+            }
+        }
+
+       
+
     }
 }
 
@@ -120,7 +191,7 @@
                     margin: auto;
                     transform-style: preserve-3d;
 
-                    @include xs{
+                    @include xs {
                         order: -1;
                     }
 
@@ -231,7 +302,7 @@
                     color: var(--color_global);
                 }
 
-                @include xs{
+                @include xs {
                     &:hover &-name {
                         color: var(--color_text);
                     }

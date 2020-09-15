@@ -2065,7 +2065,7 @@ body {
 }
 
 .banner {
-  min-height: 600px;
+  height: 600px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2076,7 +2076,83 @@ body {
 
 @media (max-width: 1023.98px) {
   .banner {
-    min-height: 300px;
+    height: auto;
+  }
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.banner-container {
+  height: 100%;
+}
+
+.banner-block {
+  height: 100%;
+  position: relative;
+  z-index: 9;
+}
+
+.banner-block__text {
+  max-width: 835px;
+  width: 100%;
+  padding-right: 16px;
+  color: white;
+}
+
+.banner-block__text--info {
+  font: 15px/20px "NotoSansArmenian-Regular", sans-serif;
+  margin-bottom: 12px;
+}
+
+.banner-block__text--info span {
+  font: 15px/20px "OpenSans-SemiBold", sans-serif;
+}
+
+.banner-block__text--title {
+  font: 48px "NotoSansArmenian-SemiBold", sans-serif;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1439.98px) {
+  .banner-block__text--title {
+    font: 40px "NotoSansArmenian-SemiBold", sans-serif;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .banner-block__text--title {
+    font: 28px "NotoSansArmenian-SemiBold", sans-serif;
+  }
+}
+
+.banner-block__text--title span {
+  color: var(--color_red);
+  font-style: italic;
+}
+
+@media (max-width: 767.98px) {
+  .banner-block__text--title span {
+    display: block;
+  }
+}
+
+.banner-block__text--description {
+  max-width: 580px;
+  width: 100%;
+  font: 18px/32px "NotoSansArmenian-Regular", sans-serif;
+}
+
+@media (max-width: 767.98px) {
+  .banner-block__text--description {
+    font: 16px/24px "NotoSansArmenian-Regular", sans-serif;
   }
 }
 
