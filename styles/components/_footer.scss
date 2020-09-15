@@ -113,6 +113,11 @@
                         display: block;
                     }
 
+                    &__cards{
+                        width: 125px;
+                        height: 30px;
+                    }
+
                     &__nvercard {
                         font: 14px $Regular;
                         color: #797F83;

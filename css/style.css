@@ -2008,6 +2008,11 @@ body {
   }
 }
 
+.footer-main__block--info-rules__cards {
+  width: 125px;
+  height: 30px;
+}
+
 .footer-main__block--info-rules__nvercard {
   font: 14px "NotoSansArmenian-Regular", sans-serif;
   color: #797F83;
