@@ -2694,10 +2694,6 @@ body {
   height: 100%;
 }
 
-.about-main {
-  height: 100%;
-}
-
 .about-container {
   height: 100%;
 }
@@ -2722,7 +2718,7 @@ body {
 
 .about-box__navbar--desctop-title {
   font: 21px "NotoSansArmenian-SemiBold", sans-serif;
-  letter-spacing: .75px;
+  letter-spacing: 0.75px;
   color: var(--color_text);
   text-transform: uppercase;
   padding-left: 43px;
@@ -2801,6 +2797,26 @@ body {
 .about-box__content--info p {
   font: 15px/1.33 "NotoSansArmenian-Regular", sans-serif;
   color: var(--color_text);
+}
+
+.about-box__content--info-points {
+  counter-reset: section;
+  font: 15px/1.33 "NotoSansArmenian-Regular", sans-serif;
+}
+
+.about-box__content--info-points li {
+  margin-top: 10px;
+  color: var(--color_text);
+  position: relative;
+  padding-left: 17px;
+}
+
+.about-box__content--info-points li::before {
+  counter-increment: section;
+  content: counter(section) ".";
+  position: absolute;
+  left: 0;
+  font: 14px "NotoSansArmenian-Regular", sans-serif;
 }
 
 @media (max-width: 1279.98px) {

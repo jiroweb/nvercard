@@ -1,118 +1,137 @@
-@import '../base/shared';
+@import "../base/shared";
 
 .about {
+  height: 100%;
+
+  // &-main {
+  //   height: 100%;
+  // }
+
+  &-container {
+    height: 100%;
+  }
+
+  &-box {
     height: 100%;
 
-    &-main{
-        height: 100%;
+    &__sidebar {
+      max-width: 382px;
+      width: 100%;
+      box-shadow: 6.1px 5.1px 16px 0 rgba(0, 0, 0, 0.15);
+      margin-right: 30px;
+      padding-top: 40px;
+      padding-bottom: 25px;
     }
 
-    &-container {
-        height: 100%;
+    &__navbar {
+      background-color: white;
+
+      &--desctop {
+        &-title {
+          font: 21px $Semibold;
+          letter-spacing: 0.75px;
+          color: var(--color_text);
+          text-transform: uppercase;
+          padding-left: 43px;
+          margin-bottom: 20px;
+        }
+
+        @include lg {
+          display: none;
+        }
+      }
+
+      &--mobile {
+        margin-top: 38px;
+        margin-bottom: 8px;
+
+        @include lg {
+          display: block;
+        }
+
+        &-title {
+          padding: 12px;
+          cursor: pointer;
+
+          h3 {
+            font: 17px $Semibold;
+            letter-spacing: 2.55px;
+            color: var(--color_global);
+            text-transform: uppercase;
+          }
+
+          .icon-arrow {
+            font-size: 8px;
+            color: var(--color_global);
+          }
+        }
+      }
+
+      &--list {
+        ul {
+          li {
+            a {
+              min-height: 54px;
+              font: 15.5px $Regular;
+              color: var(--color_text);
+              padding: 5px 5px 5px 43px;
+
+              &.active,
+              &:hover {
+                background-color: #f1f3f3;
+                color: var(--color_global);
+              }
+
+              @include lg {
+                padding: 5px 155px 5px 15px;
+              }
+            }
+          }
+        }
+      }
     }
 
-    &-box {
-        height: 100%;
+    &__content {
+      width: calc(100% - 412px);
 
-        &__sidebar {
-            max-width: 382px;
-            width: 100%;
-            box-shadow: 6.1px 5.1px 16px 0 rgba(0, 0, 0, 0.15);
-            margin-right: 30px;
-            padding-top: 40px;
-            padding-bottom: 25px;
+      &--info {
+        padding: 34px;
+        margin-top: 37px;
+        margin-bottom: 37px;
+        background-color: white;
+
+        @include lg {
+          padding: 23px 15px;
         }
 
-        &__navbar {
-            background-color: white;
-
-            &--desctop {
-                &-title {
-                    font: 21px $Semibold;
-                    letter-spacing: .75px;
-                    color: var(--color_text);
-                    text-transform: uppercase;
-                    padding-left: 43px;
-                    margin-bottom: 20px;
-                }
-
-                @include lg {
-                    display: none;
-                }
-            }
-
-            &--mobile {
-                margin-top: 38px;
-                margin-bottom: 8px;
-
-                @include lg {
-                    display: block;
-                }
-
-                &-title {
-                    padding: 12px;
-                    cursor: pointer;
-
-                    h3 {
-                        font: 17px $Semibold;
-                        letter-spacing: 2.55px;
-                        color: var(--color_global);
-                        text-transform: uppercase;
-                    }
-
-                    .icon-arrow {
-                        font-size: 8px;
-                        color: var(--color_global);
-                    }
-                }
-            }
-
-            &--list {
-                ul {
-                    li {
-                        a {
-                            min-height: 54px;
-                            font: 15.5px $Regular;
-                            color: var(--color_text);
-                            padding: 5px 5px 5px 43px;
-
-                            &.active,
-                            &:hover {
-                                background-color: #f1f3f3;
-                                color: var(--color_global);
-                            }
-
-                            @include lg{
-                                padding: 5px 155px 5px 15px;
-                            }
-                        }
-                    }
-                }
-            }
+        p {
+          font: 15px/1.33 $Regular;
+          color: var(--color_text);
         }
+        &-points {
+            counter-reset: section;
+            font: 15px/1.33 $Regular;
 
-        &__content {
-            width: calc(100% - 412px);
+          li {
+            margin-top: 10px;
+            color: var(--color_text);
+            position: relative;
+            padding-left: 17px;
+            &::before {
+                counter-increment: section;
+                content: counter(section) ".";
+                position: absolute;
+                left: 0;
+                font: 14px $Regular;
 
-            &--info {
-                padding: 34px;
-                margin-top: 37px;
-                margin-bottom: 37px;
-                background-color: white;
-
-                @include lg {
-                    padding: 23px 15px;
-                }
-
-                p{
-                    font: 15px/1.33 $Regular;
-                    color: var(--color_text);
-                }
             }
-
-            @include lg {
-                width: 100%;
-            }
+          }
         }
+      }
+
+      @include lg {
+        width: 100%;
+      }
     }
+  }
 }
