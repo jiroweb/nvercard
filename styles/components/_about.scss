@@ -27,7 +27,7 @@
 					margin-bottom: 20px;
 				}
 
-				@include lg {
+				@include sm {
 					display: none;
 				}
 			}
@@ -36,8 +36,9 @@
 				margin-top: 38px;
 				margin-bottom: 8px;
 
-				@include lg {
-					display: block;
+				@include sm {
+					display: block !important;
+					margin-top: 10px;
 				}
 
 				&-title {
@@ -59,6 +60,11 @@
 			}
 
 			&--list {
+
+				@include sm {
+					border-top: 1px solid #e7e7e7;
+				}
+
 				ul {
 					li {
 						a {
@@ -73,8 +79,8 @@
 								color: var(--color_global);
 							}
 
-							@include lg {
-								padding: 5px 155px 5px 15px;
+							@include sm {
+								padding: 15px;
 							}
 						}
 					}
@@ -85,21 +91,28 @@
 		&__content {
 			width: calc(100% - 412px);
 
+			@include sm {
+				&--title {
+					display: none;
+				}
+			}
+
 			&--info {
 				padding: 34px;
 				margin-top: 37px;
 				background-color: white;
 
-				@include lg {
+				@include sm {
 					padding: 23px 15px;
 				}
 
-				h3{
+				h3 {
 					font: 20px $Semibold;
 					color: var(--color_text);
 					margin-bottom: 15px;
 				}
-				h4{
+
+				h4 {
 					font: 16px/24px $Semibold;
 					color: var(--color_text);
 					margin-bottom: 15px;
@@ -134,7 +147,7 @@
 				}
 			}
 
-			@include lg {
+			@include sm {
 				width: 100%;
 			}
 		}
