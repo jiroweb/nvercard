@@ -2,9 +2,11 @@
 $OpneSansSemibold: 'OpenSans-SemiBold',
 sans-serif; // 600
 
+$OpneSansRegular: 'OpenSans-Regular',
+sans-serif; // normal
 
 $font-path:'../assets/fonts/OpenSans/';
-$list: 'OpenSans-SemiBold';
+$list: 'OpenSans-SemiBold' 'OpenSans-Regular';
 
 @each $name in $list {
     $src: $font-path + $name;
@@ -14,4 +16,6 @@ $list: 'OpenSans-SemiBold';
         font-family: $name;
     }
 }
+
+
 

@@ -19,6 +19,11 @@
 }
 
 @font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-family: "OpenSans-Regular";
+}
+
+@font-face {
   font-family: 'icomoon';
   src: url("../assets/fonts/icons/icomoon.eot?mbk7ji");
   src: url("../assets/fonts/icons/icomoon.eot?mbk7ji#iefix") format("embedded-opentype"), url("../assets/fonts/icons/icomoon.ttf?mbk7ji") format("truetype"), url("../assets/fonts/icons/icomoon.woff?mbk7ji") format("woff"), url("../assets/fonts/icons/icomoon.svg?mbk7ji#icomoon") format("svg");
@@ -704,6 +709,11 @@ body {
   font-family: "OpenSans-SemiBold";
 }
 
+@font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-family: "OpenSans-Regular";
+}
+
 .increment {
   width: 88px;
   height: 40px;
@@ -924,6 +934,11 @@ button[disabled] {
 @font-face {
   src: url("../assets/fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
   font-family: "OpenSans-SemiBold";
+}
+
+@font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-family: "OpenSans-Regular";
 }
 
 .catalog-box__cards--filter {
@@ -1217,6 +1232,11 @@ body {
   font-family: "OpenSans-SemiBold";
 }
 
+@font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-family: "OpenSans-Regular";
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -1329,7 +1349,7 @@ body {
 }
 
 .header-nav__box--info-support a span {
-  font: 15px/18px "OpenSans-SemiBold", sans-serif;
+  font: 15px/18px "OpenSans-Regular", sans-serif;
   color: var(--color_text);
   margin-left: 10px;
 }
@@ -1967,7 +1987,7 @@ body {
 }
 
 .footer-main__block--info-callcenter__link {
-  font: 15px "OpenSans-SemiBold", sans-serif;
+  font: 15px "OpenSans-Regular", sans-serif;
   color: var(--color_global);
   margin-right: 20px;
 }
@@ -2059,6 +2079,11 @@ body {
 @font-face {
   src: url("../assets/fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
   font-family: "OpenSans-SemiBold";
+}
+
+@font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-family: "OpenSans-Regular";
 }
 
 .home-title {
@@ -2459,6 +2484,11 @@ body {
   font-family: "OpenSans-SemiBold";
 }
 
+@font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-family: "OpenSans-Regular";
+}
+
 .catalog {
   margin-bottom: 85px;
 }
@@ -2666,6 +2696,11 @@ body {
   font-family: "OpenSans-SemiBold";
 }
 
+@font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-family: "OpenSans-Regular";
+}
+
 .favorites {
   margin-bottom: 80px;
 }
@@ -2690,21 +2725,19 @@ body {
   font-family: "OpenSans-SemiBold";
 }
 
+@font-face {
+  src: url("../assets/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-family: "OpenSans-Regular";
+}
+
 .about {
-  height: 100%;
-}
-
-.about-container {
-  height: 100%;
-}
-
-.about-box {
-  height: 100%;
+  margin-bottom: 47px;
 }
 
 .about-box__sidebar {
   max-width: 382px;
   width: 100%;
+  height: 100%;
   -webkit-box-shadow: 6.1px 5.1px 16px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 6.1px 5.1px 16px 0 rgba(0, 0, 0, 0.15);
   margin-right: 30px;
@@ -2784,7 +2817,6 @@ body {
 .about-box__content--info {
   padding: 34px;
   margin-top: 37px;
-  margin-bottom: 37px;
   background-color: white;
 }
 
@@ -2794,29 +2826,44 @@ body {
   }
 }
 
-.about-box__content--info p {
-  font: 15px/1.33 "NotoSansArmenian-Regular", sans-serif;
+.about-box__content--info h3 {
+  font: 20px "NotoSansArmenian-SemiBold", sans-serif;
   color: var(--color_text);
+  margin-bottom: 15px;
 }
 
-.about-box__content--info-points {
+.about-box__content--info h4 {
+  font: 16px/24px "NotoSansArmenian-SemiBold", sans-serif;
+  color: var(--color_text);
+  margin-bottom: 15px;
+}
+
+.about-box__content--info p {
+  font: 15px/28px "NotoSansArmenian-Regular", sans-serif;
+  color: var(--color_text);
+  margin-bottom: 30px;
+}
+
+.about-box__content--info ul {
   counter-reset: section;
-  font: 15px/1.33 "NotoSansArmenian-Regular", sans-serif;
+  margin-bottom: 30px;
 }
 
-.about-box__content--info-points li {
+.about-box__content--info ul li {
   margin-top: 10px;
   color: var(--color_text);
   position: relative;
-  padding-left: 17px;
+  padding-left: 18px;
+  font: 16px/24px "NotoSansArmenian-Regular", sans-serif;
 }
 
-.about-box__content--info-points li::before {
+.about-box__content--info ul li::before {
   counter-increment: section;
   content: counter(section) ".";
   position: absolute;
+  top: 0;
   left: 0;
-  font: 14px "NotoSansArmenian-Regular", sans-serif;
+  font: 16px/24px "OpenSans-Regular", sans-serif;
 }
 
 @media (max-width: 1279.98px) {

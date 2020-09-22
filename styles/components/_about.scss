@@ -1,137 +1,142 @@
 @import "../base/shared";
 
 .about {
-  height: 100%;
+	margin-bottom: 47px;
 
-  // &-main {
-  //   height: 100%;
-  // }
+	&-box {
 
-  &-container {
-    height: 100%;
-  }
+		&__sidebar {
+			max-width: 382px;
+			@include wh(100%);
+			box-shadow: 6.1px 5.1px 16px 0 rgba(0, 0, 0, 0.15);
+			margin-right: 30px;
+			padding-top: 40px;
+			padding-bottom: 25px;
+		}
 
-  &-box {
-    height: 100%;
+		&__navbar {
+			background-color: white;
 
-    &__sidebar {
-      max-width: 382px;
-      width: 100%;
-      box-shadow: 6.1px 5.1px 16px 0 rgba(0, 0, 0, 0.15);
-      margin-right: 30px;
-      padding-top: 40px;
-      padding-bottom: 25px;
-    }
+			&--desctop {
+				&-title {
+					font: 21px $Semibold;
+					letter-spacing: 0.75px;
+					color: var(--color_text);
+					text-transform: uppercase;
+					padding-left: 43px;
+					margin-bottom: 20px;
+				}
 
-    &__navbar {
-      background-color: white;
+				@include lg {
+					display: none;
+				}
+			}
 
-      &--desctop {
-        &-title {
-          font: 21px $Semibold;
-          letter-spacing: 0.75px;
-          color: var(--color_text);
-          text-transform: uppercase;
-          padding-left: 43px;
-          margin-bottom: 20px;
-        }
+			&--mobile {
+				margin-top: 38px;
+				margin-bottom: 8px;
 
-        @include lg {
-          display: none;
-        }
-      }
+				@include lg {
+					display: block;
+				}
 
-      &--mobile {
-        margin-top: 38px;
-        margin-bottom: 8px;
+				&-title {
+					padding: 12px;
+					cursor: pointer;
 
-        @include lg {
-          display: block;
-        }
+					h3 {
+						font: 17px $Semibold;
+						letter-spacing: 2.55px;
+						color: var(--color_global);
+						text-transform: uppercase;
+					}
 
-        &-title {
-          padding: 12px;
-          cursor: pointer;
+					.icon-arrow {
+						font-size: 8px;
+						color: var(--color_global);
+					}
+				}
+			}
 
-          h3 {
-            font: 17px $Semibold;
-            letter-spacing: 2.55px;
-            color: var(--color_global);
-            text-transform: uppercase;
-          }
+			&--list {
+				ul {
+					li {
+						a {
+							min-height: 54px;
+							font: 15.5px $Regular;
+							color: var(--color_text);
+							padding: 5px 5px 5px 43px;
 
-          .icon-arrow {
-            font-size: 8px;
-            color: var(--color_global);
-          }
-        }
-      }
+							&.active,
+							&:hover {
+								background-color: #f1f3f3;
+								color: var(--color_global);
+							}
 
-      &--list {
-        ul {
-          li {
-            a {
-              min-height: 54px;
-              font: 15.5px $Regular;
-              color: var(--color_text);
-              padding: 5px 5px 5px 43px;
+							@include lg {
+								padding: 5px 155px 5px 15px;
+							}
+						}
+					}
+				}
+			}
+		}
 
-              &.active,
-              &:hover {
-                background-color: #f1f3f3;
-                color: var(--color_global);
-              }
+		&__content {
+			width: calc(100% - 412px);
 
-              @include lg {
-                padding: 5px 155px 5px 15px;
-              }
-            }
-          }
-        }
-      }
-    }
+			&--info {
+				padding: 34px;
+				margin-top: 37px;
+				background-color: white;
 
-    &__content {
-      width: calc(100% - 412px);
+				@include lg {
+					padding: 23px 15px;
+				}
 
-      &--info {
-        padding: 34px;
-        margin-top: 37px;
-        margin-bottom: 37px;
-        background-color: white;
+				h3{
+					font: 20px $Semibold;
+					color: var(--color_text);
+					margin-bottom: 15px;
+				}
+				h4{
+					font: 16px/24px $Semibold;
+					color: var(--color_text);
+					margin-bottom: 15px;
+				}
 
-        @include lg {
-          padding: 23px 15px;
-        }
+				p {
+					font: 15px/28px $Regular;
+					color: var(--color_text);
+					margin-bottom: 30px;
+				}
 
-        p {
-          font: 15px/1.33 $Regular;
-          color: var(--color_text);
-        }
-        &-points {
-            counter-reset: section;
-            font: 15px/1.33 $Regular;
+				ul {
+					counter-reset: section;
+					margin-bottom: 30px;
 
-          li {
-            margin-top: 10px;
-            color: var(--color_text);
-            position: relative;
-            padding-left: 17px;
-            &::before {
-                counter-increment: section;
-                content: counter(section) ".";
-                position: absolute;
-                left: 0;
-                font: 14px $Regular;
+					li {
+						margin-top: 10px;
+						color: var(--color_text);
+						position: relative;
+						padding-left: 18px;
+						font: 16px/24px $Regular;
 
-            }
-          }
-        }
-      }
+						&::before {
+							counter-increment: section;
+							content: counter(section) ".";
+							position: absolute;
+							top: 0;
+							left: 0;
+							font: 16px/24px $OpneSansRegular;
+						}
+					}
+				}
+			}
 
-      @include lg {
-        width: 100%;
-      }
-    }
-  }
+			@include lg {
+				width: 100%;
+			}
+		}
+	}
 }
