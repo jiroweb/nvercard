@@ -1,0 +1,26 @@
+.checkbox {
+    cursor: pointer;
+
+    &-radio {
+        width: 16px;
+        height: 16px;
+        border: solid 1px #3C444B;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .radio:checked~&-radio {
+        border: solid 1px var(--color_global);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            border-radius: 50%;
+            background-color: var(--color_global);
+        }
+    }
+}
