@@ -1,5 +1,11 @@
 @import '../fonts/icons/icons';
 
+.icon-arrow:before {
+  content: "\e92f";
+}
+.icon-arrow__bottom:before {
+  content: "\e930";
+}
 .icon-login:before {
   content: "\e908";
 }
@@ -141,3 +147,4 @@
 .icon-cart:before {
   content: "\e92e";
 }
+
