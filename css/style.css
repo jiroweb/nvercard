@@ -1664,6 +1664,23 @@ body {
 
 .header-content__box--icons {
   margin: -12px 0 -12px auto;
+  padding-left: 35px;
+}
+
+@media (max-width: 767.98px) {
+  .header-content__box--icons {
+    padding-left: 25px;
+  }
+}
+
+.header-content__box--icons-item + .header-content__box--icons-item {
+  margin-left: 35px;
+}
+
+@media (max-width: 767.98px) {
+  .header-content__box--icons-item + .header-content__box--icons-item {
+    margin-left: 25px;
+  }
 }
 
 .header-content__box--icons-link {
@@ -1671,13 +1688,6 @@ body {
   color: var(--color_red);
   position: relative;
   height: 100%;
-  margin-left: 35px;
-}
-
-@media (max-width: 767.98px) {
-  .header-content__box--icons-link {
-    margin-left: 25px;
-  }
 }
 
 .header-content__box--icons-link:hover {
@@ -1702,18 +1712,15 @@ body {
 }
 
 .header-content__box--icons-logout__lines {
-  margin-left: 25px;
+  width: 193px;
   position: absolute;
-  width: 200px;
   top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   padding: 10px 0;
-  background-color: var(--color_red_hover);
-  border-radius: 4px;
+  background-color: white;
   display: none;
-}
-
-.header-content__box--icons-logout__lines li + li {
-  border-top: 1px solid var(--color_red);
 }
 
 .header-content__box--icons-logout__lines li {
@@ -1722,12 +1729,12 @@ body {
 }
 
 .header-content__box--icons-logout__lines li a {
-  color: white;
+  color: var(--color_text);
   font: 16px "NotoSansArmenian-Regular", sans-serif;
 }
 
 .header-content__box--icons-logout__lines li:hover a {
-  color: #cec5c5;
+  color: var(--color_red_hover);
 }
 
 .header-content__box--icons-logout:hover .header-content__box--icons-logout__lines {
@@ -2728,7 +2735,7 @@ body {
 }
 
 .catalog-box__sidebar--categories-list__item--tab .icon-arrow {
-  font-size: 8px;
+  font-size: 24px;
   padding: 0 5px;
 }
 
