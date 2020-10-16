@@ -10,8 +10,8 @@ sans-serif; // normal
 
 
 
-$font-path:'../assets/fonts/NotoSansArmenian/';
-$list: 'NotoSansArmenian-Regular' 'NotoSansArmenian-SemiBold' 'NotoSansArmenian-ExtraBold';
+$font-path:'../../assets/fonts/NotoSansArmenian/';
+$list: 'NotoSansArmenian-Regular''NotoSansArmenian-SemiBold''NotoSansArmenian-ExtraBold';
 
 @each $name in $list {
     $src: $font-path + $name;
